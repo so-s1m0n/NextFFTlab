@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "nextfft-lab"
+version = "0.1.0"
+description = "Reproducible finite Fourier transform correctness and performance research"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.11"]
+license = {text = "MIT"}
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+[tool.setuptools.packages.find]
+include = ["nextfft_lab*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]

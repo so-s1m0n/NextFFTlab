@@ -1,0 +1,759 @@
+{
+  "scope": "classical CPU baselines only; new construction not implemented",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "processor": "",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "seed": 20261126,
+  "repeats": 3,
+  "rows": [
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 2,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 5768,
+      "min_ns": 4937,
+      "samples_ns": [
+        5768,
+        5909,
+        4937
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 2,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 4727,
+      "min_ns": 4397,
+      "samples_ns": [
+        6570,
+        4397,
+        4727
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 2,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 3846,
+      "min_ns": 3706,
+      "samples_ns": [
+        4116,
+        3846,
+        3706
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 2,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 25448,
+      "min_ns": 25187,
+      "samples_ns": [
+        27361,
+        25448,
+        25187
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "direct_ntt",
+      "n": 2,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 2885,
+      "min_ns": 2854,
+      "samples_ns": [
+        3045,
+        2854,
+        2885
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 4,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 4957,
+      "min_ns": 4667,
+      "samples_ns": [
+        4957,
+        4667,
+        5368
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 4,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 4036,
+      "min_ns": 3836,
+      "samples_ns": [
+        4416,
+        4036,
+        3836
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 4,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 5909,
+      "min_ns": 5869,
+      "samples_ns": [
+        6060,
+        5909,
+        5869
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 4,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 44096,
+      "min_ns": 43034,
+      "samples_ns": [
+        44717,
+        44096,
+        43034
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "direct_ntt",
+      "n": 4,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 5328,
+      "min_ns": 5197,
+      "samples_ns": [
+        5448,
+        5328,
+        5197
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 8,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 4557,
+      "min_ns": 4517,
+      "samples_ns": [
+        4807,
+        4557,
+        4517
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 8,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 3916,
+      "min_ns": 3795,
+      "samples_ns": [
+        4557,
+        3916,
+        3795
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 8,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 11006,
+      "min_ns": 10986,
+      "samples_ns": [
+        10986,
+        11006,
+        12549
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 8,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 76305,
+      "min_ns": 74952,
+      "samples_ns": [
+        77956,
+        74952,
+        76305
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "direct_ntt",
+      "n": 8,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 17977,
+      "min_ns": 17607,
+      "samples_ns": [
+        17977,
+        18077,
+        17607
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 16,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 4767,
+      "min_ns": 4747,
+      "samples_ns": [
+        4907,
+        4767,
+        4747
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 16,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 3976,
+      "min_ns": 3846,
+      "samples_ns": [
+        4386,
+        3976,
+        3846
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 16,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 19910,
+      "min_ns": 19749,
+      "samples_ns": [
+        20220,
+        19910,
+        19749
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 16,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 145548,
+      "min_ns": 142414,
+      "samples_ns": [
+        147361,
+        145548,
+        142414
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "direct_ntt",
+      "n": 16,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 83806,
+      "min_ns": 83295,
+      "samples_ns": [
+        83806,
+        83295,
+        116715
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 32,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 4898,
+      "min_ns": 4867,
+      "samples_ns": [
+        5408,
+        4898,
+        4867
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 32,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 4517,
+      "min_ns": 4197,
+      "samples_ns": [
+        4517,
+        4197,
+        6339
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 32,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 38297,
+      "min_ns": 37626,
+      "samples_ns": [
+        38618,
+        38297,
+        37626
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 32,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 313801,
+      "min_ns": 289745,
+      "samples_ns": [
+        313801,
+        320401,
+        289745
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "direct_ntt",
+      "n": 32,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 435894,
+      "min_ns": 435213,
+      "samples_ns": [
+        435213,
+        459740,
+        435894
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 64,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 5338,
+      "min_ns": 5178,
+      "samples_ns": [
+        5508,
+        5338,
+        5178
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 64,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 4607,
+      "min_ns": 4247,
+      "samples_ns": [
+        5308,
+        4607,
+        4247
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 64,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 78869,
+      "min_ns": 78838,
+      "samples_ns": [
+        78838,
+        79920,
+        78869
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 64,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 643145,
+      "min_ns": 639590,
+      "samples_ns": [
+        648773,
+        643145,
+        639590
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "direct_ntt",
+      "n": 64,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 2275935,
+      "min_ns": 2275084,
+      "samples_ns": [
+        2289906,
+        2275935,
+        2275084
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 128,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 5989,
+      "min_ns": 5819,
+      "samples_ns": [
+        6310,
+        5989,
+        5819
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 128,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 5118,
+      "min_ns": 5007,
+      "samples_ns": [
+        5589,
+        5118,
+        5007
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 128,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 171707,
+      "min_ns": 169625,
+      "samples_ns": [
+        169625,
+        171707,
+        187020
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 128,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 1385178,
+      "min_ns": 1380892,
+      "samples_ns": [
+        1385178,
+        1380892,
+        1391367
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "direct_ntt",
+      "n": 128,
+      "exact_match": true,
+      "oracle": "direct",
+      "median_ns": 12082888,
+      "min_ns": 7051290,
+      "samples_ns": [
+        7051290,
+        13384521,
+        12082888
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 256,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 5758,
+      "min_ns": 5027,
+      "samples_ns": [
+        6129,
+        5758,
+        5027
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 256,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 4927,
+      "min_ns": 4197,
+      "samples_ns": [
+        6039,
+        4927,
+        4197
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 256,
+      "exact_match": true,
+      "oracle": "radix2 (roundtrip checked)",
+      "median_ns": 275453,
+      "min_ns": 274802,
+      "samples_ns": [
+        274802,
+        275453,
+        284387
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 256,
+      "exact_match": true,
+      "oracle": "radix2 (roundtrip checked)",
+      "median_ns": 2436396,
+      "min_ns": 2339389,
+      "samples_ns": [
+        2339389,
+        2440041,
+        2436396
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 512,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 7241,
+      "min_ns": 6760,
+      "samples_ns": [
+        8272,
+        7241,
+        6760
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 512,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 5699,
+      "min_ns": 5508,
+      "samples_ns": [
+        6560,
+        5699,
+        5508
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 512,
+      "exact_match": true,
+      "oracle": "radix2 (roundtrip checked)",
+      "median_ns": 659560,
+      "min_ns": 655233,
+      "samples_ns": [
+        655233,
+        730767,
+        659560
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 512,
+      "exact_match": true,
+      "oracle": "radix2 (roundtrip checked)",
+      "median_ns": 5290368,
+      "min_ns": 5213533,
+      "samples_ns": [
+        6526642,
+        5213533,
+        5290368
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 1024,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 10706,
+      "min_ns": 10265,
+      "samples_ns": [
+        12579,
+        10706,
+        10265
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 1024,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 8082,
+      "min_ns": 7732,
+      "samples_ns": [
+        9003,
+        8082,
+        7732
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 1024,
+      "exact_match": true,
+      "oracle": "radix2 (roundtrip checked)",
+      "median_ns": 1633281,
+      "min_ns": 1533751,
+      "samples_ns": [
+        1633281,
+        1533751,
+        1658408
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 1024,
+      "exact_match": true,
+      "oracle": "radix2 (roundtrip checked)",
+      "median_ns": 12308918,
+      "min_ns": 11458091,
+      "samples_ns": [
+        12308918,
+        14035309,
+        11458091
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 2048,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 19609,
+      "min_ns": 18998,
+      "samples_ns": [
+        20681,
+        19609,
+        18998
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 2048,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 16775,
+      "min_ns": 16074,
+      "samples_ns": [
+        18197,
+        16775,
+        16074
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 2048,
+      "exact_match": true,
+      "oracle": "radix2 (roundtrip checked)",
+      "median_ns": 3484798,
+      "min_ns": 3410307,
+      "samples_ns": [
+        3484798,
+        3410307,
+        3514513
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 2048,
+      "exact_match": true,
+      "oracle": "radix2 (roundtrip checked)",
+      "median_ns": 30494042,
+      "min_ns": 26922424,
+      "samples_ns": [
+        30494042,
+        26922424,
+        37501365
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "numpy_fft",
+      "n": 4096,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 39309,
+      "min_ns": 37517,
+      "samples_ns": [
+        39309,
+        37517,
+        138117
+      ]
+    },
+    {
+      "domain": "complex128",
+      "algorithm": "scipy_fft",
+      "n": 4096,
+      "relative_l2_vs_numpy": 0,
+      "median_ns": 30146,
+      "min_ns": 29725,
+      "samples_ns": [
+        34842,
+        30146,
+        29725
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "radix2_ntt",
+      "n": 4096,
+      "exact_match": true,
+      "oracle": "radix2 (roundtrip checked)",
+      "median_ns": 7585431,
+      "min_ns": 7508665,
+      "samples_ns": [
+        7508665,
+        7585431,
+        11835167
+      ]
+    },
+    {
+      "domain": "Fp",
+      "algorithm": "bluestein_ntt",
+      "n": 4096,
+      "exact_match": true,
+      "oracle": "radix2 (roundtrip checked)",
+      "median_ns": 56741463,
+      "min_ns": 53732828,
+      "samples_ns": [
+        60375766,
+        53732828,
+        56741463
+      ]
+    }
+  ]
+}
