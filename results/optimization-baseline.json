@@ -1,0 +1,31 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "rows": 512,
+  "size": 256,
+  "cold_setup_ns": 1464400,
+  "samples_ns": [
+    7454655400,
+    7717545900,
+    7926087200
+  ],
+  "median_ns": 7717545900,
+  "peak_process_bytes": 52318208,
+  "counts": {
+    "axis_calls": 163840,
+    "pencil_stages": 16,
+    "pair_kernel_calls": 81920,
+    "pair_kernel_add_sub": 36700160,
+    "pair_kernel_multiplications": 41943040,
+    "cross_row_mix_mac": 3276800,
+    "charged_gather_scalar_accumulations": 12582912,
+    "free_output_scalar_accumulations": 4194304,
+    "matrix_coefficient_slots": 65536
+  }
+}

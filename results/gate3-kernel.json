@@ -1,0 +1,733 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "seed": 20261126,
+  "prime": 998244353,
+  "repeats": 20,
+  "component": {
+    "m": 3,
+    "auxiliary": 1,
+    "columns": 1,
+    "entries": 256,
+    "unrouted_product": {
+      "samples_ns": [
+        513300,
+        540300,
+        508100,
+        502100,
+        503100,
+        495300,
+        496400,
+        497300,
+        502200,
+        497800,
+        497600,
+        499100,
+        570600,
+        500100,
+        497400,
+        499800,
+        502000,
+        498200,
+        498000,
+        498600
+      ],
+      "median_ns": 499450.0,
+      "python_peak_bytes": 31640
+    },
+    "classical_walsh": {
+      "samples_ns": [
+        146900,
+        144600,
+        144900,
+        144200,
+        144500,
+        144000,
+        144000,
+        143400,
+        144400,
+        144200,
+        143500,
+        147600,
+        143500,
+        144500,
+        143700,
+        167600,
+        145200,
+        145100,
+        144500,
+        145400
+      ],
+      "median_ns": 144500.0,
+      "python_peak_bytes": 10568
+    },
+    "local_pair_butterfly_applications": 384
+  },
+  "schedule_estimates": [
+    {
+      "m": 3,
+      "label_length": 2,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 8,
+      "charged_rectangles": 4,
+      "free_rectangles": 8,
+      "batch_rows": 512,
+      "minimum_input_bytes_f1_base_field": 524288,
+      "axis_calls_per_batch_row_fraction": [
+        1280,
+        4
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 3,
+      "label_length": 2,
+      "alphabet": 4,
+      "gram_dimension": 6,
+      "axes": 16,
+      "charged_rectangles": 8,
+      "free_rectangles": 48,
+      "batch_rows": 2048,
+      "minimum_input_bytes_f1_base_field": 536870912,
+      "axis_calls_per_batch_row_fraction": [
+        16896,
+        16
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 3,
+      "label_length": 2,
+      "alphabet": 8,
+      "gram_dimension": 14,
+      "axes": 32,
+      "charged_rectangles": 16,
+      "free_rectangles": 224,
+      "batch_rows": 8192,
+      "minimum_input_bytes_f1_base_field": 140737488355328,
+      "axis_calls_per_batch_row_fraction": [
+        193536,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 3,
+      "label_length": 3,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 8,
+      "charged_rectangles": 7,
+      "free_rectangles": 32,
+      "batch_rows": 1024,
+      "minimum_input_bytes_f1_base_field": 1048576,
+      "axis_calls_per_batch_row_fraction": [
+        3392,
+        8
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 3,
+      "label_length": 3,
+      "alphabet": 4,
+      "gram_dimension": 8,
+      "axes": 20,
+      "charged_rectangles": 13,
+      "free_rectangles": 504,
+      "batch_rows": 8192,
+      "minimum_input_bytes_f1_base_field": 34359738368,
+      "axis_calls_per_batch_row_fraction": [
+        239360,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 3,
+      "label_length": 4,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 8,
+      "charged_rectangles": 32,
+      "free_rectangles": 128,
+      "batch_rows": 2048,
+      "minimum_input_bytes_f1_base_field": 2097152,
+      "axis_calls_per_batch_row_fraction": [
+        14336,
+        16
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 3,
+      "label_length": 5,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 8,
+      "charged_rectangles": 51,
+      "free_rectangles": 512,
+      "batch_rows": 4096,
+      "minimum_input_bytes_f1_base_field": 4194304,
+      "axis_calls_per_batch_row_fraction": [
+        42560,
+        32
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 3,
+      "label_length": 6,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 8,
+      "charged_rectangles": 232,
+      "free_rectangles": 2048,
+      "batch_rows": 8192,
+      "minimum_input_bytes_f1_base_field": 8388608,
+      "axis_calls_per_batch_row_fraction": [
+        175616,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 5,
+      "label_length": 2,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 12,
+      "charged_rectangles": 4,
+      "free_rectangles": 8,
+      "batch_rows": 2048,
+      "minimum_input_bytes_f1_base_field": 33554432,
+      "axis_calls_per_batch_row_fraction": [
+        1792,
+        4
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 5,
+      "label_length": 2,
+      "alphabet": 4,
+      "gram_dimension": 6,
+      "axes": 20,
+      "charged_rectangles": 8,
+      "free_rectangles": 48,
+      "batch_rows": 8192,
+      "minimum_input_bytes_f1_base_field": 34359738368,
+      "axis_calls_per_batch_row_fraction": [
+        19968,
+        16
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 5,
+      "label_length": 2,
+      "alphabet": 8,
+      "gram_dimension": 14,
+      "axes": 36,
+      "charged_rectangles": 16,
+      "free_rectangles": 224,
+      "batch_rows": 32768,
+      "minimum_input_bytes_f1_base_field": 9007199254740992,
+      "axis_calls_per_batch_row_fraction": [
+        207872,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 5,
+      "label_length": 3,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 12,
+      "charged_rectangles": 7,
+      "free_rectangles": 32,
+      "batch_rows": 4096,
+      "minimum_input_bytes_f1_base_field": 67108864,
+      "axis_calls_per_batch_row_fraction": [
+        4288,
+        8
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 5,
+      "label_length": 3,
+      "alphabet": 4,
+      "gram_dimension": 8,
+      "axes": 24,
+      "charged_rectangles": 13,
+      "free_rectangles": 504,
+      "batch_rows": 32768,
+      "minimum_input_bytes_f1_base_field": 2199023255552,
+      "axis_calls_per_batch_row_fraction": [
+        246016,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 5,
+      "label_length": 4,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 12,
+      "charged_rectangles": 32,
+      "free_rectangles": 128,
+      "batch_rows": 8192,
+      "minimum_input_bytes_f1_base_field": 134217728,
+      "axis_calls_per_batch_row_fraction": [
+        18432,
+        16
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 5,
+      "label_length": 5,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 12,
+      "charged_rectangles": 51,
+      "free_rectangles": 512,
+      "batch_rows": 16384,
+      "minimum_input_bytes_f1_base_field": 268435456,
+      "axis_calls_per_batch_row_fraction": [
+        49088,
+        32
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 5,
+      "label_length": 6,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 12,
+      "charged_rectangles": 232,
+      "free_rectangles": 2048,
+      "batch_rows": 32768,
+      "minimum_input_bytes_f1_base_field": 536870912,
+      "axis_calls_per_batch_row_fraction": [
+        205312,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 7,
+      "label_length": 2,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 16,
+      "charged_rectangles": 4,
+      "free_rectangles": 8,
+      "batch_rows": 16384,
+      "minimum_input_bytes_f1_base_field": 4294967296,
+      "axis_calls_per_batch_row_fraction": [
+        4608,
+        4
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 7,
+      "label_length": 2,
+      "alphabet": 4,
+      "gram_dimension": 6,
+      "axes": 24,
+      "charged_rectangles": 8,
+      "free_rectangles": 48,
+      "batch_rows": 65536,
+      "minimum_input_bytes_f1_base_field": 4398046511104,
+      "axis_calls_per_batch_row_fraction": [
+        46080,
+        16
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 7,
+      "label_length": 2,
+      "alphabet": 8,
+      "gram_dimension": 14,
+      "axes": 40,
+      "charged_rectangles": 16,
+      "free_rectangles": 224,
+      "batch_rows": 262144,
+      "minimum_input_bytes_f1_base_field": 1152921504606846976,
+      "axis_calls_per_batch_row_fraction": [
+        444416,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 7,
+      "label_length": 3,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 16,
+      "charged_rectangles": 7,
+      "free_rectangles": 32,
+      "batch_rows": 32768,
+      "minimum_input_bytes_f1_base_field": 8589934592,
+      "axis_calls_per_batch_row_fraction": [
+        10368,
+        8
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 7,
+      "label_length": 3,
+      "alphabet": 4,
+      "gram_dimension": 8,
+      "axes": 28,
+      "charged_rectangles": 13,
+      "free_rectangles": 504,
+      "batch_rows": 262144,
+      "minimum_input_bytes_f1_base_field": 281474976710656,
+      "axis_calls_per_batch_row_fraction": [
+        505344,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 7,
+      "label_length": 4,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 16,
+      "charged_rectangles": 32,
+      "free_rectangles": 128,
+      "batch_rows": 65536,
+      "minimum_input_bytes_f1_base_field": 17179869184,
+      "axis_calls_per_batch_row_fraction": [
+        45056,
+        16
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 7,
+      "label_length": 5,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 16,
+      "charged_rectangles": 51,
+      "free_rectangles": 512,
+      "batch_rows": 131072,
+      "minimum_input_bytes_f1_base_field": 34359738368,
+      "axis_calls_per_batch_row_fraction": [
+        111232,
+        32
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 7,
+      "label_length": 6,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 16,
+      "charged_rectangles": 232,
+      "free_rectangles": 2048,
+      "batch_rows": 262144,
+      "minimum_input_bytes_f1_base_field": 68719476736,
+      "axis_calls_per_batch_row_fraction": [
+        470016,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 9,
+      "label_length": 2,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 20,
+      "charged_rectangles": 4,
+      "free_rectangles": 8,
+      "batch_rows": 65536,
+      "minimum_input_bytes_f1_base_field": 274877906944,
+      "axis_calls_per_batch_row_fraction": [
+        5632,
+        4
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 9,
+      "label_length": 2,
+      "alphabet": 4,
+      "gram_dimension": 6,
+      "axes": 28,
+      "charged_rectangles": 8,
+      "free_rectangles": 48,
+      "batch_rows": 262144,
+      "minimum_input_bytes_f1_base_field": 281474976710656,
+      "axis_calls_per_batch_row_fraction": [
+        52224,
+        16
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 9,
+      "label_length": 2,
+      "alphabet": 8,
+      "gram_dimension": 14,
+      "axes": 44,
+      "charged_rectangles": 16,
+      "free_rectangles": 224,
+      "batch_rows": 1048576,
+      "minimum_input_bytes_f1_base_field": 73786976294838206464,
+      "axis_calls_per_batch_row_fraction": [
+        473088,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 9,
+      "label_length": 3,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 20,
+      "charged_rectangles": 7,
+      "free_rectangles": 32,
+      "batch_rows": 131072,
+      "minimum_input_bytes_f1_base_field": 549755813888,
+      "axis_calls_per_batch_row_fraction": [
+        12160,
+        8
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 9,
+      "label_length": 3,
+      "alphabet": 4,
+      "gram_dimension": 8,
+      "axes": 32,
+      "charged_rectangles": 13,
+      "free_rectangles": 504,
+      "batch_rows": 1048576,
+      "minimum_input_bytes_f1_base_field": 18014398509481984,
+      "axis_calls_per_batch_row_fraction": [
+        518656,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 9,
+      "label_length": 4,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 20,
+      "charged_rectangles": 32,
+      "free_rectangles": 128,
+      "batch_rows": 262144,
+      "minimum_input_bytes_f1_base_field": 1099511627776,
+      "axis_calls_per_batch_row_fraction": [
+        53248,
+        16
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 9,
+      "label_length": 5,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 20,
+      "charged_rectangles": 51,
+      "free_rectangles": 512,
+      "batch_rows": 524288,
+      "minimum_input_bytes_f1_base_field": 2199023255552,
+      "axis_calls_per_batch_row_fraction": [
+        124288,
+        32
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 9,
+      "label_length": 6,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 20,
+      "charged_rectangles": 232,
+      "free_rectangles": 2048,
+      "batch_rows": 1048576,
+      "minimum_input_bytes_f1_base_field": 4398046511104,
+      "axis_calls_per_batch_row_fraction": [
+        529408,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 11,
+      "label_length": 2,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 24,
+      "charged_rectangles": 4,
+      "free_rectangles": 8,
+      "batch_rows": 262144,
+      "minimum_input_bytes_f1_base_field": 17592186044416,
+      "axis_calls_per_batch_row_fraction": [
+        6656,
+        4
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 11,
+      "label_length": 2,
+      "alphabet": 4,
+      "gram_dimension": 6,
+      "axes": 32,
+      "charged_rectangles": 8,
+      "free_rectangles": 48,
+      "batch_rows": 1048576,
+      "minimum_input_bytes_f1_base_field": 18014398509481984,
+      "axis_calls_per_batch_row_fraction": [
+        58368,
+        16
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 11,
+      "label_length": 2,
+      "alphabet": 8,
+      "gram_dimension": 14,
+      "axes": 48,
+      "charged_rectangles": 16,
+      "free_rectangles": 224,
+      "batch_rows": 4194304,
+      "minimum_input_bytes_f1_base_field": 4722366482869645213696,
+      "axis_calls_per_batch_row_fraction": [
+        501760,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 11,
+      "label_length": 3,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 24,
+      "charged_rectangles": 7,
+      "free_rectangles": 32,
+      "batch_rows": 524288,
+      "minimum_input_bytes_f1_base_field": 35184372088832,
+      "axis_calls_per_batch_row_fraction": [
+        13952,
+        8
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 11,
+      "label_length": 3,
+      "alphabet": 4,
+      "gram_dimension": 8,
+      "axes": 36,
+      "charged_rectangles": 13,
+      "free_rectangles": 504,
+      "batch_rows": 4194304,
+      "minimum_input_bytes_f1_base_field": 1152921504606846976,
+      "axis_calls_per_batch_row_fraction": [
+        531968,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 11,
+      "label_length": 4,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 24,
+      "charged_rectangles": 32,
+      "free_rectangles": 128,
+      "batch_rows": 1048576,
+      "minimum_input_bytes_f1_base_field": 70368744177664,
+      "axis_calls_per_batch_row_fraction": [
+        61440,
+        16
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 11,
+      "label_length": 5,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 24,
+      "charged_rectangles": 51,
+      "free_rectangles": 512,
+      "batch_rows": 2097152,
+      "minimum_input_bytes_f1_base_field": 140737488355328,
+      "axis_calls_per_batch_row_fraction": [
+        137344,
+        32
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    },
+    {
+      "m": 11,
+      "label_length": 6,
+      "alphabet": 2,
+      "gram_dimension": 2,
+      "axes": 24,
+      "charged_rectangles": 232,
+      "free_rectangles": 2048,
+      "batch_rows": 4194304,
+      "minimum_input_bytes_f1_base_field": 281474976710656,
+      "axis_calls_per_batch_row_fraction": [
+        588800,
+        64
+      ],
+      "scheduled_calls_below_a_to_three_quarters": false
+    }
+  ],
+  "materialized_template": {
+    "cold_setup_ns": 1396700,
+    "reused_apply_samples_ns": [
+      7555956500,
+      7899728400,
+      7683883800
+    ],
+    "classical_walsh_samples_ns": [
+      72612400,
+      75861900,
+      73363100
+    ],
+    "rows": 512,
+    "entries_per_row": 256,
+    "pencil_stages": 16,
+    "axis_calls": 163840,
+    "process_peak_working_set_bytes": 55705600,
+    "process_peak_measurement": "Separate one-repeat run in direct CPython process, including inputs, reference result and interpreter"
+  }
+}

@@ -14,13 +14,16 @@
 |---|---|
 | Preprint reports N(log N)^(1/2+o(1)) binary linear-gate complexity for finite abelian Fourier transforms over qualifying fields | Reported in abstract; not independently proved here |
 | Required field contains appropriate roots of unity and N is invertible | Reported assumptions |
-| Lean artifacts exist | Reported; compilation and theorem-to-manuscript mapping pending |
+| Lean statements cover forward/inverse and batched linear-gate bounds | Source mapping recorded in ROADMAP.md; local compilation and dependency axioms pending |
 | Classical exact finite-field baselines agree on tested inputs | Tested here |
 | Bluestein identity yields exact results at selected lengths | Tested here; classical identity only |
-| New construction works end to end | Not implemented |
-| New construction beats FFT in wall-clock time | Unknown |
+| Matrix-root predictor and Hermite repair compute the binary query product | Verified for a toy window with repairs and a theorem window with zero exceptions |
+| Fixed binary template with shared routing reproduces exact Walsh output | Verified at A=8, f=1, W=512 with zero exceptional rows |
+| Saving template and recursive construction | No bounded scheduled candidate passed the strict saving condition |
+| Bounded prototype speedup | Sparse routing and a degree-sized pencil reduced the fixed Python template from 7.718 s to 0.679 s on the same batch |
+| Practical speedup | Classical same-domain Walsh took 0.0772 s on that batch |
 
-Full primary manuscript source has not been audited. The related certificate work reports parity predictors, nilpotent expansion and Hermite repair; their exact definitions and prerequisites must be extracted from the pinned manuscript before implementing them. Never infer a formula merely from an abstract.
+Gate 1 maps the main Lean statements and the count predictor to pinned sources. The full proof and local Lean compilation remain open. The pinned manuscript maps the predictor, matrix root and Hermite repair to bounded binary implementations. The first theorem-scale case with nonzero exceptions exceeds the current budget, including under the factored predictor estimate. Never infer a formula merely from an abstract.
 
 ## Milestones and acceptance gates
 

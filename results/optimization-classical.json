@@ -1,0 +1,24 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "rows": 512,
+  "size": 256,
+  "cold_setup_ns": 400,
+  "samples_ns": [
+    77221300,
+    75844600,
+    78569500
+  ],
+  "median_ns": 77221300,
+  "peak_process_bytes": 41500672,
+  "counts": {
+    "axis_calls": 4096,
+    "walsh_add_sub": 1048576
+  }
+}
