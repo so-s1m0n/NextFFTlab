@@ -16,8 +16,7 @@ class MatrixPencil:
         return len(self.columns)
 
 
-def matrix_root(radix, terms):
-    """Construct L from products of affine forms in a common variable order."""
+def _matrix_root_inputs(radix, terms):
     if radix < 2 or radix & (radix - 1):
         raise ValueError("matrix root requires a power-of-two radix")
     xi = root(radix)
@@ -34,8 +33,14 @@ def matrix_root(radix, terms):
     unit = (1,) + (0,) * (form_width - 1)
     terms = tuple(term + (unit,) * (radix - len(term)) for term in terms)
 
+    return xi, terms, form_width, 1 << row_bits
+
+
+def matrix_root(radix, terms):
+    """Construct L from products of affine forms in a common variable order."""
+    xi, terms, _, rows = _matrix_root_inputs(radix, terms)
     columns = []
-    for source in range(1 << row_bits):
+    for source in range(rows):
         transitions = []
         prefix = 0
         stride = 1
