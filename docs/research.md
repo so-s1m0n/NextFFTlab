@@ -22,6 +22,7 @@
 | Saving template and recursive construction | No bounded scheduled candidate passed the strict saving condition |
 | Bounded prototype speedup | Sparse routing and a degree-sized pencil reduced the fixed Python template from 7.718 s to 0.679 s on the same batch |
 | Practical speedup | Classical same-domain Walsh took 0.0772 s on that batch |
+| Search against published records | Local rewrites, fixed-DAG scale SMT and projective exchanges retained the published H16 56-operation and H8 19-gate / 20-operation bounds in the tested neighborhoods. [Full report](RECORD_SEARCH.md) |
 
 Gate 1 maps the main Lean statements and the count predictor to pinned sources. The full proof and local Lean compilation remain open. The pinned manuscript maps the predictor, matrix root and Hermite repair to bounded binary implementations. The first theorem-scale case with nonzero exceptions exceeds the current budget, including under the factored predictor estimate. Never infer a formula merely from an abstract.
 

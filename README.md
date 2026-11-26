@@ -66,6 +66,8 @@ The [optimization study](docs/OPTIMIZATION.md) records the exact m=15 window, im
 
 The `checkpoint/pr-1` tag preserves the direct-reproduction results. The new research branch compares finite-field Walsh circuits using exact basis verification, bounded synthesis and separate counts for gates, field operations and wall time. [Circuit research and reproducibility](docs/CIRCUIT_RESEARCH.md).
 
+The [published-record search](docs/RECORD_SEARCH.md) compares separate H8 gate, H8 scaled-arithmetic and H16 scaled-arithmetic benchmarks. It records exact rational replay, bounded search failures and the remaining gaps.
+
 ## Research objective
 
 Implement the preprint's actual construction, map each component to a source location, audit correctness and all implementation overhead, then identify crossover sizes against optimized baselines. Report failures and negative results too.

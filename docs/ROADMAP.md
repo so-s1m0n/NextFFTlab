@@ -103,6 +103,10 @@ Exact symmetric windows, a factored m=15 one-shift pencil and a sparse A=8 templ
 
 The direct-reproduction and optimization work is preserved at `checkpoint/pr-1`. Scaling the explicit layout is closed for this research line. Bounded synthesis found 7- and 22-gate circuits at sizes 4 and 8. The known 19-gate H8 block was lifted through 512 points and checked on each basis vector. Structural constraints, operation counts, wall-clock comparisons and the next entry criteria are recorded in the circuit research note. [Circuit research](CIRCUIT_RESEARCH.md).
 
+### Published-record search checkpoint
+
+The 166-test baseline is tagged `checkpoint/166-tests`. Local substitution, dyadic scale SMT, projective H8 exchanges and schedule feasibility checks were completed under explicit limits. The best retained counts match the published comparison points. [Search scope and reproduction](RECORD_SEARCH.md).
+
 ## Next task for Codex
 
-Use the exact circuit verifier to evaluate bounded searches against the stronger published H8 baseline. Resume the predictor/repair line only for a structural alternative that reduces batch or address requirements and gives a verifiable saving with full independence and repair. Lean verification and general-length reproduction remain open.
+Use the exact rational verifier for a coordinated topology change beyond the explored H8 and H16 neighborhoods. A candidate must beat the published gate or scaled-arithmetic comparison before large lifts or native ports. Resume the predictor/repair line only for a structural alternative that reduces batch or address requirements and gives a verifiable saving with full independence and repair. Lean verification and general-length reproduction remain open.

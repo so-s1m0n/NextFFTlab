@@ -1,0 +1,551 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "reference": "bbb7f830d8c5612465a9922ace566750ce6d09d2",
+  "excluded_from_search": {
+    "published_h16_52_gate_exact": {
+      "gates": 52,
+      "adds_subtracts": 52,
+      "multiplications": 32,
+      "negations": 0,
+      "scaled_arithmetic": 84,
+      "restoration_operations": 0,
+      "common_scale": [
+        1,
+        1
+      ],
+      "binary_depth": 8,
+      "wire_depth": 8,
+      "peak_live_wires": 17
+    },
+    "alman_rao_theorem_6_2_exact_arithmetic_h8_h16": [
+      30,
+      77
+    ]
+  },
+  "budget": {
+    "max_process_bytes": 1073741824,
+    "method_max_seconds": 1800,
+    "rewrite_seconds_per_seed": 120,
+    "rewrite_neighbors_per_seed": 6000,
+    "rewrite_rounds": 8,
+    "rewrite_beam": 6,
+    "rewrite_coefficients": [
+      "1",
+      "-1",
+      "1/2",
+      "-1/2",
+      "2",
+      "-2"
+    ],
+    "memory_enforcement": "Windows Job Object process commit limit"
+  },
+  "cases": {
+    "h8_19_gate": {
+      "reference_path": "tools/circuits/programs/h8_19gates.txt",
+      "seed": {
+        "gates": 19,
+        "adds_subtracts": 19,
+        "multiplications": 12,
+        "negations": 0,
+        "scaled_arithmetic": 31,
+        "restoration_operations": 0,
+        "common_scale": [
+          1,
+          1
+        ],
+        "binary_depth": 6,
+        "wire_depth": 6,
+        "peak_live_wires": 13
+      },
+      "rewritten": {
+        "gates": 19,
+        "adds_subtracts": 19,
+        "multiplications": 12,
+        "negations": 0,
+        "scaled_arithmetic": 31,
+        "restoration_operations": 0,
+        "common_scale": [
+          1,
+          1
+        ],
+        "binary_depth": 6,
+        "wire_depth": 6,
+        "peak_live_wires": 13
+      },
+      "after_smt": {
+        "gates": 19,
+        "adds_subtracts": 19,
+        "multiplications": 1,
+        "negations": 0,
+        "scaled_arithmetic": 20,
+        "restoration_operations": 8,
+        "common_scale": [
+          1,
+          2
+        ],
+        "binary_depth": 6,
+        "wire_depth": 8,
+        "peak_live_wires": 13
+      },
+      "after_schedule": {
+        "gates": 19,
+        "adds_subtracts": 19,
+        "multiplications": 1,
+        "negations": 0,
+        "scaled_arithmetic": 20,
+        "restoration_operations": 8,
+        "common_scale": [
+          1,
+          2
+        ],
+        "binary_depth": 6,
+        "wire_depth": 8,
+        "peak_live_wires": 13
+      },
+      "rewrites": {
+        "objective": "gates",
+        "seed": 20261126,
+        "neighborhood_candidates": 2207,
+        "expanded_states": 43,
+        "rounds": 8,
+        "stop": "round_limit",
+        "elapsed_seconds": 1.268605999997817
+      },
+      "scaling": {
+        "exponent_bound": 2,
+        "time_limit_seconds": 12,
+        "memory_mib": 768,
+        "binary_wires": 19,
+        "copy_indicators": 240,
+        "attempts": [
+          {
+            "max_scalar_copies": 0,
+            "status": "unsat",
+            "goal_probe": true
+          },
+          {
+            "max_scalar_copies": 11,
+            "status": "sat",
+            "goal_probe": false
+          },
+          {
+            "max_scalar_copies": 7,
+            "status": "sat",
+            "goal_probe": false
+          },
+          {
+            "max_scalar_copies": 6,
+            "status": "sat",
+            "goal_probe": false
+          },
+          {
+            "max_scalar_copies": 3,
+            "status": "sat",
+            "goal_probe": false
+          },
+          {
+            "max_scalar_copies": 2,
+            "status": "sat",
+            "goal_probe": false
+          },
+          {
+            "max_scalar_copies": 0,
+            "status": "unsat",
+            "goal_probe": false
+          }
+        ],
+        "elapsed_seconds": 0.5588819999829866
+      },
+      "schedule": {
+        "orders_tested": 256,
+        "seed": 20261126,
+        "limit_seconds": 15,
+        "stop": "order_limit",
+        "elapsed_seconds": 0.03278660000069067
+      },
+      "exact_schedule": {
+        "state_limit": 100000,
+        "time_limit_seconds": 5,
+        "attempts": [
+          {
+            "peak_cap": 12,
+            "states": 25,
+            "status": "unsat"
+          }
+        ],
+        "elapsed_seconds": 0.00018580001778900623
+      },
+      "target_met": {
+        "primary_h16_scaled_53": false,
+        "secondary_h8_18_gates": false,
+        "secondary_h8_scaled_19": false
+      },
+      "verified_rational_basis_columns": 8,
+      "verified_field_basis_columns": 8
+    },
+    "h8_20_scaled": {
+      "reference_path": "tools/circuits/programs/generated/O_unit8_20ops_factor_half.txt",
+      "seed": {
+        "gates": 19,
+        "adds_subtracts": 19,
+        "multiplications": 1,
+        "negations": 0,
+        "scaled_arithmetic": 20,
+        "restoration_operations": 8,
+        "common_scale": [
+          1,
+          2
+        ],
+        "binary_depth": 6,
+        "wire_depth": 8,
+        "peak_live_wires": 13
+      },
+      "rewritten": {
+        "gates": 19,
+        "adds_subtracts": 19,
+        "multiplications": 1,
+        "negations": 0,
+        "scaled_arithmetic": 20,
+        "restoration_operations": 8,
+        "common_scale": [
+          1,
+          2
+        ],
+        "binary_depth": 6,
+        "wire_depth": 8,
+        "peak_live_wires": 13
+      },
+      "after_smt": {
+        "gates": 19,
+        "adds_subtracts": 19,
+        "multiplications": 1,
+        "negations": 0,
+        "scaled_arithmetic": 20,
+        "restoration_operations": 8,
+        "common_scale": [
+          1,
+          2
+        ],
+        "binary_depth": 6,
+        "wire_depth": 8,
+        "peak_live_wires": 13
+      },
+      "after_schedule": {
+        "gates": 19,
+        "adds_subtracts": 19,
+        "multiplications": 1,
+        "negations": 0,
+        "scaled_arithmetic": 20,
+        "restoration_operations": 8,
+        "common_scale": [
+          1,
+          2
+        ],
+        "binary_depth": 6,
+        "wire_depth": 8,
+        "peak_live_wires": 13
+      },
+      "rewrites": {
+        "objective": "arithmetic",
+        "seed": 20261126,
+        "neighborhood_candidates": 2086,
+        "expanded_states": 43,
+        "rounds": 8,
+        "stop": "round_limit",
+        "elapsed_seconds": 1.3043902999488637
+      },
+      "scaling": {
+        "exponent_bound": 2,
+        "time_limit_seconds": 12,
+        "memory_mib": 768,
+        "binary_wires": 19,
+        "copy_indicators": 218,
+        "attempts": [
+          {
+            "max_scalar_copies": 0,
+            "status": "unsat",
+            "goal_probe": false
+          }
+        ],
+        "elapsed_seconds": 0.03763289999915287
+      },
+      "schedule": {
+        "orders_tested": 256,
+        "seed": 20261126,
+        "limit_seconds": 15,
+        "stop": "order_limit",
+        "elapsed_seconds": 0.04208340001059696
+      },
+      "exact_schedule": {
+        "state_limit": 100000,
+        "time_limit_seconds": 5,
+        "attempts": [
+          {
+            "peak_cap": 12,
+            "states": 25,
+            "status": "unsat"
+          }
+        ],
+        "elapsed_seconds": 0.00020340003538876772
+      },
+      "target_met": {
+        "primary_h16_scaled_53": false,
+        "secondary_h8_18_gates": false,
+        "secondary_h8_scaled_19": false
+      },
+      "verified_rational_basis_columns": 8,
+      "verified_field_basis_columns": 8
+    },
+    "h16_56_layers": {
+      "reference_path": "tools/circuits/programs/generated/O_layers8_16_factor.txt",
+      "seed": {
+        "gates": 54,
+        "adds_subtracts": 54,
+        "multiplications": 2,
+        "negations": 0,
+        "scaled_arithmetic": 56,
+        "restoration_operations": 16,
+        "common_scale": [
+          1,
+          2
+        ],
+        "binary_depth": 7,
+        "wire_depth": 9,
+        "peak_live_wires": 21
+      },
+      "rewritten": {
+        "gates": 54,
+        "adds_subtracts": 54,
+        "multiplications": 2,
+        "negations": 0,
+        "scaled_arithmetic": 56,
+        "restoration_operations": 16,
+        "common_scale": [
+          1,
+          2
+        ],
+        "binary_depth": 7,
+        "wire_depth": 9,
+        "peak_live_wires": 21
+      },
+      "after_smt": {
+        "gates": 54,
+        "adds_subtracts": 54,
+        "multiplications": 2,
+        "negations": 0,
+        "scaled_arithmetic": 56,
+        "restoration_operations": 16,
+        "common_scale": [
+          1,
+          2
+        ],
+        "binary_depth": 7,
+        "wire_depth": 9,
+        "peak_live_wires": 21
+      },
+      "after_schedule": {
+        "gates": 54,
+        "adds_subtracts": 54,
+        "multiplications": 2,
+        "negations": 0,
+        "scaled_arithmetic": 56,
+        "restoration_operations": 16,
+        "common_scale": [
+          1,
+          2
+        ],
+        "binary_depth": 7,
+        "wire_depth": 9,
+        "peak_live_wires": 21
+      },
+      "rewrites": {
+        "objective": "arithmetic",
+        "seed": 20261126,
+        "neighborhood_candidates": 6000,
+        "expanded_states": 35,
+        "rounds": 7,
+        "stop": "neighbor_or_time_limit",
+        "elapsed_seconds": 14.899003300000913
+      },
+      "scaling": {
+        "exponent_bound": 2,
+        "time_limit_seconds": 12,
+        "memory_mib": 768,
+        "binary_wires": 54,
+        "copy_indicators": 564,
+        "attempts": [
+          {
+            "max_scalar_copies": 1,
+            "status": "unsat",
+            "goal_probe": false
+          }
+        ],
+        "elapsed_seconds": 0.12299320002784953
+      },
+      "schedule": {
+        "orders_tested": 256,
+        "seed": 20261126,
+        "limit_seconds": 15,
+        "stop": "order_limit",
+        "elapsed_seconds": 0.1250574000296183
+      },
+      "exact_schedule": {
+        "state_limit": 100000,
+        "time_limit_seconds": 5,
+        "attempts": [
+          {
+            "peak_cap": 20,
+            "states": 504,
+            "status": "unsat"
+          }
+        ],
+        "elapsed_seconds": 0.004686200001742691
+      },
+      "target_met": {
+        "primary_h16_scaled_53": false,
+        "secondary_h8_18_gates": false,
+        "secondary_h8_scaled_19": false
+      },
+      "verified_rational_basis_columns": 16,
+      "verified_field_basis_columns": 16
+    },
+    "h16_60_family": {
+      "reference_path": "tools/circuits/programs/generated/O_family_16_factor.txt",
+      "seed": {
+        "gates": 52,
+        "adds_subtracts": 52,
+        "multiplications": 8,
+        "negations": 0,
+        "scaled_arithmetic": 60,
+        "restoration_operations": 16,
+        "common_scale": [
+          1,
+          4
+        ],
+        "binary_depth": 8,
+        "wire_depth": 11,
+        "peak_live_wires": 17
+      },
+      "rewritten": {
+        "gates": 52,
+        "adds_subtracts": 52,
+        "multiplications": 8,
+        "negations": 0,
+        "scaled_arithmetic": 60,
+        "restoration_operations": 16,
+        "common_scale": [
+          1,
+          4
+        ],
+        "binary_depth": 8,
+        "wire_depth": 11,
+        "peak_live_wires": 17
+      },
+      "after_smt": {
+        "gates": 52,
+        "adds_subtracts": 52,
+        "multiplications": 8,
+        "negations": 0,
+        "scaled_arithmetic": 60,
+        "restoration_operations": 16,
+        "common_scale": [
+          1,
+          4
+        ],
+        "binary_depth": 8,
+        "wire_depth": 11,
+        "peak_live_wires": 17
+      },
+      "after_schedule": {
+        "gates": 52,
+        "adds_subtracts": 52,
+        "multiplications": 8,
+        "negations": 0,
+        "scaled_arithmetic": 60,
+        "restoration_operations": 16,
+        "common_scale": [
+          1,
+          4
+        ],
+        "binary_depth": 8,
+        "wire_depth": 11,
+        "peak_live_wires": 17
+      },
+      "rewrites": {
+        "objective": "arithmetic",
+        "seed": 20261126,
+        "neighborhood_candidates": 6000,
+        "expanded_states": 39,
+        "rounds": 8,
+        "stop": "neighbor_or_time_limit",
+        "elapsed_seconds": 16.360190799983684
+      },
+      "scaling": {
+        "exponent_bound": 2,
+        "time_limit_seconds": 12,
+        "memory_mib": 768,
+        "binary_wires": 52,
+        "copy_indicators": 560,
+        "attempts": [
+          {
+            "max_scalar_copies": 1,
+            "status": "unsat",
+            "goal_probe": true
+          },
+          {
+            "max_scalar_copies": 7,
+            "status": "unknown",
+            "goal_probe": false,
+            "reason": "canceled"
+          }
+        ],
+        "elapsed_seconds": 12.02163680002559
+      },
+      "schedule": {
+        "orders_tested": 256,
+        "seed": 20261126,
+        "limit_seconds": 15,
+        "stop": "order_limit",
+        "elapsed_seconds": 0.19745559996226802
+      },
+      "exact_schedule": {
+        "state_limit": 100000,
+        "time_limit_seconds": 5,
+        "attempts": [
+          {
+            "peak_cap": 16,
+            "states": 256,
+            "status": "unsat"
+          }
+        ],
+        "elapsed_seconds": 0.0047723000170663
+      },
+      "target_met": {
+        "primary_h16_scaled_53": false,
+        "secondary_h8_18_gates": false,
+        "secondary_h8_scaled_19": false
+      },
+      "verified_rational_basis_columns": 16,
+      "verified_field_basis_columns": 16
+    }
+  },
+  "projective_h8": {
+    "one_deletion": 11,
+    "two_deletions_one_exchange": 25080,
+    "base_directions": 27,
+    "baseline_helpers": 11,
+    "eligible_extras_before_cap": 456,
+    "admitted_extras": 456,
+    "exact_span_checks": 488943,
+    "stop": "exhausted",
+    "elapsed_seconds": 1.1998734999797307
+  },
+  "peak_process_bytes": 66011136
+}
