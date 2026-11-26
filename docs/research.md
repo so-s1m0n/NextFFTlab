@@ -8,7 +8,9 @@
 - Community overview and formalization links: https://mathcommunity.github.io/oai-math-revised/papers/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026/
 - Related independent certificate work, not peer reviewed: https://airr.science/papers/ARR-2026-1BXNNHNTEA8DAB2R/versions/v1/
 
-## Claim ledger (initial snapshot, 2026-11-26)
+## Claim ledger (closeout, 2026-11-27)
+
+The v0.1.0 Research Preview candidate archives this cycle. The final report gives the verified scope and criteria for starting a later cycle. [Final report](FINAL_REPORT.md)
 
 | Claim | Status |
 |---|---|
@@ -22,6 +24,7 @@
 | Saving template and recursive construction | No bounded scheduled candidate passed the strict saving condition |
 | Bounded prototype speedup | Sparse routing and a degree-sized pencil reduced the fixed Python template from 7.718 s to 0.679 s on the same batch |
 | Practical speedup | Classical same-domain Walsh took 0.0772 s on that batch |
+| Search against published records | Local rewrites, fixed-DAG scale SMT and projective exchanges retained the published H16 56-operation and H8 19-gate / 20-operation bounds in the tested neighborhoods. [Full report](RECORD_SEARCH.md) |
 
 Gate 1 maps the main Lean statements and the count predictor to pinned sources. The full proof and local Lean compilation remain open. The pinned manuscript maps the predictor, matrix root and Hermite repair to bounded binary implementations. The first theorem-scale case with nonzero exceptions exceeds the current budget, including under the factored predictor estimate. Never infer a formula merely from an abstract.
 

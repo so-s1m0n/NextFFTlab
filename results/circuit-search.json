@@ -1,0 +1,553 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "prime": 998244353,
+  "seed": 20261126,
+  "repeats": 20,
+  "budget": {
+    "max_search_configurations": 13440,
+    "max_seconds_per_search": 10,
+    "max_python_peak_bytes_per_measurement": 16777216
+  },
+  "search": {
+    "4": {
+      "configurations": 24,
+      "matching": [
+        [
+          1,
+          2
+        ]
+      ],
+      "anchors": [],
+      "search": {
+        "samples_ns": [
+          70900,
+          67000,
+          65300
+        ],
+        "median_ns": 67000,
+        "python_peak_bytes": 7264
+      }
+    },
+    "8": {
+      "configurations": 13440,
+      "matching": [
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "anchors": [
+        1,
+        2,
+        3
+      ],
+      "search": {
+        "samples_ns": [
+          49270300,
+          49329100,
+          46609200
+        ],
+        "median_ns": 49270300,
+        "python_peak_bytes": 852744
+      }
+    }
+  },
+  "profiles": {
+    "4": {
+      "iterative_walsh": {
+        "samples_ns": [
+          2200,
+          1800,
+          1500,
+          1200,
+          1400,
+          1200,
+          1300,
+          1400,
+          1400,
+          1300,
+          1300,
+          1200,
+          1300,
+          1200,
+          1300,
+          1200,
+          1100,
+          1200,
+          1200,
+          1200
+        ],
+        "median_ns": 1300.0,
+        "python_peak_bytes": 392
+      },
+      "butterfly_circuit": {
+        "counts": {
+          "binary_gates": 8,
+          "adds_subtracts": 8,
+          "scalar_multiplications": 0,
+          "unary_negations": 0,
+          "modular_reductions": 12,
+          "binary_depth": 2,
+          "wire_depth": 2,
+          "max_fanout_with_outputs": 2,
+          "peak_live_wires_with_last_use_reuse": 5,
+          "eager_wire_slots": 12
+        },
+        "verified_basis_vectors": 4,
+        "evaluation": {
+          "samples_ns": [
+            2700,
+            2600,
+            2400,
+            2100,
+            2100,
+            1900,
+            2000,
+            2100,
+            2100,
+            2100,
+            2000,
+            2400,
+            2100,
+            2300,
+            2500,
+            2100,
+            2100,
+            2100,
+            2000,
+            2000
+          ],
+          "median_ns": 2100.0,
+          "python_peak_bytes": 736
+        }
+      },
+      "synthesized": {
+        "counts": {
+          "binary_gates": 7,
+          "adds_subtracts": 7,
+          "scalar_multiplications": 3,
+          "unary_negations": 0,
+          "modular_reductions": 11,
+          "binary_depth": 4,
+          "wire_depth": 4,
+          "max_fanout_with_outputs": 3,
+          "peak_live_wires_with_last_use_reuse": 6,
+          "eager_wire_slots": 11
+        },
+        "verified_basis_vectors": 4,
+        "evaluation": {
+          "samples_ns": [
+            2700,
+            2300,
+            2200,
+            2000,
+            1800,
+            2100,
+            1900,
+            2000,
+            1800,
+            1900,
+            1800,
+            1900,
+            1900,
+            1900,
+            1800,
+            1900,
+            1800,
+            1900,
+            1800,
+            1800
+          ],
+          "median_ns": 1900.0,
+          "python_peak_bytes": 740
+        }
+      }
+    },
+    "8": {
+      "iterative_walsh": {
+        "samples_ns": [
+          3400,
+          3400,
+          3200,
+          3100,
+          3000,
+          2800,
+          3100,
+          2800,
+          2700,
+          2800,
+          2800,
+          2800,
+          2700,
+          2600,
+          2600,
+          2600,
+          2600,
+          2800,
+          2700,
+          2700
+        ],
+        "median_ns": 2800.0,
+        "python_peak_bytes": 552
+      },
+      "butterfly_circuit": {
+        "counts": {
+          "binary_gates": 24,
+          "adds_subtracts": 24,
+          "scalar_multiplications": 0,
+          "unary_negations": 0,
+          "modular_reductions": 32,
+          "binary_depth": 3,
+          "wire_depth": 3,
+          "max_fanout_with_outputs": 2,
+          "peak_live_wires_with_last_use_reuse": 9,
+          "eager_wire_slots": 32
+        },
+        "verified_basis_vectors": 8,
+        "evaluation": {
+          "samples_ns": [
+            8800,
+            7900,
+            8200,
+            7800,
+            7800,
+            8400,
+            9000,
+            7700,
+            7900,
+            7900,
+            7800,
+            8400,
+            9000,
+            8100,
+            5000,
+            4800,
+            4800,
+            4800,
+            4800,
+            4800
+          ],
+          "median_ns": 7850.0,
+          "python_peak_bytes": 1536
+        }
+      },
+      "synthesized": {
+        "counts": {
+          "binary_gates": 22,
+          "adds_subtracts": 22,
+          "scalar_multiplications": 14,
+          "unary_negations": 0,
+          "modular_reductions": 30,
+          "binary_depth": 8,
+          "wire_depth": 8,
+          "max_fanout_with_outputs": 3,
+          "peak_live_wires_with_last_use_reuse": 13,
+          "eager_wire_slots": 30
+        },
+        "verified_basis_vectors": 8,
+        "evaluation": {
+          "samples_ns": [
+            5500,
+            5200,
+            5100,
+            5100,
+            5000,
+            5200,
+            5100,
+            5000,
+            5000,
+            5000,
+            5000,
+            5000,
+            4900,
+            4900,
+            4900,
+            4900,
+            4900,
+            4900,
+            5000,
+            5000
+          ],
+          "median_ns": 5000.0,
+          "python_peak_bytes": 1504
+        }
+      },
+      "published_h8_lift": {
+        "counts": {
+          "binary_gates": 19,
+          "adds_subtracts": 19,
+          "scalar_multiplications": 9,
+          "unary_negations": 0,
+          "modular_reductions": 36,
+          "binary_depth": 6,
+          "wire_depth": 8,
+          "max_fanout_with_outputs": 2,
+          "peak_live_wires_with_last_use_reuse": 13,
+          "eager_wire_slots": 28
+        },
+        "verified_basis_vectors": 8,
+        "evaluation": {
+          "samples_ns": [
+            5300,
+            5100,
+            4900,
+            5000,
+            4800,
+            5000,
+            4900,
+            4800,
+            4800,
+            4800,
+            4800,
+            4800,
+            4900,
+            4900,
+            4800,
+            4800,
+            4800,
+            4800,
+            4800,
+            4800
+          ],
+          "median_ns": 4800.0,
+          "python_peak_bytes": 1696
+        }
+      }
+    },
+    "64": {
+      "iterative_walsh": {
+        "samples_ns": [
+          29400,
+          28600,
+          28100,
+          28400,
+          28000,
+          28300,
+          28600,
+          28400,
+          28400,
+          28300,
+          28600,
+          28300,
+          28500,
+          28200,
+          28500,
+          28400,
+          28400,
+          28400,
+          28500,
+          28300
+        ],
+        "median_ns": 28400.0,
+        "python_peak_bytes": 2792
+      },
+      "butterfly_circuit": {
+        "counts": {
+          "binary_gates": 384,
+          "adds_subtracts": 384,
+          "scalar_multiplications": 0,
+          "unary_negations": 0,
+          "modular_reductions": 448,
+          "binary_depth": 6,
+          "wire_depth": 6,
+          "max_fanout_with_outputs": 2,
+          "peak_live_wires_with_last_use_reuse": 65,
+          "eager_wire_slots": 448
+        },
+        "verified_basis_vectors": 64,
+        "evaluation": {
+          "samples_ns": [
+            80700,
+            71100,
+            69800,
+            71100,
+            71300,
+            75900,
+            70300,
+            77500,
+            70100,
+            72200,
+            70200,
+            70100,
+            70200,
+            69900,
+            75200,
+            70800,
+            70100,
+            69900,
+            70000,
+            69300
+          ],
+          "median_ns": 70250.0,
+          "python_peak_bytes": 18688
+        }
+      },
+      "published_h8_lift": {
+        "counts": {
+          "binary_gates": 304,
+          "adds_subtracts": 304,
+          "scalar_multiplications": 80,
+          "unary_negations": 0,
+          "modular_reductions": 448,
+          "binary_depth": 12,
+          "wire_depth": 15,
+          "max_fanout_with_outputs": 3,
+          "peak_live_wires_with_last_use_reuse": 69,
+          "eager_wire_slots": 384
+        },
+        "verified_basis_vectors": 64,
+        "evaluation": {
+          "samples_ns": [
+            66800,
+            66300,
+            65900,
+            66000,
+            65600,
+            65800,
+            65400,
+            65600,
+            88600,
+            76000,
+            77500,
+            66500,
+            66100,
+            65700,
+            65800,
+            65600,
+            65600,
+            65800,
+            66100,
+            65800
+          ],
+          "median_ns": 65850.0,
+          "python_peak_bytes": 18272
+        }
+      }
+    },
+    "512": {
+      "iterative_walsh": {
+        "samples_ns": [
+          344200,
+          338500,
+          343000,
+          343500,
+          344700,
+          341200,
+          345600,
+          341700,
+          348000,
+          387800,
+          349300,
+          340900,
+          350500,
+          340300,
+          343000,
+          340400,
+          344000,
+          345900,
+          344000,
+          341600
+        ],
+        "median_ns": 343750.0,
+        "python_peak_bytes": 20904
+      },
+      "butterfly_circuit": {
+        "counts": {
+          "binary_gates": 4608,
+          "adds_subtracts": 4608,
+          "scalar_multiplications": 0,
+          "unary_negations": 0,
+          "modular_reductions": 5120,
+          "binary_depth": 9,
+          "wire_depth": 9,
+          "max_fanout_with_outputs": 2,
+          "peak_live_wires_with_last_use_reuse": 513,
+          "eager_wire_slots": 5120
+        },
+        "verified_basis_vectors": 512,
+        "evaluation": {
+          "samples_ns": [
+            849100,
+            828300,
+            812300,
+            813600,
+            825300,
+            811400,
+            1335500,
+            1332200,
+            1332400,
+            1342300,
+            1336800,
+            1335700,
+            1349100,
+            1346600,
+            1274900,
+            834800,
+            824900,
+            825400,
+            850500,
+            848500
+          ],
+          "median_ns": 849800.0,
+          "python_peak_bytes": 210016
+        }
+      },
+      "published_h8_lift": {
+        "counts": {
+          "binary_gates": 3648,
+          "adds_subtracts": 3648,
+          "scalar_multiplications": 704,
+          "unary_negations": 0,
+          "modular_reductions": 4864,
+          "binary_depth": 18,
+          "wire_depth": 22,
+          "max_fanout_with_outputs": 3,
+          "peak_live_wires_with_last_use_reuse": 517,
+          "eager_wire_slots": 4352
+        },
+        "verified_basis_vectors": 512,
+        "evaluation": {
+          "samples_ns": [
+            746100,
+            735100,
+            741800,
+            737600,
+            734400,
+            752900,
+            793300,
+            754700,
+            740500,
+            736900,
+            741900,
+            732300,
+            739000,
+            741900,
+            739400,
+            919700,
+            735300,
+            739600,
+            746500,
+            761300
+          ],
+          "median_ns": 741150.0,
+          "python_peak_bytes": 197184
+        }
+      }
+    }
+  }
+}
