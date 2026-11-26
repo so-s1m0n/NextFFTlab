@@ -22,14 +22,28 @@ Theorem counts a gate forming au+bv with arbitrary field coefficients, not proce
 
 Classical direct DFT, radix-2 NTT, Bluestein, convolution, NumPy/SciPy benchmark. Local 58 tests passed; GitHub Actions run 45812334289 succeeded on initial commit. Benchmark is a smoke baseline only.
 
-## Gate 1 — pinned proof audit and scalar predictor [partial]
+## Gate 1 — pinned proof audit and scalar predictor [executable criteria passed; Lean build deferred]
 
 - [x] Locate exact primary LaTeX source and theorem labels.
 - [x] Implement integer-count scalar oracle for lem:count-predict, using generalized integer binomial coefficients before reduction modulo the field. Exhaustive 3-bit toy window: 48 exact in-window cases, 16 outside (not the theorem's general window). Test general window for radices 2,7,17 at selected counts. Local suite: 64 passed.
 - [ ] Compile upstream Lean with pinned toolchain; record theorem names, axioms and precise correspondence; distinguish formal lower and upper bounds and any nonformal practical cost claims. If build impractical, report the reason.
-- [ ] Implement binary tensor transform baseline (direct sign character matrix and independent iterative Walsh–Hadamard); add exact oracle and basis tests.
-- [ ] Derive indicator polynomial in query powers without reading integer count in the executable pencil; compare evaluation against scalar oracle. Record term counts, degree, and setup costs.
+- [x] Implement binary tensor transform baseline (direct sign character matrix and independent iterative Walsh–Hadamard); add exact oracle and basis tests.
+- [x] Derive indicator polynomial in query powers without reading integer count in the executable pencil; compare evaluation against scalar oracle. Record term counts, degree, and setup costs.
 Acceptance: source-mapped formulas, verified domains, independent exact tests, explicit open assumptions. No speed claim.
+
+### Gate 1 evidence (2026-11-26)
+
+- The parameter domain is the fixed field F_998244353 with prime query radix in {2, 7, 17}. Each positive T coefficient is an affine form from the indicator in `lem:count-predict`. The executable stores these forms and multiplies truncated series. Each query appears at most once in a monomial, so degree is bounded by min(D,m) and the expanded support by Σ_{d≤min(D,m)} binom(m,d)(ell−1)^d. This is a support bound, with cancellations possible. The toy window (1,2) has exactly three nonzero terms and degree 1 for every binary shift.
+- Tests compare the independent sign matrix with butterflies on basis, random and unsupported lengths. Query tests compare the truncated series evaluator against the integer-count oracle on all 64 toy query/shift pairs, including outside the window, degenerate windows, and sampled general windows. An affine test also evaluates off the root-of-unity grid.
+- Windows x86-64, CPython 3.13, Ryzen 7 5800X, single-threaded component code. `python -m pytest -q` reported 90 passed and the existing `python -m nextfft_lab.bench --max-power 7 --repeats 2` smoke exited successfully. Run `python -m nextfft_lab.bench_repair --repeats 20` for raw timing, operation counts and separately traced Python allocation peaks. [Recorded samples](../results/gate1-components.json).
+- At length 128 the direct and iterative Walsh medians were 1.285 ms and 0.0628 ms with 11,064 and 5,352 tracked bytes respectively. At m=128, ell=2 one query polynomial took 0.2033 ms to compile and 0.7599 ms to evaluate at the median. The polynomial evaluator is a component experiment. Paper gate counts and process RSS require separate measurement.
+
+### Lean source correspondence
+
+- [Pinned toolchain](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/lean-toolchain) specifies `leanprover/lean4:v4.34.1`. The Mathlib revision is `d13f23b723b8a846827a245b89c10fc7d3f11612` in the [Lake lock file](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/lake-manifest.json).
+- The [Comparator spec](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/ComparatorChallenges/ExactFourier.json) lists `OAI.ExactFourier.main_theorem`, `OAI.LinearAlgebra.FiniteFourier.fourierComplexity` and `OAI.LinearAlgebra.FiniteFourier.batchedFourierComplexity`. The first directly states `thm:main`. The second combines the upper and geometric-feedback lower estimates and includes the normalized inverse. The third states the same exact bounds across mixed batched blocks and a stronger robust lower bound in the joint error model. [Statements](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/ComparatorChallenges/ExactFourier.lean).
+- The batched upper estimate assembles per-block upper circuits via `batchFourier_upper`. The batched lower estimate joins bounded orders with the large-order spectral-plane argument. The Comparator axiom allowlist is `propext`, `Quot.sound`, `Classical.choice`. Actual transitive axioms and kernel verification remain unmeasured. These statements quantify over admissible fields and exact binary linear gates, with no guarantees about floating point, wall-clock time, memory or an engineering crossover. [Single theorem assembly](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/OAI/LinearAlgebra/FiniteFourier/Main.lean) · [Batched theorem assembly](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/OAI/LinearAlgebra/FiniteFourier/BatchedTheorem.lean).
+- No Lean, Lake or Elan executable was present on PATH. The upstream Windows v4.34.1 release headers reported a 589,007,020-byte tar.zst or 850,624,573-byte ZIP before Mathlib and the remaining locked dependencies. The upstream Comparator instructions also require Comparator, landrun and lean4export. Local compilation and `#print axioms` are deferred pending a provisioned verifier and measured build budget. A source check was run here. [Release](https://github.com/leanprover/lean4/releases/tag/v4.34.1) · [Verifier setup](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/ComparatorChallenges/README.md).
 
 ## Gate 2 — actual pencil and repair
 
@@ -62,4 +76,4 @@ Acceptance: actual source-mapped prime tensor construction end to end, supported
 
 ## Next task for Codex
 
-Complete Gate 1 beginning with the Walsh–Hadamard baseline and query-power polynomial, then Gate 2. Use source labels, test and commit each bounded milestone. Update this ledger from observed results, not predictions.
+Implement the bounded Gate 2 pencil and spectral repair. Keep the full local Lean build listed separately until it has observed evidence.

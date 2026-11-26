@@ -14,13 +14,13 @@
 |---|---|
 | Preprint reports N(log N)^(1/2+o(1)) binary linear-gate complexity for finite abelian Fourier transforms over qualifying fields | Reported in abstract; not independently proved here |
 | Required field contains appropriate roots of unity and N is invertible | Reported assumptions |
-| Lean artifacts exist | Reported; compilation and theorem-to-manuscript mapping pending |
+| Lean statements cover forward/inverse and batched linear-gate bounds | Source mapping recorded in ROADMAP.md; local compilation and dependency axioms pending |
 | Classical exact finite-field baselines agree on tested inputs | Tested here |
 | Bluestein identity yields exact results at selected lengths | Tested here; classical identity only |
 | New construction works end to end | Not implemented |
 | New construction beats FFT in wall-clock time | Unknown |
 
-Full primary manuscript source has not been audited. The related certificate work reports parity predictors, nilpotent expansion and Hermite repair; their exact definitions and prerequisites must be extracted from the pinned manuscript before implementing them. Never infer a formula merely from an abstract.
+Gate 1 maps the main Lean statements and the count predictor to pinned sources. The full proof and local Lean compilation remain open. The related certificate work reports parity predictors, nilpotent expansion and Hermite repair; their exact definitions and prerequisites must be extracted from the pinned manuscript before implementing them. Never infer a formula merely from an abstract.
 
 ## Milestones and acceptance gates
 
