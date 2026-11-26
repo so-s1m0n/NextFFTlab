@@ -31,6 +31,17 @@ def measure(operation, repeats):
     return {"samples_ns": samples, "median_ns": median(samples), "python_peak_bytes": peak}
 
 
+def environment():
+    return {
+        "os": platform.system(),
+        "release": platform.release(),
+        "machine": platform.machine(),
+        "cpu": os.environ.get("NEXTFFT_BENCH_CPU", platform.processor()),
+        "python": platform.python_version(),
+        "threads": 1,
+    }
+
+
 def run(repeats):
     rng = Random(20261126)
     results = {}
@@ -72,14 +83,7 @@ def run(repeats):
             ),
         }
     return {
-        "environment": {
-            "os": platform.system(),
-            "release": platform.release(),
-            "machine": platform.machine(),
-            "cpu": os.environ.get("NEXTFFT_BENCH_CPU", platform.processor()),
-            "python": platform.python_version(),
-            "threads": 1,
-        },
+        "environment": environment(),
         "seed": 20261126,
         "prime": P,
         "repeats": repeats,

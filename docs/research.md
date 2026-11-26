@@ -17,10 +17,11 @@
 | Lean statements cover forward/inverse and batched linear-gate bounds | Source mapping recorded in ROADMAP.md; local compilation and dependency axioms pending |
 | Classical exact finite-field baselines agree on tested inputs | Tested here |
 | Bluestein identity yields exact results at selected lengths | Tested here; classical identity only |
+| Matrix-root predictor and Hermite repair compute the binary query product | Verified for a toy window with repairs and a theorem window with zero exceptions |
 | New construction works end to end | Not implemented |
 | New construction beats FFT in wall-clock time | Unknown |
 
-Gate 1 maps the main Lean statements and the count predictor to pinned sources. The full proof and local Lean compilation remain open. The related certificate work reports parity predictors, nilpotent expansion and Hermite repair; their exact definitions and prerequisites must be extracted from the pinned manuscript before implementing them. Never infer a formula merely from an abstract.
+Gate 1 maps the main Lean statements and the count predictor to pinned sources. The full proof and local Lean compilation remain open. The pinned manuscript maps the predictor, matrix root and Hermite repair to bounded binary implementations. The first theorem-scale case with nonzero exceptions exceeds the current budget, including under the factored predictor estimate. Never infer a formula merely from an abstract.
 
 ## Milestones and acceptance gates
 

@@ -3,7 +3,7 @@
 Independent, reproducible research on the practical implications of the November 24, 2026 preprint [The logarithmic exponent of finite Fourier transforms](https://github.com/openai/math/tree/main/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026).
 [日本語](README.ja.md)
 
-**Status: classical baselines, including Walsh–Hadamard, and query-power predictor implemented. The full new construction and any practical speedup remain unverified.** The preprint concerns binary linear-gate complexity over suitable fields, not measured execution time. The lab aims to bridge that gap; it is not affiliated with OpenAI.
+**Status: classical baselines, including Walsh–Hadamard, and query-power predictor implemented. Matrix-pencil and Hermite repair verified on bounded binary cases. The full new construction and any practical speedup remain unverified.** The preprint concerns binary linear-gate complexity over suitable fields, not measured execution time. The lab aims to bridge that gap; it is not affiliated with OpenAI.
 
 ## Quick start
 
@@ -30,7 +30,7 @@ python -m nextfft_lab.bench --max-power 12 --repeats 5 --out results/local.json
 
 ## Development handoff
 
-See [AGENTS.md](AGENTS.md) for coding-agent instructions and [docs/ROADMAP.md](docs/ROADMAP.md) for source mappings, acceptance gates and the current next task. The count predictor has an integer-count oracle and a separate factored query-power evaluator. [Component measurements](results/gate1-components.json) report setup, evaluation and tracked allocations.
+See [AGENTS.md](AGENTS.md) for coding-agent instructions and [docs/ROADMAP.md](docs/ROADMAP.md) for source mappings, acceptance gates and the current next task. The count predictor has an integer-count oracle and a separate factored query-power evaluator. [Predictor measurements](results/gate1-components.json) and [pencil/repair measurements](results/gate2-pencil.json) report setup, evaluation and tracked allocations.
 
 ## Research objective
 

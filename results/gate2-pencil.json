@@ -1,0 +1,242 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "seed": 20261126,
+  "prime": 998244353,
+  "repeats": 20,
+  "cases": {
+    "toy_with_repair": {
+      "setup": {
+        "samples_ns": [
+          4413600,
+          4396600,
+          7461000,
+          5263800,
+          4549900,
+          4541300,
+          4381800,
+          4594400,
+          4832600,
+          4892100,
+          4358400,
+          4341800,
+          4612600,
+          4644500,
+          4387900,
+          4319800,
+          4512000,
+          4523500,
+          4361500,
+          4585900
+        ],
+        "median_ns": 4532400.0,
+        "python_peak_bytes": 198552
+      },
+      "reused_apply": {
+        "samples_ns": [
+          5054700,
+          5041000,
+          5078300,
+          5070900,
+          5017900,
+          5029900,
+          5052000,
+          5013500,
+          5003700,
+          5064900,
+          5015000,
+          5001000,
+          5047100,
+          5021300,
+          4984500,
+          5047200,
+          4978600,
+          4987600,
+          5327400,
+          5027600
+        ],
+        "median_ns": 5028750.0,
+        "python_peak_bytes": 201748
+      },
+      "reference_xor_permutation": {
+        "samples_ns": [
+          4600,
+          4300,
+          4100,
+          4200,
+          4100,
+          4200,
+          4200,
+          4000,
+          4100,
+          4200,
+          4200,
+          4300,
+          4100,
+          4300,
+          4100,
+          4100,
+          4100,
+          4100,
+          4000,
+          97000
+        ],
+        "median_ns": 4150.0,
+        "python_peak_bytes": 8296
+      },
+      "width": 64,
+      "samples_per_row": 8,
+      "vandermonde_checks": 16,
+      "matrix_root_radix": 2,
+      "predictor_applications": 4,
+      "pencil_stages": 8,
+      "pencil_multiply_accumulates": 12288,
+      "forward_row_conversions": 32,
+      "inverse_row_conversions": 32,
+      "conversion_adds_subtracts": 1536,
+      "inverse_conversion_scalings": 256,
+      "cross_row_check_and_lift_multiply_accumulates": 32768,
+      "spectral_inverse_and_transpose_multiply_accumulates": 4096
+    },
+    "theorem_no_exceptions": {
+      "setup": {
+        "samples_ns": [
+          161500,
+          149900,
+          148400,
+          152600,
+          149600,
+          154200,
+          149600,
+          152300,
+          149500,
+          149100,
+          148300,
+          165500,
+          147200,
+          144900,
+          145900,
+          145900,
+          160100,
+          149000,
+          335600,
+          158400
+        ],
+        "median_ns": 149600.0,
+        "python_peak_bytes": 18840
+      },
+      "reused_apply": {
+        "samples_ns": [
+          206400,
+          213100,
+          206200,
+          205800,
+          204700,
+          206100,
+          209000,
+          205300,
+          206400,
+          206300,
+          205500,
+          206900,
+          204600,
+          204200,
+          300200,
+          205400,
+          206800,
+          203300,
+          202600,
+          201900
+        ],
+        "median_ns": 205950.0,
+        "python_peak_bytes": 16960
+      },
+      "reference_xor_permutation": {
+        "samples_ns": [
+          2200,
+          2200,
+          2100,
+          2000,
+          2000,
+          2000,
+          2100,
+          1900,
+          2000,
+          2100,
+          2200,
+          2000,
+          2000,
+          2100,
+          2100,
+          2200,
+          2000,
+          2100,
+          2000,
+          2100
+        ],
+        "median_ns": 2100.0,
+        "python_peak_bytes": 3176
+      },
+      "width": 32,
+      "samples_per_row": 4,
+      "vandermonde_checks": 0,
+      "matrix_root_radix": 8,
+      "predictor_applications": 1,
+      "pencil_stages": 8,
+      "pencil_multiply_accumulates": 1024,
+      "forward_row_conversions": 0,
+      "inverse_row_conversions": 0,
+      "conversion_adds_subtracts": 0,
+      "inverse_conversion_scalings": 0,
+      "cross_row_check_and_lift_multiply_accumulates": 0,
+      "spectral_inverse_and_transpose_multiply_accumulates": 0
+    }
+  },
+  "theorem_estimates": {
+    "2": {
+      "window": [
+        -2,
+        4
+      ],
+      "radix": 8,
+      "terms_per_shift": 1,
+      "log2_batch_width": 5,
+      "exception_shifts": 0,
+      "factored_cube_indicator_log2_width_upper": 5,
+      "concentration_fraction_bound_holds": true,
+      "paper_cyclotomic_rank_log2": 4
+    },
+    "60": {
+      "window": [
+        1,
+        59
+      ],
+      "radix": 64,
+      "terms_per_shift": 576460752303423487,
+      "log2_batch_width": 3458764513820540982,
+      "exception_shifts": 2,
+      "factored_cube_indicator_log2_width_upper": 78,
+      "concentration_fraction_bound_holds": true,
+      "paper_cyclotomic_rank_log2": 3458764513820540981
+    },
+    "128": {
+      "window": [
+        18,
+        110
+      ],
+      "radix": 128,
+      "terms_per_shift": 170141169801714753757456983609246937579,
+      "log2_batch_width": 1190988188612003276302198885264728563181,
+      "exception_shifts": 1447005352152022611666,
+      "factored_cube_indicator_log2_width_upper": 10129037465064158281797,
+      "concentration_fraction_bound_holds": true,
+      "paper_cyclotomic_rank_log2": 1190988188612003276302198885264728563180
+    }
+  }
+}
