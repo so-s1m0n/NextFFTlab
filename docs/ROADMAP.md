@@ -99,6 +99,10 @@ Exact symmetric windows, a factored m=15 one-shift pencil and a sparse A=8 templ
 - Stop or pivot: if the actual template exceeds the local budget (default 1 GiB estimated working memory per experiment or 60 seconds per case), report parameters and estimates, try a bounded component optimization, do not blindly allocate. A budget failure is not a mathematical impossibility result.
 - Application GO: measurable end-to-end improvement for a real workload, not just gate count. No premature GUI, package publishing, GPU port or unrelated feature expansion.
 
+## Circuit research checkpoint
+
+The direct-reproduction and optimization work is preserved at `checkpoint/pr-1`. Scaling the explicit layout is closed for this research line. Bounded synthesis found 7- and 22-gate circuits at sizes 4 and 8. The known 19-gate H8 block was lifted through 512 points and checked on each basis vector. Structural constraints, operation counts, wall-clock comparisons and the next entry criteria are recorded in the circuit research note. [Circuit research](CIRCUIT_RESEARCH.md).
+
 ## Next task for Codex
 
-Gate 3 is blocked at the strict-saving and recursion acceptance condition. Continue candidates that address the all-shifts or dense-address requirement and give a strict, independently countable saving without invalidating independence, repair and routing. Keep the full local Lean build and nonzero theorem-window repair experiment open.
+Use the exact circuit verifier to evaluate bounded searches against the stronger published H8 baseline. Resume the predictor/repair line only for a structural alternative that reduces batch or address requirements and gives a verifiable saving with full independence and repair. Lean verification and general-length reproduction remain open.

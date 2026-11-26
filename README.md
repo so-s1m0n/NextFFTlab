@@ -62,6 +62,10 @@ See [AGENTS.md](AGENTS.md) for coding-agent instructions and [docs/ROADMAP.md](d
 
 The [optimization study](docs/OPTIMIZATION.md) records the exact m=15 window, implicit matrix root, sparse routing and matched-batch benchmarks.
 
+## Exact circuit research
+
+The `checkpoint/pr-1` tag preserves the direct-reproduction results. The new research branch compares finite-field Walsh circuits using exact basis verification, bounded synthesis and separate counts for gates, field operations and wall time. [Circuit research and reproducibility](docs/CIRCUIT_RESEARCH.md).
+
 ## Research objective
 
 Implement the preprint's actual construction, map each component to a source location, audit correctness and all implementation overhead, then identify crossover sizes against optimized baselines. Report failures and negative results too.
