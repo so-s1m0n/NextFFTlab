@@ -81,6 +81,10 @@ Acceptance: actual source-mapped prime tensor construction end to end, supported
 - The first odd m with a nontrivial paper window is 63, with window [1,62]. The source layout has A=2(m+D−1)≥126, so a single explicit f=1 row already requires at least 2^128 bytes at four bytes per entry. This is separate from the row count, coefficient extension and routing storage. The local template cannot supply a strict saving or the padding recurrence. The next unverified milestones are a feasible saving template, recursive packing and a complete finite Fourier backend. `prop:binary-template` assumes that saving and provides a perturbation bound for a normalized construction. These finite-field tests make no numerical stability claim. [Pinned binary proposition](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026/build/binary.tex).
 - `python -m pytest -q` reported 121 passed at the original checkpoint and again at publication review. The classical benchmark smoke exited successfully at the original checkpoint. [Reproduction and memory methodology](../README.md#reproduce-the-recorded-benchmarks). [Raw samples](../results/gate3-kernel.json).
 
+### Follow-up optimization checkpoint
+
+Exact symmetric windows, a factored m=15 one-shift pencil and a sparse A=8 template are implemented. The optimized template uses 24 axis calls per row and remains above the recursion threshold. The m=15 window admits two exceptional shifts, yet even one dense source-layout row exceeds the local budget. [Derivations, ablations, raw data and continuation criteria](OPTIMIZATION.md).
+
 ## Gate 4 — practical viability and applications
 
 - If Gate 3 works, port the hot path to compiled Rust/C++ and compare same-domain optimized WHT first, then NTT/FFT only after source-mapped general-length construction. Benchmark cold/warm setup, wall time, peak memory, operation counts, batch throughput, size scaling, hardware, raw samples and variation.
@@ -97,4 +101,4 @@ Acceptance: actual source-mapped prime tensor construction end to end, supported
 
 ## Next task for Codex
 
-Gate 3 is blocked at the strict-saving and recursion acceptance condition. A compact template must change the measured call schedule or avoid materializing the explicit source batch without invalidating the independence, repair and routing identities. Keep the full local Lean build and nonzero theorem-window repair experiment open.
+Gate 3 is blocked at the strict-saving and recursion acceptance condition. Continue candidates that address the all-shifts or dense-address requirement and give a strict, independently countable saving without invalidating independence, repair and routing. Keep the full local Lean build and nonzero theorem-window repair experiment open.

@@ -20,7 +20,8 @@
 | Matrix-root predictor and Hermite repair compute the binary query product | Verified for a toy window with repairs and a theorem window with zero exceptions |
 | Fixed binary template with shared routing reproduces exact Walsh output | Verified at A=8, f=1, W=512 with zero exceptional rows |
 | Saving template and recursive construction | No bounded scheduled candidate passed the strict saving condition |
-| Practical speedup | Fixed Python template was slower than classical same-domain Walsh at its one tested batch size |
+| Bounded prototype speedup | Sparse routing and a degree-sized pencil reduced the fixed Python template from 7.718 s to 0.679 s on the same batch |
+| Practical speedup | Classical same-domain Walsh took 0.0772 s on that batch |
 
 Gate 1 maps the main Lean statements and the count predictor to pinned sources. The full proof and local Lean compilation remain open. The pinned manuscript maps the predictor, matrix root and Hermite repair to bounded binary implementations. The first theorem-scale case with nonzero exceptions exceeds the current budget, including under the factored predictor estimate. Never infer a formula merely from an abstract.
 

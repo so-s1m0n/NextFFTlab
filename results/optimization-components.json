@@ -1,0 +1,1423 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "seed": 20261126,
+  "window_profiles": {
+    "3": {
+      "paper": {
+        "window": [
+          -4,
+          7
+        ],
+        "degree": 3,
+        "paper_window_radix": 16,
+        "degree_radix": 4,
+        "expanded_terms": 1,
+        "bad_shifts": 0,
+        "total_shifts": 8,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 5,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          -4,
+          7
+        ]
+      },
+      "exact": {
+        "window": [
+          0,
+          3
+        ],
+        "degree": 3,
+        "paper_window_radix": 4,
+        "degree_radix": 4,
+        "expanded_terms": 1,
+        "bad_shifts": 0,
+        "total_shifts": 8,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 5,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          -4,
+          7
+        ]
+      },
+      "exact_search": {
+        "samples_ns": [
+          1000,
+          700,
+          600,
+          300,
+          300,
+          200,
+          200,
+          300,
+          200,
+          300,
+          300,
+          200,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300
+        ],
+        "median_ns": 300.0,
+        "python_peak_bytes": 64
+      }
+    },
+    "13": {
+      "paper": {
+        "window": [
+          -6,
+          19
+        ],
+        "degree": 13,
+        "paper_window_radix": 32,
+        "degree_radix": 16,
+        "expanded_terms": 1,
+        "bad_shifts": 0,
+        "total_shifts": 8192,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 17,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          -6,
+          19
+        ]
+      },
+      "exact": {
+        "window": [
+          0,
+          13
+        ],
+        "degree": 13,
+        "paper_window_radix": 16,
+        "degree_radix": 16,
+        "expanded_terms": 1,
+        "bad_shifts": 0,
+        "total_shifts": 8192,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 17,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          -6,
+          19
+        ]
+      },
+      "exact_search": {
+        "samples_ns": [
+          600,
+          600,
+          300,
+          300,
+          300,
+          300,
+          200,
+          300,
+          300,
+          300,
+          200,
+          300,
+          300,
+          200,
+          300,
+          200,
+          300,
+          200,
+          300,
+          300
+        ],
+        "median_ns": 300.0,
+        "python_peak_bytes": 96
+      }
+    },
+    "14": {
+      "paper": {
+        "window": [
+          -5,
+          19
+        ],
+        "degree": 14,
+        "paper_window_radix": 32,
+        "degree_radix": 16,
+        "expanded_terms": 1,
+        "bad_shifts": 0,
+        "total_shifts": 16384,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 18,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          -5,
+          19
+        ]
+      },
+      "exact": {
+        "window": [
+          1,
+          13
+        ],
+        "degree": 12,
+        "paper_window_radix": 16,
+        "degree_radix": 16,
+        "expanded_terms": 8191,
+        "bad_shifts": 2,
+        "total_shifts": 16384,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 32778,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          -5,
+          19
+        ]
+      },
+      "exact_search": {
+        "samples_ns": [
+          800,
+          500,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          300,
+          500,
+          300,
+          300,
+          400,
+          400,
+          300,
+          300,
+          300,
+          400,
+          400,
+          300
+        ],
+        "median_ns": 400.0,
+        "python_peak_bytes": 96
+      }
+    },
+    "15": {
+      "paper": {
+        "window": [
+          -6,
+          21
+        ],
+        "degree": 15,
+        "paper_window_radix": 32,
+        "degree_radix": 16,
+        "expanded_terms": 1,
+        "bad_shifts": 0,
+        "total_shifts": 32768,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 19,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          -6,
+          21
+        ]
+      },
+      "exact": {
+        "window": [
+          1,
+          14
+        ],
+        "degree": 13,
+        "paper_window_radix": 16,
+        "degree_radix": 16,
+        "expanded_terms": 16383,
+        "bad_shifts": 2,
+        "total_shifts": 32768,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 65547,
+        "endpoint_factored_log2_rows_upper": 27,
+        "endpoint_factored_cyclotomic_rank_log2": 26,
+        "endpoint_factored_root_field_degree_log2": 4,
+        "paper_reference_window": [
+          -6,
+          21
+        ]
+      },
+      "exact_search": {
+        "samples_ns": [
+          700,
+          500,
+          400,
+          400,
+          400,
+          300,
+          400,
+          400,
+          400,
+          400,
+          400,
+          300,
+          300,
+          300,
+          400,
+          400,
+          400,
+          300,
+          400,
+          400
+        ],
+        "median_ns": 400.0,
+        "python_peak_bytes": 96
+      }
+    },
+    "23": {
+      "paper": {
+        "window": [
+          -6,
+          29
+        ],
+        "degree": 23,
+        "paper_window_radix": 64,
+        "degree_radix": 32,
+        "expanded_terms": 1,
+        "bad_shifts": 0,
+        "total_shifts": 8388608,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 28,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          -6,
+          29
+        ]
+      },
+      "exact": {
+        "window": [
+          2,
+          21
+        ],
+        "degree": 19,
+        "paper_window_radix": 32,
+        "degree_radix": 32,
+        "expanded_terms": 4194050,
+        "bad_shifts": 48,
+        "total_shifts": 8388608,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 20970273,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          -6,
+          29
+        ]
+      },
+      "exact_search": {
+        "samples_ns": [
+          900,
+          600,
+          600,
+          500,
+          500,
+          500,
+          500,
+          400,
+          500,
+          500,
+          500,
+          500,
+          500,
+          400,
+          500,
+          500,
+          500,
+          500,
+          600,
+          500
+        ],
+        "median_ns": 500.0,
+        "python_peak_bytes": 128
+      }
+    },
+    "31": {
+      "paper": {
+        "window": [
+          -5,
+          36
+        ],
+        "degree": 31,
+        "paper_window_radix": 64,
+        "degree_radix": 32,
+        "expanded_terms": 1,
+        "bad_shifts": 0,
+        "total_shifts": 2147483648,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 36,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          -5,
+          36
+        ]
+      },
+      "exact": {
+        "window": [
+          4,
+          27
+        ],
+        "degree": 23,
+        "paper_window_radix": 32,
+        "degree_radix": 32,
+        "expanded_terms": 1072973612,
+        "bad_shifts": 9984,
+        "total_shifts": 2147483648,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 5364868091,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          -5,
+          36
+        ]
+      },
+      "exact_search": {
+        "samples_ns": [
+          1500,
+          1000,
+          800,
+          800,
+          800,
+          700,
+          800,
+          700,
+          700,
+          700,
+          700,
+          700,
+          700,
+          700,
+          700,
+          800,
+          800,
+          700,
+          700,
+          700
+        ],
+        "median_ns": 700.0,
+        "python_peak_bytes": 160
+      }
+    },
+    "63": {
+      "paper": {
+        "window": [
+          1,
+          62
+        ],
+        "degree": 61,
+        "paper_window_radix": 64,
+        "degree_radix": 64,
+        "expanded_terms": 4611686018427387903,
+        "bad_shifts": 2,
+        "total_shifts": 9223372036854775808,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 27670116110564327481,
+        "endpoint_factored_log2_rows_upper": 81,
+        "endpoint_factored_cyclotomic_rank_log2": 80,
+        "endpoint_factored_root_field_degree_log2": 58,
+        "paper_reference_window": [
+          1,
+          62
+        ]
+      },
+      "exact": {
+        "window": [
+          13,
+          50
+        ],
+        "degree": 37,
+        "paper_window_radix": 64,
+        "degree_radix": 64,
+        "expanded_terms": 4385818456534043223,
+        "bad_shifts": 6880379390002,
+        "total_shifts": 9223372036854775808,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 26314910739204259401,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          1,
+          62
+        ]
+      },
+      "exact_search": {
+        "samples_ns": [
+          3000,
+          2600,
+          2200,
+          2100,
+          1900,
+          1900,
+          1900,
+          1900,
+          1800,
+          2000,
+          2000,
+          1900,
+          1900,
+          1900,
+          1900,
+          1900,
+          1900,
+          1900,
+          2000,
+          1800
+        ],
+        "median_ns": 1900.0,
+        "python_peak_bytes": 172
+      }
+    },
+    "128": {
+      "paper": {
+        "window": [
+          18,
+          110
+        ],
+        "degree": 92,
+        "paper_window_radix": 128,
+        "degree_radix": 128,
+        "expanded_terms": 170141169801714753757456983609246937579,
+        "bad_shifts": 1447005352152022611666,
+        "total_shifts": 340282366920938463463374607431768211456,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 1190988188612003276302198885264728563181,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          18,
+          110
+        ]
+      },
+      "exact": {
+        "window": [
+          35,
+          93
+        ],
+        "degree": 58,
+        "paper_window_radix": 64,
+        "degree_radix": 64,
+        "expanded_terms": 31897818174884273568250021678870369789,
+        "bad_shifts": 36992216028186538454925880578346,
+        "total_shifts": 340282366920938463463374607431768211456,
+        "within_repair_fraction": true,
+        "expanded_log2_rows": 191386909049305641409500130073222218862,
+        "endpoint_factored_log2_rows_upper": null,
+        "endpoint_factored_cyclotomic_rank_log2": null,
+        "endpoint_factored_root_field_degree_log2": null,
+        "paper_reference_window": [
+          18,
+          110
+        ]
+      },
+      "exact_search": {
+        "samples_ns": [
+          9900,
+          8700,
+          8000,
+          7900,
+          8100,
+          8000,
+          43500,
+          8100,
+          8000,
+          7900,
+          7800,
+          10800,
+          7900,
+          7800,
+          7800,
+          7900,
+          7800,
+          8000,
+          7800,
+          7800
+        ],
+        "median_ns": 7950.0,
+        "python_peak_bytes": 288
+      }
+    }
+  },
+  "axis_profiles": {
+    "3,0": {
+      "axes": 6,
+      "entries": 64,
+      "one_query": {
+        "samples_ns": [
+          21700,
+          19800,
+          19000,
+          18300,
+          18500,
+          18300,
+          18500,
+          17800,
+          17900,
+          18100,
+          18000,
+          18200,
+          18000,
+          17900,
+          18100,
+          18000,
+          120200,
+          20000,
+          18500,
+          22400
+        ],
+        "median_ns": 18300.0,
+        "python_peak_bytes": 5852
+      },
+      "pair_blocks": 16
+    },
+    "3,1": {
+      "axes": 8,
+      "entries": 256,
+      "one_query": {
+        "samples_ns": [
+          134000,
+          132000,
+          132000,
+          134600,
+          131900,
+          131400,
+          131200,
+          130900,
+          244700,
+          134700,
+          134900,
+          131100,
+          130600,
+          130500,
+          130500,
+          130300,
+          235900,
+          134400,
+          316300,
+          132000
+        ],
+        "median_ns": 132000.0,
+        "python_peak_bytes": 21312
+      },
+      "pair_blocks": 128
+    },
+    "3,2": {
+      "axes": 10,
+      "entries": 1024,
+      "one_query": {
+        "samples_ns": [
+          1043700,
+          849100,
+          973200,
+          911100,
+          918200,
+          805900,
+          902300,
+          901700,
+          847100,
+          1036500,
+          909600,
+          801800,
+          951600,
+          923300,
+          999400,
+          917700,
+          921300,
+          938800,
+          797000,
+          795200
+        ],
+        "median_ns": 914400.0,
+        "python_peak_bytes": 83300
+      },
+      "pair_blocks": 768
+    },
+    "5,0": {
+      "axes": 10,
+      "entries": 1024,
+      "one_query": {
+        "samples_ns": [
+          297800,
+          303200,
+          294400,
+          291200,
+          302700,
+          293900,
+          296800,
+          344200,
+          297200,
+          342100,
+          302700,
+          318300,
+          320300,
+          339900,
+          344200,
+          298300,
+          351600,
+          297600,
+          301100,
+          293900
+        ],
+        "median_ns": 301900.0,
+        "python_peak_bytes": 83292
+      },
+      "pair_blocks": 256
+    },
+    "3,3": {
+      "axes": 12,
+      "entries": 4096,
+      "one_query": {
+        "samples_ns": [
+          4407900,
+          4418800,
+          5437100,
+          6767500,
+          5126400,
+          4522800,
+          4224300,
+          4234300,
+          4304500,
+          4258100,
+          4265300,
+          4257200,
+          4287300,
+          4233300,
+          4231400,
+          4259400,
+          4256600,
+          4219000,
+          4233900,
+          4746200
+        ],
+        "median_ns": 4262350.0,
+        "python_peak_bytes": 328692
+      },
+      "pair_blocks": 4096
+    },
+    "5,1": {
+      "axes": 12,
+      "entries": 4096,
+      "one_query": {
+        "samples_ns": [
+          2222200,
+          2238700,
+          2256100,
+          2253900,
+          2260200,
+          2255200,
+          2230400,
+          2251100,
+          2232300,
+          2265200,
+          2229200,
+          2225400,
+          2242100,
+          2370600,
+          2264600,
+          2252200,
+          2523500,
+          2209300,
+          2393900,
+          2324900
+        ],
+        "median_ns": 2253050.0,
+        "python_peak_bytes": 328672
+      },
+      "pair_blocks": 2048
+    }
+  },
+  "repair_profiles": [
+    {
+      "width": 24,
+      "size": 8,
+      "checks": 0,
+      "repair_and_synthetic_predictor": {
+        "samples_ns": [
+          207100,
+          20000,
+          20500,
+          19800,
+          18700,
+          18700,
+          16800,
+          18100,
+          18500,
+          19400,
+          16700,
+          18100,
+          18600,
+          18100,
+          16800,
+          22700,
+          18400,
+          19300,
+          16800,
+          18300
+        ],
+        "median_ns": 18550.0,
+        "python_peak_bytes": 12136
+      },
+      "synthetic_predictor_once": {
+        "samples_ns": [
+          1900,
+          2100,
+          1900,
+          1700,
+          1600,
+          1800,
+          1500,
+          1500,
+          1500,
+          3200,
+          1700,
+          1600,
+          1500,
+          1500,
+          1500,
+          1600,
+          1600,
+          1500,
+          2500,
+          1600
+        ],
+        "median_ns": 1600.0,
+        "python_peak_bytes": 3176
+      },
+      "setup": {
+        "samples_ns": [
+          32000,
+          29500,
+          27700,
+          27200,
+          26700,
+          26700,
+          26600,
+          26900,
+          26400,
+          26600,
+          26400,
+          26300,
+          27100,
+          27200,
+          26600,
+          26500,
+          26400,
+          26600,
+          26600,
+          26600
+        ],
+        "median_ns": 26600.0,
+        "python_peak_bytes": 5136
+      },
+      "check_lift_mac": 0,
+      "spectral_solve_mac": 0,
+      "check_conversions": 0
+    },
+    {
+      "width": 24,
+      "size": 8,
+      "checks": 1,
+      "repair_and_synthetic_predictor": {
+        "samples_ns": [
+          852800,
+          842800,
+          846200,
+          855600,
+          864100,
+          888700,
+          854900,
+          847300,
+          1121100,
+          1316900,
+          1313400,
+          1315500,
+          1303200,
+          1363900,
+          1312300,
+          1326800,
+          1322300,
+          1319500,
+          1311600,
+          1253700
+        ],
+        "median_ns": 1278450.0,
+        "python_peak_bytes": 78720
+      },
+      "synthetic_predictor_once": {
+        "samples_ns": [
+          146400,
+          144400,
+          148800,
+          145600,
+          144800,
+          149900,
+          147300,
+          146800,
+          145800,
+          193400,
+          147900,
+          147300,
+          144400,
+          145100,
+          144300,
+          145300,
+          146300,
+          143500,
+          143600,
+          148900
+        ],
+        "median_ns": 146050.0,
+        "python_peak_bytes": 19200
+      },
+      "setup": {
+        "samples_ns": [
+          45200,
+          38600,
+          37100,
+          36000,
+          38100,
+          42300,
+          36200,
+          37500,
+          36300,
+          36600,
+          36000,
+          35700,
+          35600,
+          35600,
+          35700,
+          36000,
+          35700,
+          35500,
+          40200,
+          35300
+        ],
+        "median_ns": 36100.0,
+        "python_peak_bytes": 6584
+      },
+      "check_lift_mac": 768,
+      "spectral_solve_mac": 16,
+      "check_conversions": 4
+    },
+    {
+      "width": 24,
+      "size": 8,
+      "checks": 2,
+      "repair_and_synthetic_predictor": {
+        "samples_ns": [
+          951600,
+          993300,
+          954100,
+          946500,
+          955200,
+          945600,
+          971900,
+          1012100,
+          1003100,
+          1011400,
+          955000,
+          946200,
+          947700,
+          1046800,
+          1045200,
+          1026800,
+          960500,
+          950700,
+          955900,
+          1037800
+        ],
+        "median_ns": 958200.0,
+        "python_peak_bytes": 79992
+      },
+      "synthetic_predictor_once": {
+        "samples_ns": [
+          145700,
+          143900,
+          144600,
+          143200,
+          142900,
+          143700,
+          210500,
+          250800,
+          257000,
+          243800,
+          244600,
+          244400,
+          242000,
+          241400,
+          242900,
+          242600,
+          248300,
+          244400,
+          244200,
+          244600
+        ],
+        "median_ns": 242750.0,
+        "python_peak_bytes": 19200
+      },
+      "setup": {
+        "samples_ns": [
+          135400,
+          93000,
+          73700,
+          69000,
+          67000,
+          68800,
+          198500,
+          68500,
+          67300,
+          65500,
+          52300,
+          52500,
+          53500,
+          53600,
+          53100,
+          55100,
+          53600,
+          52700,
+          54000,
+          52700
+        ],
+        "median_ns": 60300.0,
+        "python_peak_bytes": 8072
+      },
+      "check_lift_mac": 1536,
+      "spectral_solve_mac": 64,
+      "check_conversions": 8
+    },
+    {
+      "width": 24,
+      "size": 8,
+      "checks": 4,
+      "repair_and_synthetic_predictor": {
+        "samples_ns": [
+          1234300,
+          1524600,
+          1292600,
+          1130100,
+          1116600,
+          1221400,
+          1121900,
+          1115000,
+          1136500,
+          1122900,
+          1124500,
+          1216000,
+          1120700,
+          1113900,
+          1120300,
+          1179500,
+          1174700,
+          1119200,
+          1116400,
+          1112600
+        ],
+        "median_ns": 1123700.0,
+        "python_peak_bytes": 82776
+      },
+      "synthetic_predictor_once": {
+        "samples_ns": [
+          149300,
+          144100,
+          149000,
+          144400,
+          143800,
+          144400,
+          144200,
+          146000,
+          144300,
+          145000,
+          144200,
+          144400,
+          144700,
+          145400,
+          146300,
+          143900,
+          144000,
+          144600,
+          241400,
+          151400
+        ],
+        "median_ns": 144500.0,
+        "python_peak_bytes": 19200
+      },
+      "setup": {
+        "samples_ns": [
+          145300,
+          139400,
+          135700,
+          136700,
+          136400,
+          137800,
+          140700,
+          138900,
+          137800,
+          243400,
+          143900,
+          261200,
+          212700,
+          158200,
+          140900,
+          139000,
+          135500,
+          136900,
+          136900,
+          136400
+        ],
+        "median_ns": 138950.0,
+        "python_peak_bytes": 13984
+      },
+      "check_lift_mac": 3072,
+      "spectral_solve_mac": 256,
+      "check_conversions": 16
+    },
+    {
+      "width": 24,
+      "size": 8,
+      "checks": 8,
+      "repair_and_synthetic_predictor": {
+        "samples_ns": [
+          1498100,
+          1510000,
+          1509100,
+          1512200,
+          1498500,
+          1531800,
+          1513700,
+          1509900,
+          1555300,
+          1509200,
+          1505300,
+          1517200,
+          1512400,
+          1506500,
+          1503600,
+          1542600,
+          1526700,
+          1510900,
+          1502700,
+          1498100
+        ],
+        "median_ns": 1509950.0,
+        "python_peak_bytes": 88384
+      },
+      "synthetic_predictor_once": {
+        "samples_ns": [
+          153800,
+          148600,
+          148400,
+          148800,
+          147900,
+          148500,
+          148800,
+          148500,
+          148500,
+          147300,
+          147800,
+          147600,
+          151600,
+          147700,
+          147200,
+          147500,
+          148700,
+          148000,
+          148400,
+          148300
+        ],
+        "median_ns": 148400.0,
+        "python_peak_bytes": 19200
+      },
+      "setup": {
+        "samples_ns": [
+          617800,
+          591900,
+          581900,
+          580900,
+          586500,
+          584500,
+          584600,
+          584300,
+          581100,
+          577800,
+          582800,
+          580200,
+          580900,
+          582700,
+          592100,
+          586400,
+          578700,
+          584600,
+          588600,
+          587000
+        ],
+        "median_ns": 584400.0,
+        "python_peak_bytes": 37416
+      },
+      "check_lift_mac": 6144,
+      "spectral_solve_mac": 1024,
+      "check_conversions": 32
+    }
+  ],
+  "extension_profiles": {
+    "1": {
+      "cost": {
+        "samples_ns": [
+          1800,
+          1200,
+          900,
+          700,
+          800,
+          800,
+          900,
+          700,
+          900,
+          1100,
+          1100,
+          1200,
+          1200,
+          1000,
+          800,
+          800,
+          800,
+          800,
+          800,
+          700
+        ],
+        "median_ns": 850.0,
+        "python_peak_bytes": 540
+      },
+      "base_multiplications": 1,
+      "packed_operand_bytes": 4
+    },
+    "2": {
+      "cost": {
+        "samples_ns": [
+          1400,
+          1100,
+          900,
+          800,
+          800,
+          900,
+          900,
+          900,
+          900,
+          800,
+          900,
+          900,
+          900,
+          900,
+          900,
+          800,
+          900,
+          800,
+          900,
+          900
+        ],
+        "median_ns": 900.0,
+        "python_peak_bytes": 620
+      },
+      "base_multiplications": 4,
+      "packed_operand_bytes": 8
+    },
+    "4": {
+      "cost": {
+        "samples_ns": [
+          2300,
+          2400,
+          2200,
+          2100,
+          2000,
+          2000,
+          2000,
+          2100,
+          2000,
+          2200,
+          2200,
+          2100,
+          2100,
+          2100,
+          2000,
+          2000,
+          2000,
+          2000,
+          2000,
+          1900
+        ],
+        "median_ns": 2050.0,
+        "python_peak_bytes": 708
+      },
+      "base_multiplications": 16,
+      "packed_operand_bytes": 16
+    },
+    "8": {
+      "cost": {
+        "samples_ns": [
+          6200,
+          6200,
+          5900,
+          5900,
+          5800,
+          5800,
+          5700,
+          5900,
+          5900,
+          5900,
+          5800,
+          5800,
+          5700,
+          5900,
+          5800,
+          6000,
+          5900,
+          6000,
+          11300,
+          6000
+        ],
+        "median_ns": 5900.0,
+        "python_peak_bytes": 952
+      },
+      "base_multiplications": 64,
+      "packed_operand_bytes": 32
+    },
+    "16": {
+      "cost": {
+        "samples_ns": [
+          21400,
+          21200,
+          21300,
+          21200,
+          21100,
+          21300,
+          21300,
+          21000,
+          21100,
+          21500,
+          21000,
+          21200,
+          21400,
+          21100,
+          21200,
+          21200,
+          21200,
+          21200,
+          21300,
+          21200
+        ],
+        "median_ns": 21200.0,
+        "python_peak_bytes": 1636
+      },
+      "base_multiplications": 256,
+      "packed_operand_bytes": 64
+    },
+    "32": {
+      "cost": {
+        "samples_ns": [
+          75200,
+          75500,
+          74700,
+          75400,
+          75700,
+          75100,
+          74700,
+          75000,
+          74800,
+          78700,
+          75600,
+          75800,
+          75900,
+          75800,
+          75500,
+          80300,
+          76200,
+          85300,
+          76700,
+          75900
+        ],
+        "median_ns": 75650.0,
+        "python_peak_bytes": 3020
+      },
+      "base_multiplications": 1024,
+      "packed_operand_bytes": 128
+    }
+  },
+  "endpoint_pencil": {
+    "rows_per_shift": 4096,
+    "materialized_setup": {
+      "samples_ns": [
+        16314300,
+        16048100,
+        16044000
+      ],
+      "median_ns": 16048100,
+      "python_peak_bytes": 3929512
+    },
+    "implicit_setup": {
+      "samples_ns": [
+        58700,
+        56800,
+        56600
+      ],
+      "median_ns": 56800,
+      "python_peak_bytes": 11336
+    },
+    "materialized_apply_power": {
+      "samples_ns": [
+        212793800,
+        215237000,
+        213773500
+      ],
+      "median_ns": 213773500,
+      "python_peak_bytes": 362128
+    },
+    "implicit_apply_power": {
+      "samples_ns": [
+        45404400,
+        46358900,
+        49504300
+      ],
+      "median_ns": 46358900,
+      "python_peak_bytes": 330576
+    },
+    "materialized_affine_coefficient_slots": 196608,
+    "implicit_factor_count": 48,
+    "tensor_transition_visits": 196608
+  },
+  "m15_endpoint_shift_design": {
+    "shift_count": 6750,
+    "max_exception_shifts": 1,
+    "rows_per_label": 27648000,
+    "checks_per_label": 4096
+  }
+}
