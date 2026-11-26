@@ -8,7 +8,9 @@
 - Community overview and formalization links: https://mathcommunity.github.io/oai-math-revised/papers/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026/
 - Related independent certificate work, not peer reviewed: https://airr.science/papers/ARR-2026-1BXNNHNTEA8DAB2R/versions/v1/
 
-## Claim ledger (initial snapshot, 2026-11-26)
+## Claim ledger (closeout, 2026-11-27)
+
+The v0.1.0 Research Preview candidate archives this cycle. The final report gives the verified scope and criteria for starting a later cycle. [Final report](FINAL_REPORT.md)
 
 | Claim | Status |
 |---|---|
