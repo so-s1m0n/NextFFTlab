@@ -18,6 +18,34 @@ python -m pytest -q
 python -m nextfft_lab.bench --max-power 12 --repeats 5 --out results/local.json
 ```
 
+## Reproduce the recorded benchmarks
+
+Create the virtual environment above, then run the commands below from the repository root. Each command emits one JSON document on stdout. The seed is 20261126. Set `NEXTFFT_BENCH_CPU` to the CPU model if the platform reports a generic processor identifier.
+
+```sh
+python -m nextfft_lab.bench_repair --repeats 20
+python -m nextfft_lab.bench_pencil --repeats 20
+python -m nextfft_lab.bench_kernel --repeats 20 --template-repeats 3
+```
+
+The recorded host used Windows 11 x86-64, AMD Ryzen 7 5800X, CPython 3.13.3 and one algorithm thread. Timings use `perf_counter_ns` and raw samples. Component measurements warm up once and measure `tracemalloc` peak in a separate call. A traced peak covers Python allocations made during that call. Full-template setup is timed once, followed by three applications with reused setup and three same-input classical Walsh runs. The measured template has 512 independent length-256 rows and zero exceptional rows.
+
+On Windows, reproduce the full-template process peak by launching the **base CPython executable** in a separate process and sampling its `PeakWorkingSet64` while it runs. Run the following in PowerShell 7 with the virtual environment active. The process peak includes the interpreter, inputs and reference output.
+
+```powershell
+$basePython = python -c "import sys; print(sys._base_executable)"
+$benchmark = Start-Process -FilePath $basePython -ArgumentList '-m nextfft_lab.bench_kernel --repeats 20 --template-repeats 1' -NoNewWindow -PassThru -RedirectStandardOutput results/kernel-local.json
+$peak = 0
+while (!$benchmark.HasExited) {
+    $peak = [Math]::Max($peak, $benchmark.PeakWorkingSet64)
+    Start-Sleep -Milliseconds 250
+    $benchmark.Refresh()
+}
+$benchmark.WaitForExit()
+if ($benchmark.ExitCode -ne 0) { throw "Benchmark exited with code $($benchmark.ExitCode)" }
+$peak
+```
+
 ## Current scope
 
 - Exact direct DFT and classical radix-2 NTT over F_998244353.
