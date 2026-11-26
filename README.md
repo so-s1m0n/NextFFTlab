@@ -3,7 +3,7 @@
 Independent, reproducible research on the practical implications of the November 24, 2026 preprint [The logarithmic exponent of finite Fourier transforms](https://github.com/openai/math/tree/main/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026).
 [日本語](README.ja.md)
 
-**Status: baseline only. No implementation or speedup of the new asymptotic construction is claimed.** The preprint concerns binary linear-gate complexity over suitable fields, not measured execution time. The lab aims to bridge that gap; it is not affiliated with OpenAI.
+**Status: classical baselines and scalar predictor oracle implemented. The full new construction and any practical speedup remain unverified.** The preprint concerns binary linear-gate complexity over suitable fields, not measured execution time. The lab aims to bridge that gap; it is not affiliated with OpenAI.
 
 ## Quick start
 
@@ -27,6 +27,10 @@ python -m nextfft_lab.bench --max-power 12 --repeats 5 --out results/local.json
 - Separate complex128 NumPy/SciPy and finite-field tracks. Do not compare their timings as equivalent workloads.
 - Research roadmap, claim ledger and source references: [docs/research.md](docs/research.md).
 - One local smoke benchmark: [results/baseline.json](results/baseline.json). It is not a hardware-independent performance claim.
+
+## Development handoff
+
+See [AGENTS.md](AGENTS.md) for coding-agent instructions and [docs/ROADMAP.md](docs/ROADMAP.md) for source mappings, acceptance gates and the current next task. The paper's count predictor now has a scalar reference implementation; it is not a fast Fourier backend.
 
 ## Research objective
 
