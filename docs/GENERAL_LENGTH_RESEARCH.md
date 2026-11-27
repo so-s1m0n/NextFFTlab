@@ -99,3 +99,19 @@ Run: python -m pytest -q tests/test_extension_coordinates.py
 Limitations: dense quadratic extension DFT; six auxiliary transforms per application (including repeated kernel setup), ordinary base-field NewtonPlan setup, temporary arrays, no occupied-register word, no performance claim. Each extension register is two base-field coordinates, so packing two rows does not compress arbitrary input information. This is an actual extension-field execution, not a componentwise base-field transform masquerading as extension arithmetic. General extension degrees, grouped-axis capacity, incomplete final batches, efficient descent, and the saving backend remain open.
 
 Next: A2 fiber scheduling with arbitrary occupied adjacent fibers; then batch padding and multiple axes for A4. For A1 compare interpolation with an established fast geometric interpolation method before claiming an application advantage. Keep A5's bounded negative result; no further complex optimization without a stability hypothesis.
+
+### Next-cycle checkpoint from PR #3 at 8432fab
+
+The 12 extension-coordinate tests at the incoming commit were independently reviewed and replayed. Root orders, two-row basis results and the field-coordinate scope agree with the pinned source. The full incoming suite with Z3 passed 232 tests. Integer residues and integer lengths are the supported interface.
+
+| Track | Status and evidence |
+|---|---|
+| A2, occupied neighbors | The serial group kernel of `up:fibers` now operates on an occupied tensor. At 8×8 it needs zero dedicated payload slots rather than 40 with dedicated scratch, with 3,072 NTT calls in either path. The borrowed path took 169.6 ms versus 85.8 ms with dedicated scratch. All basis vectors matched a dense tensor calculation. [Implementation, actual slot traffic and limits](OCCUPIED_FIBERS_A2.md) |
+| A1, fast interpolation | Bostan–Schost's two-convolution interpolation now provides a matched fast comparator over F_998244353. At n=128 the setup was 0.887 ms versus 1.556 ms for the paper-derived prototype, and four-input reuse took about 5.36 ms in both paths. The non-root evaluate–multiply–interpolate application matched schoolbook and NTT and took about 7.79 ms versus 1.71 ms for ordinary convolution at 128 coefficients per operand. [Method, verification and measurements](GEOMETRIC_INTERPOLATION_A1.md) |
+| A4, multi-axis extension coordinates | Actual quadratic-field Fourier kernels process up to three axes, preserving each independent grid. Odd batch widths exercise the padded zero coordinate. The 3×4, width-five case used 37,512 counted base multiplications versus 4,840 for separate base-field calls. [Extension checks and raw data](EXTENSION_RESEARCH.md) |
+| A3, extension-coordinate packing | The half-box experiment performs multiplication in a quartic extension with quadratic subfield Fourier roots, then gathers mixed-radix carries. All bilinear basis pairs at the tested sizes agree with ordinary convolution. At n=16 warm packed multiplication took about 0.884 ms versus 0.103 ms for classical linear NTT. [Extension checks and raw data](EXTENSION_RESEARCH.md) |
+| A5, complex arithmetic | The earlier bounded negative result is retained as the decision for the tested implementation. Resume only with a specific numerical-stability hypothesis. [Archived result](COMPLEX_GEOMETRIC_A5.md) |
+
+The current checks establish exactness for the supported sizes. Low-depth synchronized word construction, practical base-field descent for larger extension degrees, and the source's prime-grid and deformation machinery remain open. Priority goes to a structurally different cost model before expanding the exhaustive cases.
+
+Regression with Z3 after integration passed all 255 tests in 50.68 s. The classical benchmark smoke produced 35 rows. Reproduction commands and raw samples are in each track report.

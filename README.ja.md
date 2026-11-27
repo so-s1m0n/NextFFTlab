@@ -39,4 +39,4 @@ NextFFTlab 独自のコードと文書は [MIT](LICENSE) です。Jacob Sussman 
 
 ## 次期研究：一般長NTT・FFTと応用
 
-[一般長研究計画・検証記録](docs/GENERAL_LENGTH_RESEARCH.md)では、原論文後半の補題の実行可能な検証と応用を扱います。有限体で全補助レジスタを復元するNewton変換、幾何格子の古典法との比較、小規模なパッキングとGood因子分解を検証しました。複素数版の数値誤差も測定しました。節約型再帰と論文全体の再現は未達です。[自律開発プロトコル](docs/AGENT_RESEARCH_PROTOCOL.md)
+[一般長研究計画・検証記録](docs/GENERAL_LENGTH_RESEARCH.md)では、原論文後半の補題の実行可能な検証と応用を扱います。占有ファイバーの借用と復元、Bostan–Schost補間との比較、小規模な拡大体での複数軸・多項式パッキングを検証しました。複素数版は測定済みの否定的結果を保持しています。節約型再帰と論文全体の再現は未達です。[自律開発プロトコル](docs/AGENT_RESEARCH_PROTOCOL.md)

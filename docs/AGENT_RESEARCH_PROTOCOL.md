@@ -14,4 +14,4 @@ Objective: verify the pinned paper and investigate transferable components with 
 
 ## Current handoff
 
-G2 is verified on bounded occupied buffers. A1 and A5 have matched measurements, and A3/A4 have bounded base-field identity checks. See the continuation checkpoint in GENERAL_LENGTH_RESEARCH.md for scope and no-go findings. Next verify A2 fiber borrowing with independent dirty neighbors and A3/A4 coefficient-coordinate packing over a small extension. Continue larger cases only with an explicit resource bound and independent exact checks. Preserve archived data and write new experiments to unique files.
+A2 now checks serial borrowing on occupied tensor fibers. A1 includes a fast Bostan–Schost comparator and a polynomial application. A4 covers multi-axis grids and odd batches in degree two. A3 covers small quartic extension packing with active coordinate digits. See GENERAL_LENGTH_RESEARCH.md for the benchmark results and bounded scope. Before scaling, justify an implementation that reduces auxiliary transform or slot-address costs. Resume complex arithmetic only with a concrete stability hypothesis. Keep archived data and use unique files for new experiments.

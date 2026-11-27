@@ -15,7 +15,7 @@ The [final research report](docs/FINAL_REPORT.md) separates published results, l
 
 ## Active research: general-length NTT and FFT
 
-[General-length research](docs/GENERAL_LENGTH_RESEARCH.md) records the exact occupied-buffer Newton word, classical non-root geometric baselines, bounded mixed-radix packing and Good-factor tests, and the numerical limits of the tested complex128 factorization. The general-length theorem and saving recursive construction remain open. [Research protocol](docs/AGENT_RESEARCH_PROTOCOL.md)
+[General-length research](docs/GENERAL_LENGTH_RESEARCH.md) records occupied-fiber borrowing, Bostan–Schost interpolation, bounded multi-axis and polynomial packing over small extension fields, and the numerical limits of the tested complex128 factorization. The general-length theorem and saving recursive construction remain open. [Research protocol](docs/AGENT_RESEARCH_PROTOCOL.md)
 
 ## Run the tests
 
