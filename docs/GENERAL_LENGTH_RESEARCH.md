@@ -24,7 +24,7 @@ This only checks the algebra and scratch restoration. The padded Toeplitz backen
 ## Matched measurement (G1)
 
 Run: python -m nextfft_lab.bench_geometric --repeats 20
-Observed medians: results/geometric-baseline.json; full samples are emitted by the benchmark command. The initial run's raw samples are not yet archived in Git. CPython 3.13.5, Linux x86_64, sandbox host, seed 20261127; one Python process, warm timings, 20 repeats, setup measured separately. Host CPU not recorded; no cross-machine claims. Local verification used the initial 58-test baseline plus 15 new cases (73 passed); full current repository suite is left to CI. Four length-b classical backend transforms per application; two cached kernel spectra built during setup.
+Raw samples and observed medians: results/geometric-baseline.json (20 samples per method and size). CPython 3.13.5, Linux x86_64, sandbox host, seed 20261127; one Python process, warm timings, 20 repeats, setup measured separately. Host CPU not recorded; no cross-machine claims. Local verification used the initial 58-test baseline plus 15 new cases (73 passed); full current repository suite is left to CI. Four length-b classical backend transforms per application; two cached kernel spectra built during setup.
 
 | N | Padded b | Newton forward median | Classical radix2 median | Newton setup median |
 |---:|---:|---:|---:|---:|
