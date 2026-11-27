@@ -2,6 +2,8 @@
 
 ## Source snapshot
 
+See the [construction and evidence map](CONSTRUCTION_MAP.md) for pinned source anchors, tests, data and remaining work, including the characteristic-zero prime-axis and deformation lemmas.
+
 Primary source pinned to openai/math commit 3344da59991ed94f9ba711217b29c1d760badfa6.
 [Manuscript directory](https://github.com/openai/math/tree/3344da59991ed94f9ba711217b29c1d760badfa6/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026).
 Actual LaTeX is in build/; no PDF extraction is needed. Upstream README, main.tex, intro.tex, repair.tex, kernel.tex and section labels of layers.tex/packing.tex/binary.tex were inspected. Full proof and Lean build are not yet audited.
@@ -40,10 +42,7 @@ Acceptance: source-mapped formulas, verified domains, independent exact tests, e
 
 ### Lean source correspondence
 
-- [Pinned toolchain](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/lean-toolchain) specifies `leanprover/lean4:v4.34.1`. The Mathlib revision is `d13f23b723b8a846827a245b89c10fc7d3f11612` in the [Lake lock file](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/lake-manifest.json).
-- The [Comparator spec](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/ComparatorChallenges/ExactFourier.json) lists `OAI.ExactFourier.main_theorem`, `OAI.LinearAlgebra.FiniteFourier.fourierComplexity` and `OAI.LinearAlgebra.FiniteFourier.batchedFourierComplexity`. The first directly states `thm:main`. The second combines the upper and geometric-feedback lower estimates and includes the normalized inverse. The third states the same exact bounds across mixed batched blocks and a stronger robust lower bound in the joint error model. [Statements](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/ComparatorChallenges/ExactFourier.lean).
-- The batched upper estimate assembles per-block upper circuits via `batchFourier_upper`. The batched lower estimate joins bounded orders with the large-order spectral-plane argument. The Comparator axiom allowlist is `propext`, `Quot.sound`, `Classical.choice`. Actual transitive axioms and kernel verification remain unmeasured. These statements quantify over admissible fields and exact binary linear gates, with no guarantees about floating point, wall-clock time, memory or an engineering crossover. [Single theorem assembly](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/OAI/LinearAlgebra/FiniteFourier/Main.lean) · [Batched theorem assembly](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/OAI/LinearAlgebra/FiniteFourier/BatchedTheorem.lean).
-- No Lean, Lake or Elan executable was present on PATH. The upstream Windows v4.34.1 release headers reported a 589,007,020-byte tar.zst or 850,624,573-byte ZIP before Mathlib and the remaining locked dependencies. The upstream Comparator instructions also require Comparator, landrun and lean4export. Local compilation and `#print axioms` are deferred pending a provisioned verifier and measured build budget. The source statements and declared axiom allowlist were inspected. [Release](https://github.com/leanprover/lean4/releases/tag/v4.34.1) · [Verifier setup](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/ComparatorChallenges/README.md).
+Lean 4.34.1 ran on the pinned sources to check the direct imports, with an independent lexical inventory of their transitive module imports. The pinned Lake dependency setup hit the 1 GiB process-group memory limit before proof compilation or axiom extraction. The three-name Comparator challenge contains the uniform single and batched gate theorems and a separate earlier subsequential complex DFT statement. [Theorems, assumptions, dependency evidence and reproduction](LEAN_FOURIER_AUDIT.md)
 
 ## Gate 2 — actual pencil and repair [bounded components verified]
 

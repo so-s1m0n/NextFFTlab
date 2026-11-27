@@ -68,3 +68,45 @@ The driver verifies the published and retained circuits on every basis vector ov
 - OpenAI's November 24 preprint and higher-level claims are tied to the source commit in the [source map](ROADMAP.md). The repository records the Lean correspondence and leaves local compilation open.
 - The chronological comparison uses the Alman–Rao arithmetic bound and Sussman's distinct gate and scaled-arithmetic counts. [Alman and Rao v2](https://arxiv.org/abs/2211.06459) · [Sussman at bbb7f830](https://github.com/jacobalansussman/wht-fewer-operations/tree/bbb7f830d8c5612465a9922ace566750ce6d09d2)
 - NextFFTlab's original code and documentation are [MIT licensed](../LICENSE). For Sussman's two H8-derived JSON artifacts, see the [attributions](../results/record-circuits/NOTICE.md) and [Apache-2.0 license](../results/record-circuits/LICENSE-APACHE-2.0.txt). The pinned proof and reference repository remain separately licensed external sources.
+
+## Characteristic-zero prime axes
+
+The exact width-four quotient comparison records raw batch samples, setup, operation counts, coefficient bits and traced Python allocation peaks. It uses standard-library Fraction arithmetic. [Protocol and results](PRIME5_DEFORMATION_A3.md) · [Raw JSON](../results/prime5-deformation.json) · [Runnable examples](CONSTRUCTION_MAP.md)
+
+```sh
+python -m pytest -q tests/test_rational_deformation.py tests/test_prime5_deformation.py
+python -m nextfft_lab.bench_prime5_deformation --output prime5-local.json
+```
+
+## Core proof and shear checks
+
+- [Lean toolchain, fixed dependency inventory, attempted build and commands](LEAN_FOURIER_AUDIT.md)
+- [Shear basis checks, exact operation counts and conditional subset applications](SHEAR_WORD.md)
+- [Strict saving and padding conditions](RECURSION_GATE.md)
+
+```sh
+python -m pytest -q tests/test_shear_word.py
+```
+
+## Phase 2 release candidate
+
+The [Phase 2 report](PHASE2_REPORT.md) indexes the frozen measurements. The [construction map](CONSTRUCTION_MAP.md) gives three standalone examples. The [Lean audit](LEAN_FOURIER_AUDIT.md) records the distinct proof-verification preflight and the open build gate.
+
+Run the full suite with the research extra to exercise all 284 tests, and build the 0.2.0 wheel from the candidate branch. The benchmark command is a classical package smoke check, not a new performance comparison.
+
+```sh
+python -m pip install -e '.[dev,research]'
+python -m pytest -q -rs
+python -m pip wheel --no-deps --wheel-dir ../phase2-wheel .
+```
+
+In a fresh virtual environment, install that wheel and run its smoke checks from a directory outside the repository.
+
+```sh
+python -m pip install /path/to/phase2-wheel/nextfft_lab-0.2.0-py3-none-any.whl
+python -m pip check
+python -c "from importlib.metadata import version; import nextfft_lab; assert version('nextfft-lab') == nextfft_lab.__version__ == '0.2.0'"
+python -m nextfft_lab.bench --max-power 7 --repeats 2
+```
+
+Package metadata and the import version both identify 0.2.0 on the candidate branch. The existing v0.1.0 tag and Research Preview remain the published artifacts. The merge, tag and publication of v0.2.0 require approval.

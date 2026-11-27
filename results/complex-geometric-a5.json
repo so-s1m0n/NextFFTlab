@@ -1,0 +1,998 @@
+{
+  "schema": 1,
+  "stage": "A5",
+  "arithmetic": "complex128",
+  "oracle": "100-digit Decimal geometric Horner; rounded to complex128 once",
+  "repeats": 5,
+  "seed": 20261127,
+  "environment": {
+    "python": "3.13.3",
+    "system": "Windows",
+    "machine": "AMD64",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "fft_workers": 1
+  },
+  "cases": [
+    {
+      "grid": "dft",
+      "length": 8,
+      "turns": "1",
+      "step_radius": "1",
+      "q_complex128": [
+        0.7071067811865476,
+        -0.7071067811865476
+      ],
+      "relative_l2_parameter_rounding": 1.1623927985537774e-15,
+      "condition_2_estimate": 1.0000000000000016,
+      "smallest_singular_value_estimate": 2.8284271247461903,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 54300,
+          "warm_ns": [
+            14200,
+            11400,
+            10300,
+            10200,
+            9800
+          ],
+          "warm_median_ns": 10300,
+          "relative_l2_ideal_grid": 1.827085270346031e-15,
+          "relative_l2_rounded_q_grid": 1.3787805835099518e-15
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 234800,
+          "warm_ns": [
+            41000,
+            36600,
+            34600,
+            34100,
+            35200
+          ],
+          "warm_median_ns": 35200,
+          "relative_l2_ideal_grid": 1.559591340927632e-15,
+          "relative_l2_rounded_q_grid": 1.3233587663596243e-15
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 78800,
+          "warm_ns": [
+            27900,
+            22300,
+            20700,
+            20900,
+            20200
+          ],
+          "warm_median_ns": 20900,
+          "relative_l2_ideal_grid": 1.5399787099906103e-15,
+          "relative_l2_rounded_q_grid": 1.0610582015087786e-15
+        },
+        "zoom_fft": {
+          "status": "measured",
+          "setup_ns": 56000,
+          "warm_ns": [
+            25400,
+            21700,
+            20700,
+            20100,
+            21100
+          ],
+          "warm_median_ns": 21100,
+          "relative_l2_ideal_grid": 8.372335718946124e-16,
+          "relative_l2_rounded_q_grid": 1.5248451880999074e-15
+        },
+        "czt_default_grid": {
+          "status": "measured",
+          "setup_ns": 299300,
+          "warm_ns": [
+            26500,
+            22200,
+            19900,
+            19100,
+            18600
+          ],
+          "warm_median_ns": 19900,
+          "relative_l2_ideal_grid": 3.813106341721876e-16,
+          "relative_l2_rounded_q_grid": 1.3442770177390365e-15
+        },
+        "fft": {
+          "status": "measured",
+          "setup_ns": 500,
+          "warm_ns": [
+            6300,
+            4400,
+            3900,
+            3600,
+            3700
+          ],
+          "warm_median_ns": 3900,
+          "relative_l2_ideal_grid": 1.1613845388209514e-16,
+          "relative_l2_rounded_q_grid": 1.2281615466801918e-15
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 2.1538721742373064e-15,
+        "normwise_residual": 1.087345333045721e-15,
+        "max_abs_toeplitz_kernel": 1.3065629648763766
+      }
+    },
+    {
+      "grid": "unit_arc",
+      "length": 8,
+      "turns": "0.08",
+      "step_radius": "1",
+      "q_complex128": [
+        0.9980267284282716,
+        -0.06279051952931337
+      ],
+      "relative_l2_parameter_rounding": 3.916146979693392e-17,
+      "condition_2_estimate": 1319403073.669039,
+      "smallest_singular_value_estimate": 5.755406718578072e-09,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 25700,
+          "warm_ns": [
+            11200,
+            10000,
+            9500,
+            9300,
+            9500
+          ],
+          "warm_median_ns": 9500,
+          "relative_l2_ideal_grid": 6.322045399654886e-16,
+          "relative_l2_rounded_q_grid": 6.379033600941733e-16
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 39900,
+          "warm_ns": [
+            33700,
+            32400,
+            31300,
+            33400,
+            32000
+          ],
+          "warm_median_ns": 32400,
+          "relative_l2_ideal_grid": 7.290550314907478e-11,
+          "relative_l2_rounded_q_grid": 7.290550897305404e-11
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 37000,
+          "warm_ns": [
+            23800,
+            20500,
+            19400,
+            31300,
+            20100
+          ],
+          "warm_median_ns": 20500,
+          "relative_l2_ideal_grid": 6.300243350897888e-16,
+          "relative_l2_rounded_q_grid": 6.306723700363664e-16
+        },
+        "zoom_fft": {
+          "status": "measured",
+          "setup_ns": 44200,
+          "warm_ns": [
+            22800,
+            21600,
+            20200,
+            19100,
+            21000
+          ],
+          "warm_median_ns": 21000,
+          "relative_l2_ideal_grid": 5.84809539464736e-16,
+          "relative_l2_rounded_q_grid": 6.018838309179083e-16
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 6.678649131447083e-09,
+        "normwise_residual": 1.0575366013578928e-14,
+        "max_abs_toeplitz_kernel": 52519.76849741687
+      }
+    },
+    {
+      "grid": "spiral",
+      "length": 8,
+      "turns": "0.65",
+      "step_radius": "1.002",
+      "q_complex128": [
+        0.8742409990869427,
+        -0.4895984839799489
+      ],
+      "relative_l2_parameter_rounding": 8.745775208366196e-16,
+      "condition_2_estimate": 95.85398041571433,
+      "smallest_singular_value_estimate": 0.038624849452156836,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 24300,
+          "warm_ns": [
+            11200,
+            10800,
+            9900,
+            9500,
+            9400
+          ],
+          "warm_median_ns": 9900,
+          "relative_l2_ideal_grid": 4.128527399643419e-15,
+          "relative_l2_rounded_q_grid": 4.1890039324827205e-15
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 37600,
+          "warm_ns": [
+            34500,
+            32900,
+            43100,
+            31700,
+            31500
+          ],
+          "warm_median_ns": 32900,
+          "relative_l2_ideal_grid": 4.495564796803344e-15,
+          "relative_l2_rounded_q_grid": 4.722720677659785e-15
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 36200,
+          "warm_ns": [
+            23300,
+            20700,
+            20200,
+            19500,
+            19200
+          ],
+          "warm_median_ns": 20200,
+          "relative_l2_ideal_grid": 8.637066829013302e-16,
+          "relative_l2_rounded_q_grid": 8.659621636350521e-16
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 3.581765624586163e-14,
+        "normwise_residual": 4.381302525183099e-15,
+        "max_abs_toeplitz_kernel": 2.0202827636684297
+      }
+    },
+    {
+      "grid": "dft",
+      "length": 32,
+      "turns": "1",
+      "step_radius": "1",
+      "q_complex128": [
+        0.9807852804032304,
+        -0.19509032201612828
+      ],
+      "relative_l2_parameter_rounding": 7.00744493042507e-15,
+      "condition_2_estimate": 1.0000000000000073,
+      "smallest_singular_value_estimate": 5.656854249492338,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 35200,
+          "warm_ns": [
+            14200,
+            12200,
+            11600,
+            11700,
+            11600
+          ],
+          "warm_median_ns": 11700,
+          "relative_l2_ideal_grid": 1.2511439253815247e-09,
+          "relative_l2_rounded_q_grid": 1.2511437015675435e-09
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 60600,
+          "warm_ns": [
+            35500,
+            34900,
+            33800,
+            32500,
+            32200
+          ],
+          "warm_median_ns": 33800,
+          "relative_l2_ideal_grid": 4.386319855545211e-09,
+          "relative_l2_rounded_q_grid": 4.386319509430661e-09
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 54100,
+          "warm_ns": [
+            33500,
+            23800,
+            20900,
+            20000,
+            20200
+          ],
+          "warm_median_ns": 20900,
+          "relative_l2_ideal_grid": 1.1808726610332123e-14,
+          "relative_l2_rounded_q_grid": 6.163655331021661e-15
+        },
+        "zoom_fft": {
+          "status": "measured",
+          "setup_ns": 44700,
+          "warm_ns": [
+            23600,
+            21100,
+            20600,
+            19800,
+            19800
+          ],
+          "warm_median_ns": 20600,
+          "relative_l2_ideal_grid": 4.0459914947421835e-15,
+          "relative_l2_rounded_q_grid": 9.311117503026224e-15
+        },
+        "czt_default_grid": {
+          "status": "measured",
+          "setup_ns": 42000,
+          "warm_ns": [
+            23300,
+            20500,
+            20100,
+            19900,
+            19800
+          ],
+          "warm_median_ns": 20100,
+          "relative_l2_ideal_grid": 6.628591426500957e-16,
+          "relative_l2_rounded_q_grid": 7.025094165677469e-15
+        },
+        "fft": {
+          "status": "measured",
+          "setup_ns": 400,
+          "warm_ns": [
+            6600,
+            4400,
+            4200,
+            4100,
+            3900
+          ],
+          "warm_median_ns": 4200,
+          "relative_l2_ideal_grid": 1.2340644545015316e-16,
+          "relative_l2_rounded_q_grid": 7.01412747500457e-15
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 1.5681201547915903e-09,
+        "normwise_residual": 7.840600801496681e-10,
+        "max_abs_toeplitz_kernel": 31.20771159707865
+      }
+    },
+    {
+      "grid": "unit_arc",
+      "length": 32,
+      "turns": "0.08",
+      "step_radius": "1",
+      "q_complex128": [
+        0.9998766324816606,
+        -0.015707317311820675
+      ],
+      "relative_l2_parameter_rounding": 3.697307534032117e-15,
+      "condition_2_estimate": 5.045451088622471e+17,
+      "smallest_singular_value_estimate": 3.9563550859287033e-17,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 35500,
+          "warm_ns": [
+            14000,
+            12400,
+            12200,
+            12100,
+            12600
+          ],
+          "warm_median_ns": 12400,
+          "relative_l2_ideal_grid": 2.2224053769068068e-13,
+          "relative_l2_rounded_q_grid": 2.2138161555858184e-13
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 51600,
+          "warm_ns": [
+            37400,
+            36100,
+            35200,
+            35100,
+            33500
+          ],
+          "warm_median_ns": 35200,
+          "relative_l2_ideal_grid": 6.179993669994147e+31,
+          "relative_l2_rounded_q_grid": 6.179993669994165e+31
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 41900,
+          "warm_ns": [
+            26400,
+            22200,
+            21700,
+            20400,
+            30500
+          ],
+          "warm_median_ns": 22200,
+          "relative_l2_ideal_grid": 3.762959935766439e-15,
+          "relative_l2_rounded_q_grid": 1.0024983685431695e-15
+        },
+        "zoom_fft": {
+          "status": "measured",
+          "setup_ns": 43000,
+          "warm_ns": [
+            24000,
+            21400,
+            20700,
+            20300,
+            20200
+          ],
+          "warm_median_ns": 20700,
+          "relative_l2_ideal_grid": 5.587376112917205e-16,
+          "relative_l2_rounded_q_grid": 3.4280120133010956e-15
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 5.386701123210941e+25,
+        "normwise_residual": 4.85628914288974e-15,
+        "max_abs_toeplitz_kernel": 1.1267449323597712e+22
+      }
+    },
+    {
+      "grid": "spiral",
+      "length": 32,
+      "turns": "0.65",
+      "step_radius": "1.002",
+      "q_complex128": [
+        0.9938504311832013,
+        -0.12753556538066102
+      ],
+      "relative_l2_parameter_rounding": 2.1113188959831223e-14,
+      "condition_2_estimate": 74597228853.4069,
+      "smallest_singular_value_estimate": 4.372442696552327e-10,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 35500,
+          "warm_ns": [
+            14200,
+            12700,
+            11900,
+            11600,
+            11900
+          ],
+          "warm_median_ns": 11900,
+          "relative_l2_ideal_grid": 1.3705512989895498e-06,
+          "relative_l2_rounded_q_grid": 1.3705512955014739e-06
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 51900,
+          "warm_ns": [
+            35400,
+            33500,
+            33200,
+            32300,
+            31300
+          ],
+          "warm_median_ns": 33200,
+          "relative_l2_ideal_grid": 6.607715140682285e-07,
+          "relative_l2_rounded_q_grid": 6.607715129013635e-07
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 43000,
+          "warm_ns": [
+            24800,
+            30500,
+            22400,
+            21000,
+            20300
+          ],
+          "warm_median_ns": 22400,
+          "relative_l2_ideal_grid": 2.2826382473790507e-14,
+          "relative_l2_rounded_q_grid": 2.856556782524488e-15
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 22.00485691126034,
+        "normwise_residual": 8.818316312331563e-08,
+        "max_abs_toeplitz_kernel": 390.2644713232879
+      }
+    },
+    {
+      "grid": "dft",
+      "length": 64,
+      "turns": "1",
+      "step_radius": "1",
+      "q_complex128": [
+        0.9951847266721969,
+        -0.0980171403295606
+      ],
+      "relative_l2_parameter_rounding": 4.670603707749153e-14,
+      "condition_2_estimate": 1.000000000000156,
+      "smallest_singular_value_estimate": 7.9999999999999245,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 52500,
+          "warm_ns": [
+            19400,
+            17400,
+            16800,
+            17000,
+            16600
+          ],
+          "warm_median_ns": 17000,
+          "relative_l2_ideal_grid": 0.058735875429828575,
+          "relative_l2_rounded_q_grid": 0.0587358754298324
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 362900,
+          "warm_ns": [
+            51200,
+            48600,
+            43700,
+            41100,
+            40300
+          ],
+          "warm_median_ns": 43700,
+          "relative_l2_ideal_grid": 1.4925227696925696,
+          "relative_l2_rounded_q_grid": 1.492522769692518
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 70200,
+          "warm_ns": [
+            32200,
+            28000,
+            26900,
+            25500,
+            25400
+          ],
+          "warm_median_ns": 26900,
+          "relative_l2_ideal_grid": 4.648898553262413e-14,
+          "relative_l2_rounded_q_grid": 5.728244765604145e-15
+        },
+        "zoom_fft": {
+          "status": "measured",
+          "setup_ns": 54400,
+          "warm_ns": [
+            24900,
+            22000,
+            21600,
+            21400,
+            20600
+          ],
+          "warm_median_ns": 21600,
+          "relative_l2_ideal_grid": 7.019008461967519e-15,
+          "relative_l2_rounded_q_grid": 4.685171279305357e-14
+        },
+        "czt_default_grid": {
+          "status": "measured",
+          "setup_ns": 46400,
+          "warm_ns": [
+            23700,
+            21400,
+            20700,
+            20500,
+            20600
+          ],
+          "warm_median_ns": 20700,
+          "relative_l2_ideal_grid": 3.859223171260182e-16,
+          "relative_l2_rounded_q_grid": 4.6569890152309494e-14
+        },
+        "fft": {
+          "status": "measured",
+          "setup_ns": 500,
+          "warm_ns": [
+            6000,
+            4300,
+            4100,
+            4100,
+            4000
+          ],
+          "warm_median_ns": 4100,
+          "relative_l2_ideal_grid": 1.5058062859115278e-16,
+          "relative_l2_rounded_q_grid": 4.6677940502699026e-14
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 0.1486980497494747,
+        "normwise_residual": 0.07396234310087504,
+        "max_abs_toeplitz_kernel": 3870.3058364975386
+      }
+    },
+    {
+      "grid": "unit_arc",
+      "length": 64,
+      "turns": "0.08",
+      "step_radius": "1",
+      "q_complex128": [
+        0.9999691576447897,
+        -0.007853900888711334
+      ],
+      "relative_l2_parameter_rounding": 9.330505136590458e-14,
+      "condition_2_estimate": 6.308880225203933e+17,
+      "smallest_singular_value_estimate": 4.483243381712029e-17,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 56100,
+          "warm_ns": [
+            20200,
+            17700,
+            16900,
+            16800,
+            16600
+          ],
+          "warm_median_ns": 16900,
+          "relative_l2_ideal_grid": 5.503935931046789e-09,
+          "relative_l2_rounded_q_grid": 5.50396450251361e-09
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 89400,
+          "warm_ns": [
+            38600,
+            37100,
+            35000,
+            34500,
+            60500
+          ],
+          "warm_median_ns": 37100,
+          "relative_l2_ideal_grid": 1.0354697095920773e+101,
+          "relative_l2_rounded_q_grid": 1.0354697095921614e+101
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 60900,
+          "warm_ns": [
+            26400,
+            22800,
+            21900,
+            21300,
+            20700
+          ],
+          "warm_median_ns": 21900,
+          "relative_l2_ideal_grid": 9.322945991289895e-14,
+          "relative_l2_rounded_q_grid": 1.0117709350779932e-15
+        },
+        "zoom_fft": {
+          "status": "measured",
+          "setup_ns": 51500,
+          "warm_ns": [
+            24900,
+            22000,
+            21300,
+            21100,
+            20800
+          ],
+          "warm_median_ns": 21300,
+          "relative_l2_ideal_grid": 8.552963223094601e-16,
+          "relative_l2_rounded_q_grid": 9.342797722447947e-14
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 1.5125864522812184e+73,
+        "normwise_residual": 3.2089288458803823e-15,
+        "max_abs_toeplitz_kernel": 2.5555400262891577e+45
+      }
+    },
+    {
+      "grid": "spiral",
+      "length": 64,
+      "turns": "0.65",
+      "step_radius": "1.002",
+      "q_complex128": [
+        0.9999605322325396,
+        -0.06389784016080786
+      ],
+      "relative_l2_parameter_rounding": 1.0453602051018117e-13,
+      "condition_2_estimate": 6.27405528351321e+19,
+      "smallest_singular_value_estimate": 1.768728619196582e-16,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 53100,
+          "warm_ns": [
+            18900,
+            17500,
+            16800,
+            17000,
+            24500
+          ],
+          "warm_median_ns": 17500,
+          "relative_l2_ideal_grid": 190981.18540596406,
+          "relative_l2_rounded_q_grid": 190981.18540598385
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 80000,
+          "warm_ns": [
+            37500,
+            35900,
+            34500,
+            34400,
+            33300
+          ],
+          "warm_median_ns": 34500,
+          "relative_l2_ideal_grid": 693092.0781183782,
+          "relative_l2_rounded_q_grid": 693092.07811845
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 61600,
+          "warm_ns": [
+            26700,
+            23400,
+            22000,
+            21200,
+            21100
+          ],
+          "warm_median_ns": 22000,
+          "relative_l2_ideal_grid": 1.052750398816566e-13,
+          "relative_l2_rounded_q_grid": 1.0163505954063991e-14
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 4.043567600535355e+23,
+        "normwise_residual": 0.004548471998495075,
+        "max_abs_toeplitz_kernel": 706484.6856009029
+      }
+    },
+    {
+      "grid": "dft",
+      "length": 128,
+      "turns": "1",
+      "step_radius": "1",
+      "q_complex128": [
+        0.9987954562051724,
+        -0.049067674327418015
+      ],
+      "relative_l2_parameter_rounding": 6.744576260728736e-14,
+      "condition_2_estimate": 1.000000000000189,
+      "smallest_singular_value_estimate": 11.313708498984619,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 88700,
+          "warm_ns": [
+            29500,
+            33500,
+            29100,
+            26800,
+            26600
+          ],
+          "warm_median_ns": 29100,
+          "relative_l2_ideal_grid": 1634982066303930.8,
+          "relative_l2_rounded_q_grid": 1634982066303849.8
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 121000,
+          "warm_ns": [
+            53100,
+            54200,
+            41000,
+            38300,
+            37200
+          ],
+          "warm_median_ns": 41000,
+          "relative_l2_ideal_grid": 7.525522703890062e+17,
+          "relative_l2_rounded_q_grid": 7.52552270388969e+17
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 77100,
+          "warm_ns": [
+            27700,
+            25000,
+            23300,
+            22400,
+            21900
+          ],
+          "warm_median_ns": 23300,
+          "relative_l2_ideal_grid": 7.063100367576435e-14,
+          "relative_l2_rounded_q_grid": 1.655777462611854e-14
+        },
+        "zoom_fft": {
+          "status": "measured",
+          "setup_ns": 55800,
+          "warm_ns": [
+            26800,
+            24100,
+            23200,
+            32200,
+            26600
+          ],
+          "warm_median_ns": 26600,
+          "relative_l2_ideal_grid": 1.6204947784439367e-14,
+          "relative_l2_rounded_q_grid": 6.954401795639512e-14
+        },
+        "czt_default_grid": {
+          "status": "measured",
+          "setup_ns": 52400,
+          "warm_ns": [
+            25100,
+            23000,
+            22100,
+            21800,
+            22700
+          ],
+          "warm_median_ns": 22700,
+          "relative_l2_ideal_grid": 4.62741439598408e-16,
+          "relative_l2_rounded_q_grid": 6.741033516014165e-14
+        },
+        "fft": {
+          "status": "measured",
+          "setup_ns": 500,
+          "warm_ns": [
+            6500,
+            4600,
+            4400,
+            4300,
+            4300
+          ],
+          "warm_median_ns": 4400,
+          "relative_l2_ideal_grid": 2.1746769966172159e-16,
+          "relative_l2_rounded_q_grid": 6.73908010944864e-14
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 7.638017784382007e+37,
+        "normwise_residual": 0.9999999999998399,
+        "max_abs_toeplitz_kernel": 84424765.21230024
+      }
+    },
+    {
+      "grid": "unit_arc",
+      "length": 128,
+      "turns": "0.08",
+      "step_radius": "1",
+      "q_complex128": [
+        0.9999922893814706,
+        -0.003926980723806
+      ],
+      "relative_l2_parameter_rounding": 2.4897229527522983e-13,
+      "condition_2_estimate": 1.0327689977857759e+18,
+      "smallest_singular_value_estimate": 3.873082953278536e-17,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 83100,
+          "warm_ns": [
+            31400,
+            28300,
+            27900,
+            27800,
+            27400
+          ],
+          "warm_median_ns": 27900,
+          "relative_l2_ideal_grid": 36.313976973721786,
+          "relative_l2_rounded_q_grid": 36.31397697372893
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 114600,
+          "warm_ns": [
+            42800,
+            43800,
+            39700,
+            49300,
+            39000
+          ],
+          "warm_median_ns": 42800,
+          "relative_l2_ideal_grid": 9.796300452863037e+240,
+          "relative_l2_rounded_q_grid": 9.796300452864967e+240
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 79500,
+          "warm_ns": [
+            28400,
+            23700,
+            22900,
+            22000,
+            31100
+          ],
+          "warm_median_ns": 23700,
+          "relative_l2_ideal_grid": 2.492113477593539e-13,
+          "relative_l2_rounded_q_grid": 1.249817151297878e-15
+        },
+        "zoom_fft": {
+          "status": "measured",
+          "setup_ns": 56000,
+          "warm_ns": [
+            26900,
+            24100,
+            23100,
+            22600,
+            22100
+          ],
+          "warm_median_ns": 23100,
+          "relative_l2_ideal_grid": 1.4012848494090675e-15,
+          "relative_l2_rounded_q_grid": 2.4877904108132403e-13
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 1.181062579326034e+210,
+        "normwise_residual": 3.391502101214734e-14,
+        "max_abs_toeplitz_kernel": 1.8555881810917715e+92
+      }
+    },
+    {
+      "grid": "spiral",
+      "length": 128,
+      "turns": "0.65",
+      "step_radius": "1.002",
+      "q_complex128": [
+        1.0014900032693799,
+        -0.03196518968343009
+      ],
+      "relative_l2_parameter_rounding": 1.314733603687444e-12,
+      "condition_2_estimate": 2.8357389613237657e+26,
+      "smallest_singular_value_estimate": 8.748729459753236e-13,
+      "forward": {
+        "newton_direct": {
+          "status": "measured",
+          "setup_ns": 82300,
+          "warm_ns": [
+            29000,
+            26900,
+            26500,
+            26300,
+            26100
+          ],
+          "warm_median_ns": 26500,
+          "relative_l2_ideal_grid": 5.225400938762714e+24,
+          "relative_l2_rounded_q_grid": 5.225400938755845e+24
+        },
+        "newton_fft": {
+          "status": "measured",
+          "setup_ns": 113400,
+          "warm_ns": [
+            42900,
+            40400,
+            37500,
+            36500,
+            35800
+          ],
+          "warm_median_ns": 37500,
+          "relative_l2_ideal_grid": 2.097936367737609e+26,
+          "relative_l2_rounded_q_grid": 2.0979363677348508e+26
+        },
+        "czt_explicit_q": {
+          "status": "measured",
+          "setup_ns": 75300,
+          "warm_ns": [
+            28000,
+            24600,
+            71000,
+            33300,
+            24400
+          ],
+          "warm_median_ns": 28000,
+          "relative_l2_ideal_grid": 1.3230871441869528e-12,
+          "relative_l2_rounded_q_grid": 4.9496485152849865e-14
+        }
+      },
+      "newton_interpolation": {
+        "status": "measured",
+        "relative_l2_coefficient_error": 7.17907866074443e+91,
+        "normwise_residual": 1.734001250638711e-11,
+        "max_abs_toeplitz_kernel": 2601037087330.083
+      }
+    }
+  ]
+}

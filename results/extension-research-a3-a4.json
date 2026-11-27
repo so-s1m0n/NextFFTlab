@@ -1,0 +1,675 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X 8-Core Processor",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "seed": 20261127,
+  "field": 998244353,
+  "repeats": 7,
+  "quadratic_grids": [
+    {
+      "shape": [
+        2,
+        3
+      ],
+      "ratios": [
+        3,
+        5
+      ],
+      "batch_width": 2,
+      "packed_setup_with_base_reference": {
+        "samples_ns": [
+          122300,
+          125800,
+          115400,
+          114400,
+          113500,
+          114100,
+          114000
+        ],
+        "median_ns": 114400,
+        "python_peak_bytes": 9856
+      },
+      "base_setup": {
+        "samples_ns": [
+          48400,
+          47300,
+          47300,
+          45500,
+          44800,
+          45400,
+          45700
+        ],
+        "median_ns": 45700,
+        "python_peak_bytes": 4056
+      },
+      "packed_forward": {
+        "samples_ns": [
+          323100,
+          314300,
+          316900,
+          315300,
+          313200,
+          335800,
+          320500
+        ],
+        "median_ns": 316900,
+        "python_peak_bytes": 6000
+      },
+      "base_forward": {
+        "samples_ns": [
+          351800,
+          354000,
+          354200,
+          349900,
+          374800,
+          350200,
+          348500
+        ],
+        "median_ns": 351800,
+        "python_peak_bytes": 4808
+      },
+      "packed_inverse": {
+        "samples_ns": [
+          317800,
+          312500,
+          312500,
+          310000,
+          308400,
+          308500,
+          307400
+        ],
+        "median_ns": 310000,
+        "python_peak_bytes": 6080
+      },
+      "base_inverse": {
+        "samples_ns": [
+          369900,
+          338100,
+          334400,
+          335200,
+          339700,
+          333700,
+          333100
+        ],
+        "median_ns": 335200,
+        "python_peak_bytes": 4808
+      },
+      "application_counts": {
+        "base_add_sub": 576,
+        "base_multiply": 872,
+        "packed_add_sub": 3000,
+        "packed_multiply": 4092,
+        "extension_batches": 1,
+        "padded_coordinates": 0
+      }
+    },
+    {
+      "shape": [
+        2,
+        3
+      ],
+      "ratios": [
+        3,
+        5
+      ],
+      "batch_width": 3,
+      "packed_setup_with_base_reference": {
+        "samples_ns": [
+          130500,
+          125500,
+          122400,
+          121300,
+          124700,
+          119600,
+          122100
+        ],
+        "median_ns": 122400,
+        "python_peak_bytes": 9616
+      },
+      "base_setup": {
+        "samples_ns": [
+          67300,
+          50900,
+          47700,
+          49200,
+          46200,
+          46300,
+          45800
+        ],
+        "median_ns": 47700,
+        "python_peak_bytes": 4056
+      },
+      "packed_forward": {
+        "samples_ns": [
+          650000,
+          632800,
+          623400,
+          623600,
+          626400,
+          639700,
+          629000
+        ],
+        "median_ns": 629000,
+        "python_peak_bytes": 6736
+      },
+      "base_forward": {
+        "samples_ns": [
+          503900,
+          498200,
+          496500,
+          502900,
+          496100,
+          496400,
+          493400
+        ],
+        "median_ns": 496500,
+        "python_peak_bytes": 5960
+      },
+      "packed_inverse": {
+        "samples_ns": [
+          597800,
+          605300,
+          591200,
+          592200,
+          596700,
+          589700,
+          590400
+        ],
+        "median_ns": 592200,
+        "python_peak_bytes": 6816
+      },
+      "base_inverse": {
+        "samples_ns": [
+          490200,
+          493300,
+          494200,
+          487100,
+          485300,
+          492700,
+          484100
+        ],
+        "median_ns": 490200,
+        "python_peak_bytes": 5960
+      },
+      "application_counts": {
+        "base_add_sub": 864,
+        "base_multiply": 1308,
+        "packed_add_sub": 6000,
+        "packed_multiply": 8184,
+        "extension_batches": 2,
+        "padded_coordinates": 1
+      }
+    },
+    {
+      "shape": [
+        3,
+        4
+      ],
+      "ratios": [
+        3,
+        5
+      ],
+      "batch_width": 5,
+      "packed_setup_with_base_reference": {
+        "samples_ns": [
+          207000,
+          203100,
+          205300,
+          199100,
+          198300,
+          200500,
+          198900
+        ],
+        "median_ns": 200500,
+        "python_peak_bytes": 12848
+      },
+      "base_setup": {
+        "samples_ns": [
+          65300,
+          62800,
+          60900,
+          65100,
+          57100,
+          57300,
+          56900
+        ],
+        "median_ns": 60900,
+        "python_peak_bytes": 4984
+      },
+      "packed_forward": {
+        "samples_ns": [
+          2647900,
+          2640600,
+          2634500,
+          2639400,
+          2628900,
+          2674800,
+          2671200
+        ],
+        "median_ns": 2640600,
+        "python_peak_bytes": 13440
+      },
+      "base_forward": {
+        "samples_ns": [
+          1500200,
+          1507300,
+          1496800,
+          1544300,
+          1499700,
+          1493500,
+          1498500
+        ],
+        "median_ns": 1499700,
+        "python_peak_bytes": 9912
+      },
+      "packed_inverse": {
+        "samples_ns": [
+          2796700,
+          2788300,
+          2589900,
+          2579000,
+          2599900,
+          2587200,
+          2615000
+        ],
+        "median_ns": 2599900,
+        "python_peak_bytes": 13528
+      },
+      "base_inverse": {
+        "samples_ns": [
+          1496900,
+          1516300,
+          1499000,
+          1523500,
+          1489500,
+          1489200,
+          1491200
+        ],
+        "median_ns": 1496900,
+        "python_peak_bytes": 9912
+      },
+      "application_counts": {
+        "base_add_sub": 3360,
+        "base_multiply": 4840,
+        "packed_add_sub": 28368,
+        "packed_multiply": 37512,
+        "extension_batches": 3,
+        "padded_coordinates": 1
+      }
+    },
+    {
+      "shape": [
+        2,
+        2,
+        3
+      ],
+      "ratios": [
+        3,
+        5,
+        7
+      ],
+      "batch_width": 8,
+      "packed_setup_with_base_reference": {
+        "samples_ns": [
+          178700,
+          173800,
+          170100,
+          168800,
+          168700,
+          167100,
+          169800
+        ],
+        "median_ns": 169800,
+        "python_peak_bytes": 13080
+      },
+      "base_setup": {
+        "samples_ns": [
+          70600,
+          65100,
+          63500,
+          62800,
+          62700,
+          61300,
+          66700
+        ],
+        "median_ns": 63500,
+        "python_peak_bytes": 5200
+      },
+      "packed_forward": {
+        "samples_ns": [
+          3943800,
+          3909800,
+          3945000,
+          4012000,
+          3733600,
+          3826700,
+          3726000
+        ],
+        "median_ns": 3909800,
+        "python_peak_bytes": 15064
+      },
+      "base_forward": {
+        "samples_ns": [
+          3890000,
+          4182800,
+          3806100,
+          3783800,
+          3923300,
+          3997400,
+          4086100
+        ],
+        "median_ns": 3923300,
+        "python_peak_bytes": 11424
+      },
+      "packed_inverse": {
+        "samples_ns": [
+          3796700,
+          3823600,
+          3928500,
+          3802000,
+          3820400,
+          3848400,
+          3802600
+        ],
+        "median_ns": 3820400,
+        "python_peak_bytes": 15144
+      },
+      "base_inverse": {
+        "samples_ns": [
+          3842000,
+          3862000,
+          3829900,
+          3845500,
+          3830700,
+          3854900,
+          3792900
+        ],
+        "median_ns": 3842000,
+        "python_peak_bytes": 11424
+      },
+      "application_counts": {
+        "base_add_sub": 6144,
+        "base_multiply": 9568,
+        "packed_add_sub": 38400,
+        "packed_multiply": 52320,
+        "extension_batches": 4,
+        "padded_coordinates": 0
+      }
+    }
+  ],
+  "quartic_products": [
+    {
+      "length": 8,
+      "extension_degree": 4,
+      "jets": 3,
+      "cyclic_length": 6,
+      "packed_setup": {
+        "samples_ns": [
+          7100,
+          5900,
+          5600,
+          5300,
+          5300,
+          5300,
+          5200
+        ],
+        "median_ns": 5300,
+        "python_peak_bytes": 1264
+      },
+      "packed_warm": {
+        "samples_ns": [
+          285200,
+          277600,
+          280100,
+          280300,
+          286100,
+          276600,
+          275800
+        ],
+        "median_ns": 280100,
+        "python_peak_bytes": 12336
+      },
+      "packed_cold": {
+        "samples_ns": [
+          313000,
+          287700,
+          285100,
+          286900,
+          290500,
+          285800,
+          290200
+        ],
+        "median_ns": 287700,
+        "python_peak_bytes": 13352
+      },
+      "base_linear_ntt": {
+        "samples_ns": [
+          55300,
+          53300,
+          52700,
+          52300,
+          52600,
+          52100,
+          52800
+        ],
+        "median_ns": 52700,
+        "python_peak_bytes": 4064
+      },
+      "application_counts": {
+        "packed_add_sub": 2607,
+        "packed_multiply": 3048,
+        "base_add_sub": 192,
+        "base_multiply": 224,
+        "quadratic_dfts": 14,
+        "quartic_jet_products": 24,
+        "base_ntts": 3
+      }
+    },
+    {
+      "length": 9,
+      "extension_degree": 4,
+      "jets": 3,
+      "cyclic_length": 6,
+      "packed_setup": {
+        "samples_ns": [
+          6000,
+          5600,
+          5400,
+          5300,
+          5000,
+          5200,
+          5000
+        ],
+        "median_ns": 5300,
+        "python_peak_bytes": 1144
+      },
+      "packed_warm": {
+        "samples_ns": [
+          285800,
+          283900,
+          281100,
+          281000,
+          298200,
+          281700,
+          286000
+        ],
+        "median_ns": 283900,
+        "python_peak_bytes": 12552
+      },
+      "packed_cold": {
+        "samples_ns": [
+          295500,
+          298500,
+          296300,
+          302700,
+          294600,
+          295200,
+          299000
+        ],
+        "median_ns": 296300,
+        "python_peak_bytes": 13496
+      },
+      "base_linear_ntt": {
+        "samples_ns": [
+          103500,
+          98500,
+          97700,
+          98400,
+          100500,
+          98600,
+          98500
+        ],
+        "median_ns": 98500,
+        "python_peak_bytes": 6368
+      },
+      "application_counts": {
+        "packed_add_sub": 2613,
+        "packed_multiply": 3048,
+        "base_add_sub": 480,
+        "base_multiply": 544,
+        "quadratic_dfts": 14,
+        "quartic_jet_products": 24,
+        "base_ntts": 3
+      }
+    },
+    {
+      "length": 12,
+      "extension_degree": 4,
+      "jets": 4,
+      "cyclic_length": 6,
+      "packed_setup": {
+        "samples_ns": [
+          5700,
+          5300,
+          5100,
+          4900,
+          4900,
+          4900,
+          4800
+        ],
+        "median_ns": 4900,
+        "python_peak_bytes": 1144
+      },
+      "packed_warm": {
+        "samples_ns": [
+          337000,
+          298100,
+          299600,
+          292600,
+          292000,
+          290600,
+          287900
+        ],
+        "median_ns": 292600,
+        "python_peak_bytes": 12992
+      },
+      "packed_cold": {
+        "samples_ns": [
+          304500,
+          305600,
+          300400,
+          300200,
+          299100,
+          299700,
+          298600
+        ],
+        "median_ns": 300200,
+        "python_peak_bytes": 13936
+      },
+      "base_linear_ntt": {
+        "samples_ns": [
+          103300,
+          103700,
+          98900,
+          98500,
+          99100,
+          99000,
+          98600
+        ],
+        "median_ns": 99000,
+        "python_peak_bytes": 6784
+      },
+      "application_counts": {
+        "packed_add_sub": 2631,
+        "packed_multiply": 3048,
+        "base_add_sub": 480,
+        "base_multiply": 544,
+        "quadratic_dfts": 14,
+        "quartic_jet_products": 24,
+        "base_ntts": 3
+      }
+    },
+    {
+      "length": 16,
+      "extension_degree": 4,
+      "jets": 3,
+      "cyclic_length": 12,
+      "packed_setup": {
+        "samples_ns": [
+          7300,
+          7000,
+          6700,
+          6600,
+          6500,
+          6600,
+          6400
+        ],
+        "median_ns": 6600,
+        "python_peak_bytes": 1912
+      },
+      "packed_warm": {
+        "samples_ns": [
+          886400,
+          893800,
+          883900,
+          887100,
+          881200,
+          883700,
+          879200
+        ],
+        "median_ns": 883900,
+        "python_peak_bytes": 23648
+      },
+      "packed_cold": {
+        "samples_ns": [
+          896300,
+          885000,
+          880100,
+          964900,
+          900500,
+          1007100,
+          899900
+        ],
+        "median_ns": 899900,
+        "python_peak_bytes": 25296
+      },
+      "base_linear_ntt": {
+        "samples_ns": [
+          106100,
+          104800,
+          102200,
+          102800,
+          102500,
+          106900,
+          102500
+        ],
+        "median_ns": 102800,
+        "python_peak_bytes": 7392
+      },
+      "application_counts": {
+        "packed_add_sub": 9255,
+        "packed_multiply": 11136,
+        "base_add_sub": 480,
+        "base_multiply": 544,
+        "quadratic_dfts": 14,
+        "quartic_jet_products": 48,
+        "base_ntts": 3
+      }
+    }
+  ]
+}

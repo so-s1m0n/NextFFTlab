@@ -4,7 +4,7 @@
 
 Translate the pinned November 24, 2026 construction into runnable, auditable code, establish exact correctness and measure its actual cost against mature equivalent baselines. A usable faster implementation is the stretch goal, not a premise. A reproducible negative result is a valid research outcome, but must not be described as a speedup or as proof that no future implementation could win.
 
-Read README.md, docs/research.md and docs/ROADMAP.md first. The latter is the authoritative implementation sequence and gate checklist. Start with the first incomplete gate. Inspect git status, CI, and existing tests before changes. Do not overwrite user changes.
+Read README.md, docs/AGENT_RESEARCH_PROTOCOL.md and docs/GENERAL_LENGTH_RESEARCH.md first. The latter is the active queue for post-WHT paper verification and applications. docs/ROADMAP.md and docs/FINAL_REPORT.md archive the prior research cycle. Do not restart closed WHT searches without new structural evidence. Start with the next incomplete active task. Inspect git status, CI, and existing tests before changes. Do not overwrite user changes.
 
 ## Work loop
 

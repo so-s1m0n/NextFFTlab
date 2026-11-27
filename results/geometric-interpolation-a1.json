@@ -1,0 +1,756 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X 8-Core Processor",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "seed": 20261127,
+  "q": 3,
+  "field": 998244353,
+  "repeats": 7,
+  "interpolation_rows": {
+    "8": {
+      "newton_setup": {
+        "samples_ns": [
+          60700,
+          63900,
+          58000,
+          56700,
+          63700,
+          91800,
+          62500
+        ],
+        "median_ns": 62500,
+        "python_peak_bytes": 4728
+      },
+      "bostan_schost_setup": {
+        "samples_ns": [
+          55100,
+          52600,
+          48900,
+          47600,
+          47100,
+          46600,
+          46500
+        ],
+        "median_ns": 47600,
+        "python_peak_bytes": 5432
+      },
+      "newton_cold_one": {
+        "samples_ns": [
+          156300,
+          152100,
+          148100,
+          148300,
+          147200,
+          145900,
+          145700
+        ],
+        "median_ns": 148100,
+        "python_peak_bytes": 7504
+      },
+      "bostan_schost_cold_one": {
+        "samples_ns": [
+          134800,
+          133400,
+          132200,
+          129600,
+          133900,
+          131600,
+          130500
+        ],
+        "median_ns": 132200,
+        "python_peak_bytes": 7288
+      },
+      "quadratic_one": {
+        "samples_ns": [
+          21400,
+          19500,
+          19300,
+          19200,
+          18600,
+          18500,
+          18600
+        ],
+        "median_ns": 19200,
+        "python_peak_bytes": 1408
+      },
+      "warm": {
+        "1": {
+          "newton": {
+            "samples_ns": [
+              86600,
+              83500,
+              84500,
+              82700,
+              84600,
+              82900,
+              84100
+            ],
+            "median_ns": 84100,
+            "python_peak_bytes": 4224
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              92800,
+              86200,
+              82400,
+              81600,
+              81800,
+              80200,
+              81200
+            ],
+            "median_ns": 81800,
+            "python_peak_bytes": 4288
+          }
+        },
+        "4": {
+          "newton": {
+            "samples_ns": [
+              331800,
+              331000,
+              328400,
+              332500,
+              325900,
+              450900,
+              326700
+            ],
+            "median_ns": 331000,
+            "python_peak_bytes": 5744
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              463100,
+              323600,
+              323400,
+              309700,
+              310400,
+              345300,
+              322800
+            ],
+            "median_ns": 323400,
+            "python_peak_bytes": 5808
+          }
+        },
+        "16": {
+          "newton": {
+            "samples_ns": [
+              1461700,
+              1269800,
+              1268200,
+              1339300,
+              1265900,
+              1261700,
+              1258000
+            ],
+            "median_ns": 1268200,
+            "python_peak_bytes": 11792
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              1180700,
+              1204500,
+              1183600,
+              1306200,
+              1184300,
+              1222100,
+              1186400
+            ],
+            "median_ns": 1186400,
+            "python_peak_bytes": 11856
+          }
+        }
+      }
+    },
+    "32": {
+      "newton_setup": {
+        "samples_ns": [
+          264200,
+          256800,
+          252200,
+          258100,
+          249600,
+          248300,
+          247300
+        ],
+        "median_ns": 252200,
+        "python_peak_bytes": 15600
+      },
+      "bostan_schost_setup": {
+        "samples_ns": [
+          172900,
+          167600,
+          160900,
+          161000,
+          163800,
+          159200,
+          156700
+        ],
+        "median_ns": 161000,
+        "python_peak_bytes": 17616
+      },
+      "newton_cold_one": {
+        "samples_ns": [
+          576100,
+          577900,
+          765200,
+          1049300,
+          1055700,
+          1039700,
+          1052100
+        ],
+        "median_ns": 1039700,
+        "python_peak_bytes": 24536
+      },
+      "bostan_schost_cold_one": {
+        "samples_ns": [
+          485700,
+          479700,
+          567000,
+          829100,
+          818800,
+          814900,
+          814400
+        ],
+        "median_ns": 814400,
+        "python_peak_bytes": 23832
+      },
+      "quadratic_one": {
+        "samples_ns": [
+          423000,
+          415000,
+          419400,
+          415300,
+          417300,
+          415200,
+          418200
+        ],
+        "median_ns": 417300,
+        "python_peak_bytes": 5376
+      },
+      "warm": {
+        "1": {
+          "newton": {
+            "samples_ns": [
+              309600,
+              305000,
+              303900,
+              311600,
+              308000,
+              303500,
+              314600
+            ],
+            "median_ns": 308000,
+            "python_peak_bytes": 14016
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              312200,
+              307700,
+              310700,
+              304600,
+              309500,
+              369400,
+              316700
+            ],
+            "median_ns": 310700,
+            "python_peak_bytes": 14272
+          }
+        },
+        "4": {
+          "newton": {
+            "samples_ns": [
+              1275700,
+              1343100,
+              1263400,
+              1202100,
+              1301900,
+              1253400,
+              1269400
+            ],
+            "median_ns": 1269400,
+            "python_peak_bytes": 18416
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              1333500,
+              1264600,
+              1199400,
+              1327900,
+              1236000,
+              1310600,
+              1295600
+            ],
+            "median_ns": 1295600,
+            "python_peak_bytes": 18672
+          }
+        },
+        "16": {
+          "newton": {
+            "samples_ns": [
+              6182000,
+              5018700,
+              5737200,
+              4578300,
+              4616800,
+              4561700,
+              4555400
+            ],
+            "median_ns": 4616800,
+            "python_peak_bytes": 35984
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              4860200,
+              4691000,
+              4606400,
+              4629800,
+              4671200,
+              4638600,
+              4621400
+            ],
+            "median_ns": 4638600,
+            "python_peak_bytes": 36240
+          }
+        }
+      }
+    },
+    "128": {
+      "newton_setup": {
+        "samples_ns": [
+          1575600,
+          1556300,
+          1582900,
+          1544900,
+          1541600,
+          1532700,
+          1562000
+        ],
+        "median_ns": 1556300,
+        "python_peak_bytes": 60240
+      },
+      "bostan_schost_setup": {
+        "samples_ns": [
+          1261500,
+          969400,
+          707400,
+          711000,
+          887100,
+          750100,
+          931000
+        ],
+        "median_ns": 887100,
+        "python_peak_bytes": 66864
+      },
+      "newton_cold_one": {
+        "samples_ns": [
+          2957500,
+          2941700,
+          2949900,
+          2919700,
+          2948700,
+          2921500,
+          2954700
+        ],
+        "median_ns": 2948700,
+        "python_peak_bytes": 94840
+      },
+      "bostan_schost_cold_one": {
+        "samples_ns": [
+          3674800,
+          3643000,
+          2498100,
+          2075300,
+          2062300,
+          2089900,
+          2046400
+        ],
+        "median_ns": 2089900,
+        "python_peak_bytes": 91064
+      },
+      "quadratic_one": {
+        "samples_ns": [
+          8287100,
+          7530400,
+          7477200,
+          7470900,
+          7491000,
+          7482100,
+          7851100
+        ],
+        "median_ns": 7491000,
+        "python_peak_bytes": 20736
+      },
+      "warm": {
+        "1": {
+          "newton": {
+            "samples_ns": [
+              1372200,
+              1413900,
+              1354900,
+              1352600,
+              1354100,
+              1461300,
+              1366000
+            ],
+            "median_ns": 1366000,
+            "python_peak_bytes": 53600
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              1369500,
+              1363100,
+              1509000,
+              1356600,
+              1330700,
+              1307600,
+              1381700
+            ],
+            "median_ns": 1363100,
+            "python_peak_bytes": 54624
+          }
+        },
+        "4": {
+          "newton": {
+            "samples_ns": [
+              5363100,
+              5370100,
+              6885500,
+              6515600,
+              5355200,
+              5346200,
+              5561100
+            ],
+            "median_ns": 5370100,
+            "python_peak_bytes": 69520
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              9304500,
+              6186400,
+              5237600,
+              5318400,
+              5358400,
+              5508000,
+              5318000
+            ],
+            "median_ns": 5358400,
+            "python_peak_bytes": 70544
+          }
+        },
+        "16": {
+          "newton": {
+            "samples_ns": [
+              21164500,
+              21178400,
+              21106400,
+              20662700,
+              20559300,
+              20979300,
+              20643600
+            ],
+            "median_ns": 20979300,
+            "python_peak_bytes": 133168
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              21069000,
+              22653400,
+              21085400,
+              21158400,
+              21128300,
+              21103300,
+              21030300
+            ],
+            "median_ns": 21103300,
+            "python_peak_bytes": 134192
+          }
+        }
+      }
+    },
+    "512": {
+      "newton_setup": {
+        "samples_ns": [
+          16764700,
+          26114800,
+          26127400,
+          26299700,
+          26501500,
+          26283500,
+          26283500
+        ],
+        "median_ns": 26283500,
+        "python_peak_bytes": 239428
+      },
+      "bostan_schost_setup": {
+        "samples_ns": [
+          7088700,
+          6014300,
+          3644100,
+          4270400,
+          3988600,
+          3965300,
+          3949900
+        ],
+        "median_ns": 3988600,
+        "python_peak_bytes": 264768
+      },
+      "newton_cold_one": {
+        "samples_ns": [
+          22051200,
+          22834600,
+          23731300,
+          30885500,
+          24431500,
+          22797000,
+          35678000
+        ],
+        "median_ns": 23731300,
+        "python_peak_bytes": 376780
+      },
+      "bostan_schost_cold_one": {
+        "samples_ns": [
+          18592300,
+          18371900,
+          18535600,
+          18710900,
+          18421900,
+          18511400,
+          17355000
+        ],
+        "median_ns": 18511400,
+        "python_peak_bytes": 360716
+      },
+      "quadratic_one": {
+        "samples_ns": [
+          157805100,
+          173004800,
+          171156400,
+          183281700,
+          133575400,
+          161483600,
+          126393200
+        ],
+        "median_ns": 161483600,
+        "python_peak_bytes": 82268
+      },
+      "warm": {
+        "1": {
+          "newton": {
+            "samples_ns": [
+              11980300,
+              11941500,
+              7531200,
+              7116900,
+              7173100,
+              6957700,
+              7489000
+            ],
+            "median_ns": 7489000,
+            "python_peak_bytes": 212540
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              11974300,
+              12107800,
+              12076000,
+              11968400,
+              12102600,
+              11995500,
+              11974900
+            ],
+            "median_ns": 11995500,
+            "python_peak_bytes": 216636
+          }
+        },
+        "4": {
+          "newton": {
+            "samples_ns": [
+              47996600,
+              48209400,
+              47742000,
+              46719700,
+              48293800,
+              37441000,
+              35892300
+            ],
+            "median_ns": 47742000,
+            "python_peak_bytes": 274732
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              48535700,
+              48423300,
+              48589100,
+              43739700,
+              46006700,
+              38131900,
+              31100100
+            ],
+            "median_ns": 46006700,
+            "python_peak_bytes": 278828
+          }
+        },
+        "16": {
+          "newton": {
+            "samples_ns": [
+              144570100,
+              176496000,
+              168163000,
+              189287200,
+              174019900,
+              183527100,
+              170055900
+            ],
+            "median_ns": 174019900,
+            "python_peak_bytes": 523468
+          },
+          "bostan_schost": {
+            "samples_ns": [
+              192162000,
+              192288300,
+              189358200,
+              159253600,
+              173796400,
+              181622500,
+              150507900
+            ],
+            "median_ns": 181622500,
+            "python_peak_bytes": 527564
+          }
+        }
+      }
+    }
+  },
+  "polynomial_products": {
+    "8": {
+      "product_length": 15,
+      "geometric_warm": {
+        "samples_ns": [
+          346400,
+          317300,
+          329900,
+          322000,
+          308100,
+          467600,
+          390300
+        ],
+        "median_ns": 329900,
+        "python_peak_bytes": 7912
+      },
+      "geometric_cold": {
+        "samples_ns": [
+          525400,
+          495900,
+          499000,
+          480200,
+          632100,
+          731300,
+          587700
+        ],
+        "median_ns": 525400,
+        "python_peak_bytes": 15352
+      },
+      "classical_linear_ntt": {
+        "samples_ns": [
+          61700,
+          52900,
+          63600,
+          66900,
+          89200,
+          82200,
+          51500
+        ],
+        "median_ns": 63600,
+        "python_peak_bytes": 4064
+      }
+    },
+    "32": {
+      "product_length": 63,
+      "geometric_warm": {
+        "samples_ns": [
+          1429200,
+          1455100,
+          1497200,
+          1430100,
+          1369300,
+          1381900,
+          1387300
+        ],
+        "median_ns": 1429200,
+        "python_peak_bytes": 29800
+      },
+      "geometric_cold": {
+        "samples_ns": [
+          2145200,
+          2007600,
+          2009500,
+          2089300,
+          2015900,
+          1996700,
+          2175500
+        ],
+        "median_ns": 2015900,
+        "python_peak_bytes": 56176
+      },
+      "classical_linear_ntt": {
+        "samples_ns": [
+          220400,
+          228000,
+          214400,
+          212800,
+          213700,
+          212800,
+          211000
+        ],
+        "median_ns": 213700,
+        "python_peak_bytes": 14048
+      }
+    },
+    "128": {
+      "product_length": 255,
+      "geometric_warm": {
+        "samples_ns": [
+          8896700,
+          8690700,
+          7387100,
+          6918800,
+          8529000,
+          7787400,
+          6338700
+        ],
+        "median_ns": 7787400,
+        "python_peak_bytes": 117924
+      },
+      "geometric_cold": {
+        "samples_ns": [
+          16055700,
+          16109600,
+          16128500,
+          16020600,
+          16039500,
+          16183100,
+          16031700
+        ],
+        "median_ns": 16055700,
+        "python_peak_bytes": 221100
+      },
+      "classical_linear_ntt": {
+        "samples_ns": [
+          1718000,
+          1710400,
+          1705900,
+          1714400,
+          1715200,
+          1711200,
+          1720100
+        ],
+        "median_ns": 1714400,
+        "python_peak_bytes": 54496
+      }
+    }
+  }
+}

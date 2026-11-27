@@ -1,0 +1,606 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X 8-Core Processor",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "seed": 20261127,
+  "field": 998244353,
+  "q": 3,
+  "repeats": 7,
+  "rows_by_length": {
+    "8": {
+      "newton_setup": {
+        "samples_ns": [
+          61500,
+          59200,
+          60500,
+          57800,
+          57300,
+          57100,
+          57200
+        ],
+        "median_ns": 57800,
+        "python_peak_bytes": 4744
+      },
+      "chirp_setup": {
+        "samples_ns": [
+          28700,
+          26600,
+          24800,
+          24000,
+          23500,
+          23500,
+          23100
+        ],
+        "median_ns": 24000,
+        "python_peak_bytes": 2120
+      },
+      "newton_one": {
+        "samples_ns": [
+          85500,
+          84100,
+          81800,
+          82300,
+          81500,
+          80900,
+          82000
+        ],
+        "median_ns": 82000,
+        "python_peak_bytes": 4056
+      },
+      "chirp_one": {
+        "samples_ns": [
+          45600,
+          45400,
+          43900,
+          43500,
+          44300,
+          43300,
+          44600
+        ],
+        "median_ns": 44300,
+        "python_peak_bytes": 3696
+      },
+      "horner_one": {
+        "samples_ns": [
+          8700,
+          7000,
+          6800,
+          6600,
+          6200,
+          6000,
+          6000
+        ],
+        "median_ns": 6600,
+        "python_peak_bytes": 1464
+      },
+      "newton_batch4": {
+        "samples_ns": [
+          355400,
+          352800,
+          348200,
+          342400,
+          339300,
+          339500,
+          336500
+        ],
+        "median_ns": 342400,
+        "python_peak_bytes": 5656
+      },
+      "chirp_batch4": {
+        "samples_ns": [
+          173500,
+          175700,
+          171800,
+          177000,
+          177400,
+          173400,
+          172300
+        ],
+        "median_ns": 173500,
+        "python_peak_bytes": 4960
+      },
+      "horner_batch4": {
+        "samples_ns": [
+          28100,
+          27400,
+          27000,
+          26300,
+          26700,
+          26700,
+          26600
+        ],
+        "median_ns": 26700,
+        "python_peak_bytes": 3040
+      },
+      "newton_inverse_batch4": {
+        "samples_ns": [
+          334900,
+          337900,
+          342300,
+          443200,
+          335900,
+          339300,
+          330900
+        ],
+        "median_ns": 337900,
+        "python_peak_bytes": 5656
+      },
+      "divided_difference_batch4": {
+        "samples_ns": [
+          76500,
+          75400,
+          75300,
+          74200,
+          73900,
+          74500,
+          73800
+        ],
+        "median_ns": 74500,
+        "python_peak_bytes": 2984
+      },
+      "occupied_word": {
+        "setup": {
+          "samples_ns": [
+            230000,
+            217000,
+            214100,
+            214600,
+            212400,
+            215700,
+            218100
+          ],
+          "median_ns": 215700,
+          "python_peak_bytes": 12280
+        },
+        "apply_with_input_reset": {
+          "samples_ns": [
+            3458400,
+            3613600,
+            3537300,
+            3566200,
+            3710100,
+            3904700,
+            3871200
+          ],
+          "median_ns": 3613600,
+          "python_peak_bytes": 2008
+        },
+        "data_registers": 48,
+        "padded_length": 16,
+        "ntt_transforms_per_application": 192
+      }
+    },
+    "32": {
+      "newton_setup": {
+        "samples_ns": [
+          264700,
+          266100,
+          251100,
+          246800,
+          245500,
+          311900,
+          258200
+        ],
+        "median_ns": 258200,
+        "python_peak_bytes": 15600
+      },
+      "chirp_setup": {
+        "samples_ns": [
+          125000,
+          120200,
+          117500,
+          115600,
+          123000,
+          116200,
+          116200
+        ],
+        "median_ns": 117500,
+        "python_peak_bytes": 7200
+      },
+      "newton_one": {
+        "samples_ns": [
+          450600,
+          313900,
+          325400,
+          404400,
+          343000,
+          308700,
+          420900
+        ],
+        "median_ns": 343000,
+        "python_peak_bytes": 13848
+      },
+      "chirp_one": {
+        "samples_ns": [
+          349400,
+          381600,
+          161800,
+          194300,
+          267200,
+          194300,
+          296100
+        ],
+        "median_ns": 267200,
+        "python_peak_bytes": 12464
+      },
+      "horner_one": {
+        "samples_ns": [
+          83000,
+          71800,
+          68000,
+          73600,
+          67500,
+          66900,
+          66500
+        ],
+        "median_ns": 68000,
+        "python_peak_bytes": 5432
+      },
+      "newton_batch4": {
+        "samples_ns": [
+          1217500,
+          1390100,
+          1258800,
+          1341400,
+          1187700,
+          1399100,
+          1445700
+        ],
+        "median_ns": 1341400,
+        "python_peak_bytes": 18328
+      },
+      "chirp_batch4": {
+        "samples_ns": [
+          824800,
+          635800,
+          630900,
+          774600,
+          756100,
+          643700,
+          626600
+        ],
+        "median_ns": 643700,
+        "python_peak_bytes": 16608
+      },
+      "horner_batch4": {
+        "samples_ns": [
+          287800,
+          286100,
+          284800,
+          285500,
+          285600,
+          290100,
+          287500
+        ],
+        "median_ns": 286100,
+        "python_peak_bytes": 9576
+      },
+      "newton_inverse_batch4": {
+        "samples_ns": [
+          1521400,
+          1233700,
+          1172600,
+          1184600,
+          1179800,
+          1307300,
+          1202500
+        ],
+        "median_ns": 1202500,
+        "python_peak_bytes": 18328
+      },
+      "divided_difference_batch4": {
+        "samples_ns": [
+          1842800,
+          1933600,
+          1862600,
+          1842500,
+          2320700,
+          1847300,
+          2101600
+        ],
+        "median_ns": 1862600,
+        "python_peak_bytes": 9520
+      },
+      "occupied_word": {
+        "setup": {
+          "samples_ns": [
+            938700,
+            1107000,
+            1232800,
+            1285400,
+            1221200,
+            928800,
+            929700
+          ],
+          "median_ns": 1107000,
+          "python_peak_bytes": 34064
+        },
+        "apply_with_input_reset": {
+          "samples_ns": [
+            13461900,
+            18275200,
+            12926900,
+            18725600,
+            18711700,
+            17824400,
+            15621600
+          ],
+          "median_ns": 17824400,
+          "python_peak_bytes": 6616
+        },
+        "data_registers": 192,
+        "padded_length": 64,
+        "ntt_transforms_per_application": 192
+      }
+    },
+    "64": {
+      "newton_setup": {
+        "samples_ns": [
+          584700,
+          580900,
+          584400,
+          577700,
+          578000,
+          581900,
+          579600
+        ],
+        "median_ns": 580900,
+        "python_peak_bytes": 30448
+      },
+      "chirp_setup": {
+        "samples_ns": [
+          262800,
+          257600,
+          257300,
+          255400,
+          253500,
+          257600,
+          253000
+        ],
+        "median_ns": 257300,
+        "python_peak_bytes": 14112
+      },
+      "newton_one": {
+        "samples_ns": [
+          598800,
+          582300,
+          595100,
+          590900,
+          577200,
+          591100,
+          594400
+        ],
+        "median_ns": 591100,
+        "python_peak_bytes": 26904
+      },
+      "chirp_one": {
+        "samples_ns": [
+          528000,
+          529000,
+          524700,
+          533900,
+          532700,
+          531000,
+          531100
+        ],
+        "median_ns": 531000,
+        "python_peak_bytes": 24240
+      },
+      "horner_one": {
+        "samples_ns": [
+          313500,
+          360900,
+          266900,
+          263100,
+          267300,
+          261700,
+          260200
+        ],
+        "median_ns": 266900,
+        "python_peak_bytes": 7992
+      },
+      "newton_batch4": {
+        "samples_ns": [
+          2513200,
+          2367200,
+          2484800,
+          2397700,
+          2507600,
+          2654500,
+          2798900
+        ],
+        "median_ns": 2507600,
+        "python_peak_bytes": 35224
+      },
+      "chirp_batch4": {
+        "samples_ns": [
+          1339600,
+          1307000,
+          1317700,
+          1328200,
+          1326000,
+          1256600,
+          1255100
+        ],
+        "median_ns": 1317700,
+        "python_peak_bytes": 32224
+      },
+      "horner_batch4": {
+        "samples_ns": [
+          993700,
+          1031200,
+          994400,
+          1010800,
+          1028100,
+          1031400,
+          1001400
+        ],
+        "median_ns": 1010800,
+        "python_peak_bytes": 15976
+      },
+      "newton_inverse_batch4": {
+        "samples_ns": [
+          2722400,
+          2617800,
+          2681800,
+          2642500,
+          2848000,
+          2723100,
+          2963000
+        ],
+        "median_ns": 2722400,
+        "python_peak_bytes": 35224
+      },
+      "divided_difference_batch4": {
+        "samples_ns": [
+          8628100,
+          8405100,
+          8030900,
+          8821500,
+          8810400,
+          9150000,
+          11941300
+        ],
+        "median_ns": 8810400,
+        "python_peak_bytes": 15920
+      }
+    },
+    "128": {
+      "newton_setup": {
+        "samples_ns": [
+          1553600,
+          1516800,
+          2597500,
+          1542900,
+          1486700,
+          2058700,
+          1534900
+        ],
+        "median_ns": 1542900,
+        "python_peak_bytes": 60240
+      },
+      "chirp_setup": {
+        "samples_ns": [
+          612900,
+          552200,
+          553400,
+          556800,
+          560900,
+          551800,
+          558900
+        ],
+        "median_ns": 556800,
+        "python_peak_bytes": 28032
+      },
+      "newton_one": {
+        "samples_ns": [
+          1330300,
+          1282500,
+          1266700,
+          1561300,
+          1548500,
+          1267000,
+          1396000
+        ],
+        "median_ns": 1330300,
+        "python_peak_bytes": 53432
+      },
+      "chirp_one": {
+        "samples_ns": [
+          686900,
+          667500,
+          654900,
+          697100,
+          698600,
+          690700,
+          700300
+        ],
+        "median_ns": 690700,
+        "python_peak_bytes": 48208
+      },
+      "horner_one": {
+        "samples_ns": [
+          993200,
+          994100,
+          988700,
+          1201400,
+          1003600,
+          1007000,
+          998000
+        ],
+        "median_ns": 998000,
+        "python_peak_bytes": 20792
+      },
+      "newton_batch4": {
+        "samples_ns": [
+          5242700,
+          5281600,
+          5170000,
+          5169000,
+          5068900,
+          5138600,
+          5128300
+        ],
+        "median_ns": 5169000,
+        "python_peak_bytes": 69432
+      },
+      "chirp_batch4": {
+        "samples_ns": [
+          2764500,
+          2772400,
+          2794200,
+          2724300,
+          2678200,
+          2764100,
+          2968200
+        ],
+        "median_ns": 2764500,
+        "python_peak_bytes": 63872
+      },
+      "horner_batch4": {
+        "samples_ns": [
+          4117400,
+          3781400,
+          3765900,
+          3746600,
+          3806000,
+          3824000,
+          3776900
+        ],
+        "median_ns": 3781400,
+        "python_peak_bytes": 36456
+      },
+      "newton_inverse_batch4": {
+        "samples_ns": [
+          5163900,
+          5231600,
+          5187300,
+          5259000,
+          5141500,
+          5249400,
+          5314000
+        ],
+        "median_ns": 5231600,
+        "python_peak_bytes": 69432
+      },
+      "divided_difference_batch4": {
+        "samples_ns": [
+          32140500,
+          31253700,
+          29434500,
+          30101600,
+          30605800,
+          29552700,
+          30124700
+        ],
+        "median_ns": 30124700,
+        "python_peak_bytes": 36400
+      }
+    }
+  }
+}

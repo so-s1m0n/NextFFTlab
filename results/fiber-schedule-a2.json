@@ -1,0 +1,195 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X 8-Core Processor",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "seed": 20261127,
+  "repeats": 5,
+  "cases": [
+    {
+      "shape": [
+        8,
+        8
+      ],
+      "axis_indices": [
+        0,
+        1
+      ],
+      "groups": [
+        [
+          [
+            0,
+            8
+          ]
+        ],
+        [
+          [
+            0,
+            8
+          ]
+        ]
+      ],
+      "occupied_setup": {
+        "samples_ns": [
+          402100,
+          396600,
+          389300,
+          386100,
+          391000
+        ],
+        "median_ns": 391000,
+        "python_peak_bytes": 20408
+      },
+      "ordinary_setup": {
+        "samples_ns": [
+          117600,
+          116300,
+          115000,
+          111500,
+          117500
+        ],
+        "median_ns": 116300,
+        "python_peak_bytes": 7856
+      },
+      "borrowed": {
+        "samples_ns": [
+          170796900,
+          170146200,
+          168133000,
+          168868600,
+          169582100
+        ],
+        "median_ns": 169582100,
+        "python_peak_bytes": 3624,
+        "extra_registers": 0,
+        "ntts": 3072,
+        "payload_reads": 303232,
+        "payload_writes": 281728
+      },
+      "dedicated": {
+        "samples_ns": [
+          85338100,
+          85775100,
+          84634200,
+          91755500,
+          95373000
+        ],
+        "median_ns": 85775100,
+        "python_peak_bytes": 5080,
+        "extra_registers": 40,
+        "ntts": 3072,
+        "payload_reads": 5760,
+        "payload_writes": 3712,
+        "scratch_reads": 297472,
+        "scratch_writes": 278016
+      },
+      "ordinary": {
+        "samples_ns": [
+          1250900,
+          1825500,
+          1404700,
+          1318800,
+          1221600
+        ],
+        "median_ns": 1318800,
+        "python_peak_bytes": 9616,
+        "ntts": 64,
+        "payload_reads": 128,
+        "payload_writes": 128
+      }
+    },
+    {
+      "shape": [
+        13,
+        4
+      ],
+      "axis_indices": [
+        1
+      ],
+      "groups": [
+        [
+          [
+            0,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      ],
+      "occupied_setup": {
+        "samples_ns": [
+          122500,
+          168200,
+          124300,
+          110800,
+          109300
+        ],
+        "median_ns": 122500,
+        "python_peak_bytes": 7876
+      },
+      "ordinary_setup": {
+        "samples_ns": [
+          33900,
+          34000,
+          30800,
+          29200,
+          29000
+        ],
+        "median_ns": 30800,
+        "python_peak_bytes": 2952
+      },
+      "borrowed": {
+        "samples_ns": [
+          59374600,
+          59593100,
+          59610300,
+          59250200,
+          59047900
+        ],
+        "median_ns": 59374600,
+        "python_peak_bytes": 3056,
+        "extra_registers": 0,
+        "ntts": 2496,
+        "payload_reads": 98228,
+        "payload_writes": 89492
+      },
+      "dedicated": {
+        "samples_ns": [
+          31459700,
+          31997800,
+          32359600,
+          31694600,
+          31704600
+        ],
+        "median_ns": 31704600,
+        "python_peak_bytes": 3720,
+        "extra_registers": 20,
+        "ntts": 2496,
+        "payload_reads": 2340,
+        "payload_writes": 1508,
+        "scratch_reads": 95888,
+        "scratch_writes": 87984
+      },
+      "ordinary": {
+        "samples_ns": [
+          645800,
+          890700,
+          1004200,
+          933500,
+          998300
+        ],
+        "median_ns": 933500,
+        "python_peak_bytes": 6840,
+        "ntts": 52,
+        "payload_reads": 52,
+        "payload_writes": 52
+      }
+    }
+  ]
+}

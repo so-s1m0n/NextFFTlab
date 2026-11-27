@@ -1,0 +1,242 @@
+{
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 5800X 8-Core Processor",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "seed": 20261127,
+  "repeats": 7,
+  "field": 998244353,
+  "packing": {
+    "8": {
+      "jets": 8,
+      "cyclic": 8,
+      "packed": {
+        "samples_ns": [
+          223100,
+          189800,
+          176800,
+          288300,
+          249900,
+          199700,
+          176400
+        ],
+        "median_ns": 199700,
+        "python_peak_bytes": 5896
+      },
+      "linear_ntt": {
+        "samples_ns": [
+          59000,
+          56200,
+          53500,
+          52100,
+          52400,
+          51800,
+          84100
+        ],
+        "median_ns": 53500,
+        "python_peak_bytes": 4064
+      }
+    },
+    "16": {
+      "jets": 8,
+      "cyclic": 16,
+      "packed": {
+        "samples_ns": [
+          347900,
+          339700,
+          343000,
+          334000,
+          332600,
+          331400,
+          331500
+        ],
+        "median_ns": 334000,
+        "python_peak_bytes": 9736
+      },
+      "linear_ntt": {
+        "samples_ns": [
+          109400,
+          104500,
+          102400,
+          102500,
+          103000,
+          101900,
+          100700
+        ],
+        "median_ns": 102500,
+        "python_peak_bytes": 7392
+      }
+    },
+    "32": {
+      "jets": 8,
+      "cyclic": 32,
+      "packed": {
+        "samples_ns": [
+          653200,
+          736500,
+          646600,
+          653500,
+          651700,
+          641700,
+          648300
+        ],
+        "median_ns": 651700,
+        "python_peak_bytes": 17416
+      },
+      "linear_ntt": {
+        "samples_ns": [
+          210400,
+          211800,
+          207800,
+          206300,
+          206400,
+          211400,
+          206200
+        ],
+        "median_ns": 207800,
+        "python_peak_bytes": 14048
+      }
+    }
+  },
+  "good_factors": {
+    "14": {
+      "axes": [
+        2,
+        7
+      ],
+      "good": {
+        "samples_ns": [
+          53200,
+          50900,
+          50000,
+          55900,
+          86800,
+          88500,
+          91200
+        ],
+        "median_ns": 55900,
+        "python_peak_bytes": 3608
+      },
+      "bluestein": {
+        "samples_ns": [
+          119500,
+          116800,
+          115800,
+          115100,
+          115900,
+          114000,
+          115100
+        ],
+        "median_ns": 115800,
+        "python_peak_bytes": 7168
+      },
+      "dense": {
+        "samples_ns": [
+          55200,
+          54000,
+          54000,
+          53900,
+          53600,
+          54000,
+          53800
+        ],
+        "median_ns": 54000,
+        "python_peak_bytes": 2176
+      }
+    },
+    "28": {
+      "axes": [
+        4,
+        7
+      ],
+      "good": {
+        "samples_ns": [
+          92400,
+          91400,
+          92200,
+          90700,
+          90900,
+          90700,
+          89200
+        ],
+        "median_ns": 90900,
+        "python_peak_bytes": 4748
+      },
+      "bluestein": {
+        "samples_ns": [
+          238600,
+          236900,
+          241200,
+          234300,
+          251000,
+          233300,
+          234100
+        ],
+        "median_ns": 236900,
+        "python_peak_bytes": 13568
+      },
+      "dense": {
+        "samples_ns": [
+          264100,
+          261900,
+          260200,
+          260300,
+          259800,
+          261100,
+          260700
+        ],
+        "median_ns": 260700,
+        "python_peak_bytes": 3352
+      }
+    },
+    "68": {
+      "axes": [
+        4,
+        17
+      ],
+      "good": {
+        "samples_ns": [
+          428300,
+          428100,
+          424700,
+          424200,
+          442200,
+          431100,
+          425200
+        ],
+        "median_ns": 428100,
+        "python_peak_bytes": 9344
+      },
+      "bluestein": {
+        "samples_ns": [
+          973200,
+          1032900,
+          972400,
+          962100,
+          962600,
+          965300,
+          960700
+        ],
+        "median_ns": 965300,
+        "python_peak_bytes": 45616
+      },
+      "dense": {
+        "samples_ns": [
+          1962700,
+          1960800,
+          1975100,
+          1954000,
+          1978800,
+          1993600,
+          1981300
+        ],
+        "median_ns": 1975100,
+        "python_peak_bytes": 6616
+      }
+    }
+  }
+}

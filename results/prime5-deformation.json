@@ -1,0 +1,1159 @@
+{
+  "experiment": "width-four truncated-jet binomial multiplication",
+  "algebra": "Q(i)[z,Y]/(z^r,Y^4-lambda)",
+  "arithmetic_domain": "exact fractions in both Gaussian coordinates",
+  "environment": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "cpu": "AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD",
+    "python": "3.13.3",
+    "threads": 1
+  },
+  "seed": 20261127,
+  "repeats": 20,
+  "orders": [
+    1,
+    2,
+    3
+  ],
+  "cases": {
+    "paper_lambda": [
+      {
+        "order": 1,
+        "lambda": {
+          "real": "-15",
+          "imag": "-20"
+        },
+        "pairs_per_sample": 8,
+        "verified_exact_pair_count": 8,
+        "reusable_split_setup": {
+          "samples_ns": [
+            252600,
+            235600,
+            230000,
+            229000,
+            228600,
+            235500,
+            237300,
+            229000,
+            228000,
+            248800,
+            233000,
+            227300,
+            223900,
+            224700,
+            225100,
+            222900,
+            222900,
+            222100,
+            224500,
+            224400
+          ],
+          "median_ns": 228300.0,
+          "python_peak_bytes": 6576,
+          "arithmetic": {
+            "gaussian_method_calls": {
+              "add": 0,
+              "subtract": 1,
+              "negate": 0,
+              "multiply": 32,
+              "divide": 1
+            },
+            "peak_fraction_bits": {
+              "numerator": 9,
+              "denominator": 7
+            },
+            "rational_ops_inside_gaussian_methods": {
+              "add_or_subtract": 69,
+              "negate": 0,
+              "multiply": 134,
+              "divide": 2
+            }
+          }
+        },
+        "methods": {
+          "schoolbook": {
+            "samples_ns": [
+              1305000,
+              1282600,
+              1328200,
+              1297400,
+              1306800,
+              1316400,
+              1304000,
+              1313800,
+              1302100,
+              1314200,
+              1303100,
+              1321400,
+              1387300,
+              1303600,
+              1298900,
+              1316900,
+              1324400,
+              1314700,
+              1315100,
+              1303300
+            ],
+            "median_ns": 1310300.0,
+            "median_ns_per_product": 163787.5,
+            "python_peak_bytes_per_batch": 18244,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 19,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 19,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 24,
+                "denominator": 16
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 76,
+                "negate": 0,
+                "multiply": 76,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 152,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 152,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 33,
+                "denominator": 27
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 608,
+                "negate": 0,
+                "multiply": 608,
+                "divide": 0
+              }
+            }
+          },
+          "split_plan": {
+            "samples_ns": [
+              9373500,
+              9407200,
+              9251500,
+              9297000,
+              9692500,
+              9230300,
+              9293300,
+              9423800,
+              9647400,
+              9408100,
+              9497500,
+              9377000,
+              9404300,
+              9378600,
+              9340400,
+              9283300,
+              9361900,
+              9619700,
+              11469000,
+              9347600
+            ],
+            "median_ns": 9377800.0,
+            "median_ns_per_product": 1172225.0,
+            "python_peak_bytes_per_batch": 29660,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 136,
+                "subtract": 36,
+                "negate": 3,
+                "multiply": 121,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 31,
+                "denominator": 18
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 586,
+                "negate": 6,
+                "multiply": 484,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 1088,
+                "subtract": 288,
+                "negate": 24,
+                "multiply": 968,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 45,
+                "denominator": 37
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 4688,
+                "negate": 48,
+                "multiply": 3872,
+                "divide": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "order": 2,
+        "lambda": {
+          "real": "-15",
+          "imag": "-20"
+        },
+        "pairs_per_sample": 8,
+        "verified_exact_pair_count": 8,
+        "reusable_split_setup": {
+          "samples_ns": [
+            560600,
+            743800,
+            668500,
+            567800,
+            536000,
+            535700,
+            544000,
+            532600,
+            532600,
+            531200,
+            529800,
+            554900,
+            534800,
+            536300,
+            528700,
+            523600,
+            524100,
+            531500,
+            525900,
+            530200
+          ],
+          "median_ns": 533700.0,
+          "python_peak_bytes": 12304,
+          "arithmetic": {
+            "gaussian_method_calls": {
+              "add": 0,
+              "subtract": 1,
+              "negate": 0,
+              "multiply": 80,
+              "divide": 1
+            },
+            "peak_fraction_bits": {
+              "numerator": 21,
+              "denominator": 7
+            },
+            "rational_ops_inside_gaussian_methods": {
+              "add_or_subtract": 165,
+              "negate": 0,
+              "multiply": 326,
+              "divide": 2
+            }
+          }
+        },
+        "methods": {
+          "schoolbook": {
+            "samples_ns": [
+              3568800,
+              3551100,
+              3510200,
+              3687400,
+              3522200,
+              3508200,
+              3504800,
+              3488800,
+              3687900,
+              3615200,
+              3484700,
+              3925400,
+              3806200,
+              5041900,
+              5083600,
+              3560800,
+              3521600,
+              3610400,
+              4321700,
+              3541100
+            ],
+            "median_ns": 3564800.0,
+            "median_ns_per_product": 445600.0,
+            "python_peak_bytes_per_batch": 29072,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 54,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 54,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 36,
+                "denominator": 30
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 216,
+                "negate": 0,
+                "multiply": 216,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 432,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 432,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 36,
+                "denominator": 31
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 1728,
+                "negate": 0,
+                "multiply": 1728,
+                "divide": 0
+              }
+            }
+          },
+          "split_plan": {
+            "samples_ns": [
+              24796400,
+              24826400,
+              24530900,
+              25635600,
+              24597900,
+              24470800,
+              24913400,
+              24820300,
+              24515200,
+              25949400,
+              24801900,
+              24801900,
+              26533600,
+              26155300,
+              26775600,
+              26897500,
+              24722700,
+              28795700,
+              27787000,
+              26381600
+            ],
+            "median_ns": 24869900.0,
+            "median_ns_per_product": 3108737.5,
+            "python_peak_bytes_per_batch": 46588,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 340,
+                "subtract": 60,
+                "negate": 5,
+                "multiply": 315,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 70,
+                "denominator": 51
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 1430,
+                "negate": 10,
+                "multiply": 1260,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 2720,
+                "subtract": 480,
+                "negate": 40,
+                "multiply": 2520,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 75,
+                "denominator": 56
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 11440,
+                "negate": 80,
+                "multiply": 10080,
+                "divide": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "order": 3,
+        "lambda": {
+          "real": "-15",
+          "imag": "-20"
+        },
+        "pairs_per_sample": 8,
+        "verified_exact_pair_count": 8,
+        "reusable_split_setup": {
+          "samples_ns": [
+            898900,
+            1039500,
+            1403200,
+            1116300,
+            861800,
+            859400,
+            854700,
+            864300,
+            857700,
+            853200,
+            856500,
+            857700,
+            856900,
+            850600,
+            905600,
+            855300,
+            864000,
+            862100,
+            860900,
+            854300
+          ],
+          "median_ns": 860150.0,
+          "python_peak_bytes": 19288,
+          "arithmetic": {
+            "gaussian_method_calls": {
+              "add": 0,
+              "subtract": 1,
+              "negate": 0,
+              "multiply": 128,
+              "divide": 1
+            },
+            "peak_fraction_bits": {
+              "numerator": 31,
+              "denominator": 15
+            },
+            "rational_ops_inside_gaussian_methods": {
+              "add_or_subtract": 261,
+              "negate": 0,
+              "multiply": 518,
+              "divide": 2
+            }
+          }
+        },
+        "methods": {
+          "schoolbook": {
+            "samples_ns": [
+              6864800,
+              7070700,
+              7361000,
+              6735500,
+              6735600,
+              6735900,
+              6813000,
+              6748500,
+              6797700,
+              7141100,
+              6759100,
+              7128700,
+              7070100,
+              6777100,
+              6870200,
+              6931500,
+              6917100,
+              6789300,
+              6696400,
+              7164500
+            ],
+            "median_ns": 6838900.0,
+            "median_ns_per_product": 854862.5,
+            "python_peak_bytes_per_batch": 39720,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 105,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 105,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 42,
+                "denominator": 35
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 420,
+                "negate": 0,
+                "multiply": 420,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 840,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 840,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 42,
+                "denominator": 35
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 3360,
+                "negate": 0,
+                "multiply": 3360,
+                "divide": 0
+              }
+            }
+          },
+          "split_plan": {
+            "samples_ns": [
+              48700400,
+              52508600,
+              49931000,
+              48056400,
+              47322500,
+              47532600,
+              47055000,
+              47195900,
+              47251800,
+              47949400,
+              47902100,
+              47229300,
+              48453000,
+              48531800,
+              48407900,
+              47501900,
+              47945400,
+              47969300,
+              48101600,
+              48208000
+            ],
+            "median_ns": 47959350.0,
+            "median_ns_per_product": 5994918.75,
+            "python_peak_bytes_per_batch": 63600,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 632,
+                "subtract": 84,
+                "negate": 7,
+                "multiply": 597,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 101,
+                "denominator": 72
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 2626,
+                "negate": 14,
+                "multiply": 2388,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 5056,
+                "subtract": 672,
+                "negate": 56,
+                "multiply": 4776,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 101,
+                "denominator": 72
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 21008,
+                "negate": 112,
+                "multiply": 19104,
+                "divide": 0
+              }
+            }
+          }
+        }
+      }
+    ],
+    "lambda_one_control": [
+      {
+        "order": 1,
+        "lambda": {
+          "real": "1",
+          "imag": "0"
+        },
+        "pairs_per_sample": 8,
+        "verified_exact_pair_count": 8,
+        "reusable_split_setup": {
+          "samples_ns": [
+            232100,
+            225900,
+            223200,
+            224900,
+            222600,
+            222700,
+            229900,
+            224300,
+            223800,
+            222200,
+            222300,
+            223100,
+            222800,
+            221700,
+            221000,
+            222100,
+            222300,
+            222600,
+            226700,
+            221600
+          ],
+          "median_ns": 222750.0,
+          "python_peak_bytes": 6224,
+          "arithmetic": {
+            "gaussian_method_calls": {
+              "add": 0,
+              "subtract": 1,
+              "negate": 0,
+              "multiply": 32,
+              "divide": 1
+            },
+            "peak_fraction_bits": {
+              "numerator": 3,
+              "denominator": 4
+            },
+            "rational_ops_inside_gaussian_methods": {
+              "add_or_subtract": 69,
+              "negate": 0,
+              "multiply": 134,
+              "divide": 2
+            }
+          }
+        },
+        "methods": {
+          "schoolbook": {
+            "samples_ns": [
+              1185600,
+              1198700,
+              1183100,
+              1187000,
+              1205000,
+              1186600,
+              1181800,
+              1191900,
+              1179900,
+              1185000,
+              1180000,
+              1183000,
+              1250000,
+              1193300,
+              1182300,
+              1154500,
+              1169900,
+              1184700,
+              1201900,
+              1182600
+            ],
+            "median_ns": 1184850.0,
+            "median_ns_per_product": 148106.25,
+            "python_peak_bytes_per_batch": 18112,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 19,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 16,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 21,
+                "denominator": 16
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 70,
+                "negate": 0,
+                "multiply": 64,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 152,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 128,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 30,
+                "denominator": 30
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 560,
+                "negate": 0,
+                "multiply": 512,
+                "divide": 0
+              }
+            }
+          },
+          "split_plan": {
+            "samples_ns": [
+              8636400,
+              8720900,
+              8693800,
+              8650700,
+              8644700,
+              8624500,
+              8816600,
+              8623200,
+              8745800,
+              8642800,
+              8693600,
+              8652900,
+              8632800,
+              8693600,
+              8678000,
+              9836700,
+              8871900,
+              8754700,
+              8530400,
+              8586800
+            ],
+            "median_ns": 8665450.0,
+            "median_ns_per_product": 1083181.25,
+            "python_peak_bytes_per_batch": 27088,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 136,
+                "subtract": 36,
+                "negate": 3,
+                "multiply": 121,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 22,
+                "denominator": 17
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 586,
+                "negate": 6,
+                "multiply": 484,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 1088,
+                "subtract": 288,
+                "negate": 24,
+                "multiply": 968,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 38,
+                "denominator": 36
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 4688,
+                "negate": 48,
+                "multiply": 3872,
+                "divide": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "order": 2,
+        "lambda": {
+          "real": "1",
+          "imag": "0"
+        },
+        "pairs_per_sample": 8,
+        "verified_exact_pair_count": 8,
+        "reusable_split_setup": {
+          "samples_ns": [
+            571000,
+            523400,
+            531800,
+            521700,
+            520400,
+            519600,
+            524500,
+            524200,
+            524200,
+            524700,
+            520000,
+            518500,
+            517900,
+            530300,
+            519400,
+            521700,
+            520000,
+            524900,
+            518900,
+            519500
+          ],
+          "median_ns": 521700.0,
+          "python_peak_bytes": 11024,
+          "arithmetic": {
+            "gaussian_method_calls": {
+              "add": 0,
+              "subtract": 1,
+              "negate": 0,
+              "multiply": 80,
+              "divide": 1
+            },
+            "peak_fraction_bits": {
+              "numerator": 4,
+              "denominator": 5
+            },
+            "rational_ops_inside_gaussian_methods": {
+              "add_or_subtract": 165,
+              "negate": 0,
+              "multiply": 326,
+              "divide": 2
+            }
+          }
+        },
+        "methods": {
+          "schoolbook": {
+            "samples_ns": [
+              3302100,
+              3290100,
+              3557000,
+              3284100,
+              3280100,
+              3733500,
+              3354200,
+              3346400,
+              3309100,
+              3269000,
+              3273600,
+              3275700,
+              3301800,
+              3264700,
+              3287200,
+              3746900,
+              3532700,
+              3268500,
+              3263600,
+              3567500
+            ],
+            "median_ns": 3295950.0,
+            "median_ns_per_product": 411993.75,
+            "python_peak_bytes_per_batch": 28472,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 54,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 48,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 32,
+                "denominator": 29
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 204,
+                "negate": 0,
+                "multiply": 192,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 432,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 384,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 34,
+                "denominator": 31
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 1632,
+                "negate": 0,
+                "multiply": 1536,
+                "divide": 0
+              }
+            }
+          },
+          "split_plan": {
+            "samples_ns": [
+              25634200,
+              21521600,
+              21209300,
+              21184300,
+              21225700,
+              24575200,
+              26260800,
+              21108000,
+              21248900,
+              21188800,
+              22245300,
+              21133900,
+              21161200,
+              21299100,
+              21235100,
+              21991700,
+              22325300,
+              22445300,
+              21189800,
+              22140400
+            ],
+            "median_ns": 21274000.0,
+            "median_ns_per_product": 2659250.0,
+            "python_peak_bytes_per_batch": 43468,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 340,
+                "subtract": 60,
+                "negate": 5,
+                "multiply": 315,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 39,
+                "denominator": 35
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 1430,
+                "negate": 10,
+                "multiply": 1260,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 2720,
+                "subtract": 480,
+                "negate": 40,
+                "multiply": 2520,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 46,
+                "denominator": 40
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 11440,
+                "negate": 80,
+                "multiply": 10080,
+                "divide": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "order": 3,
+        "lambda": {
+          "real": "1",
+          "imag": "0"
+        },
+        "pairs_per_sample": 8,
+        "verified_exact_pair_count": 8,
+        "reusable_split_setup": {
+          "samples_ns": [
+            1091200,
+            896100,
+            972400,
+            825100,
+            815900,
+            821600,
+            993900,
+            958700,
+            835700,
+            803000,
+            998700,
+            828100,
+            1090000,
+            1014800,
+            980900,
+            1079000,
+            887600,
+            802000,
+            811000,
+            1022600
+          ],
+          "median_ns": 927400.0,
+          "python_peak_bytes": 16632,
+          "arithmetic": {
+            "gaussian_method_calls": {
+              "add": 0,
+              "subtract": 1,
+              "negate": 0,
+              "multiply": 128,
+              "divide": 1
+            },
+            "peak_fraction_bits": {
+              "numerator": 5,
+              "denominator": 5
+            },
+            "rational_ops_inside_gaussian_methods": {
+              "add_or_subtract": 261,
+              "negate": 0,
+              "multiply": 518,
+              "divide": 2
+            }
+          }
+        },
+        "methods": {
+          "schoolbook": {
+            "samples_ns": [
+              6985200,
+              7098000,
+              6748700,
+              7251100,
+              6420300,
+              6374800,
+              6377800,
+              6476300,
+              6677500,
+              6676300,
+              6491000,
+              6341800,
+              6466600,
+              6246500,
+              6328800,
+              6435300,
+              6406400,
+              6406800,
+              6344800,
+              6869100
+            ],
+            "median_ns": 6450950.0,
+            "median_ns_per_product": 806368.75,
+            "python_peak_bytes_per_batch": 38796,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 105,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 96,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 37,
+                "denominator": 33
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 402,
+                "negate": 0,
+                "multiply": 384,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 840,
+                "subtract": 0,
+                "negate": 0,
+                "multiply": 768,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 38,
+                "denominator": 35
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 3216,
+                "negate": 0,
+                "multiply": 3072,
+                "divide": 0
+              }
+            }
+          },
+          "split_plan": {
+            "samples_ns": [
+              44893700,
+              44905900,
+              42757000,
+              47673700,
+              40406100,
+              39126700,
+              39256500,
+              39325700,
+              39152200,
+              40256000,
+              40097400,
+              41114300,
+              40905600,
+              40470100,
+              39714900,
+              39849100,
+              40165900,
+              39358100,
+              39843100,
+              39394300
+            ],
+            "median_ns": 40131650.0,
+            "median_ns_per_product": 5016456.25,
+            "python_peak_bytes_per_batch": 59480,
+            "arithmetic_first_product": {
+              "gaussian_method_calls": {
+                "add": 632,
+                "subtract": 84,
+                "negate": 7,
+                "multiply": 597,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 47,
+                "denominator": 40
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 2626,
+                "negate": 14,
+                "multiply": 2388,
+                "divide": 0
+              }
+            },
+            "arithmetic_warm_batch": {
+              "gaussian_method_calls": {
+                "add": 5056,
+                "subtract": 672,
+                "negate": 56,
+                "multiply": 4776,
+                "divide": 0
+              },
+              "peak_fraction_bits": {
+                "numerator": 49,
+                "denominator": 44
+              },
+              "rational_ops_inside_gaussian_methods": {
+                "add_or_subtract": 21008,
+                "negate": 112,
+                "multiply": 19104,
+                "divide": 0
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "conventions": {
+    "inputs": "Both methods and both lambdas receive the same immutable input pairs by order.",
+    "timing": "perf_counter_ns without tracing or counters. Both methods warm up once and alternate timed batch order. Exact output checks are outside the timed interval.",
+    "setup": "Split plan construction only, measured separately. Dense schoolbook has no plan.",
+    "python_peak_bytes": "Separate tracemalloc calls after GC, excluding already constructed inputs and the warm plan.",
+    "gaussian_method_calls": "Literal Gaussian arithmetic method invocations, including any nested calls. They are not rational primitive-operation counts or binary linear gates.",
+    "rational_ops_inside_gaussian_methods": "Derived from the formula in each Gaussian method. Excludes indexing, Fraction normalization and scalar setup outside those methods.",
+    "peak_fraction_bits": "Maximum bit lengths of reduced numerators and denominators in real and imaginary coordinates of inputs, observed Gaussian operands/results, and Gaussian objects constructed during the measured call. Internal temporaries inside Fraction are excluded.",
+    "comparison_scope": "Concrete-width quotient-algebra component only. No full Fourier transform timing."
+  },
+  "budget": {
+    "max_seconds": 1800,
+    "max_process_bytes": 1073741824,
+    "memory_enforcement": "Windows Job Object process commit limit"
+  },
+  "peak_process_bytes": 31379456,
+  "elapsed_seconds": 5.0508554
+}
