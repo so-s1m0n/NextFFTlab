@@ -36,3 +36,7 @@ python -m nextfft_lab.bench --max-power 7 --repeats 2
 ## ライセンス
 
 NextFFTlab 独自のコードと文書は [MIT](LICENSE) です。Jacob Sussman の H8 回路に由来するデータ2件には [第三者著作物の表示](results/record-circuits/NOTICE.md)と [Apache-2.0](results/record-circuits/LICENSE-APACHE-2.0.txt) が適用されます。
+
+## 次期研究：一般長NTT・FFTと応用
+
+[一般長研究計画・検証記録](docs/GENERAL_LENGTH_RESEARCH.md)では、原論文後半の補題の実行可能な検証と応用を扱います。幾何Newton分解と作業領域復元の一部を有限体で検証しました。古典NTTを内部に使用しており、高速化や論文全体の再現は未達です。[自律開発プロトコル](docs/AGENT_RESEARCH_PROTOCOL.md)

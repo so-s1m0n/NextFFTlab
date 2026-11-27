@@ -13,6 +13,10 @@ An independent study of the November 24, 2026 preprint *The logarithmic exponent
 
 The [final research report](docs/FINAL_REPORT.md) separates published results, lab measurements and bounded negative results.
 
+## Active research: general-length NTT and FFT
+
+[General-length research](docs/GENERAL_LENGTH_RESEARCH.md) maps executable checks and application experiments to the paper's later lemmas. The first checkpoint verifies geometric Newton factorization and partial occupied-workspace restoration in the finite field. Its classical NTT backend is slower than radix-2 NTT; no new complexity or speed claim. See [agent research protocol](docs/AGENT_RESEARCH_PROTOCOL.md) for bounded autonomous development.
+
 ## Run the tests
 
 Python 3.10 or newer. Run the commands from a virtual environment in the repository root.

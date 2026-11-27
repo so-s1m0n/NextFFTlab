@@ -1,0 +1,42 @@
+{
+  "field": 998244353,
+  "seed": 20261127,
+  "repeats": 20,
+  "python": "3.13.5",
+  "platform": "Linux x86_64",
+  "raw_samples": "Exact local JSON is separate; this file records observed medians only.",
+  "rows": [
+    {
+      "n": 16,
+      "padded": 32,
+      "forward_backend_ntts": 4,
+      "setup_median_ns": 92385.5,
+      "newton_forward_median_ns": 120571.5,
+      "classical_forward_median_ns": 13096.5
+    },
+    {
+      "n": 64,
+      "padded": 128,
+      "forward_backend_ntts": 4,
+      "setup_median_ns": 458523.5,
+      "newton_forward_median_ns": 523240,
+      "classical_forward_median_ns": 49261
+    },
+    {
+      "n": 256,
+      "padded": 512,
+      "forward_backend_ntts": 4,
+      "setup_median_ns": 3514007.5,
+      "newton_forward_median_ns": 2605314,
+      "classical_forward_median_ns": 259144
+    },
+    {
+      "n": 512,
+      "padded": 1024,
+      "forward_backend_ntts": 4,
+      "setup_median_ns": 11252060.5,
+      "newton_forward_median_ns": 6412407,
+      "classical_forward_median_ns": 655572
+    }
+  ]
+}
