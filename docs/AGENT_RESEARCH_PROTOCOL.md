@@ -19,3 +19,5 @@ A2 now checks serial borrowing on occupied tensor fibers. A1 includes a fast Bos
 The characteristic-zero track checks p=3 and p=5 and measures a width-four quotient application. The measured deformation loses to direct schoolbook. Reopen performance work only with a specific change to endpoint costs, coefficient growth or jet arithmetic. [Construction map](CONSTRUCTION_MAP.md) · [Prime-five evidence](PRIME5_DEFORMATION_A3.md)
 
 The core verification track records a bounded Lean dependency-build blocker and the exact saving-template gate. Resume Lean work on a provisioned environment or with compatible compiled dependencies. Resume recursion work only with a structural change that can pass strict call and resource bounds. [Lean audit](LEAN_FOURIER_AUDIT.md) · [Recursion gate](RECURSION_GATE.md)
+
+The v0.2.0 Research Preview candidate closes Phase 2. The final scope and authorization boundaries are in the [Phase 2 report](PHASE2_REPORT.md). New mathematics, performance exploration and size increases are paused. Any formal resource expansion requires separate owner approval.

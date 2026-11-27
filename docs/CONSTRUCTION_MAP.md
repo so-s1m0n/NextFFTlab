@@ -2,6 +2,8 @@
 
 This map follows `openai/math@3344da59991ed94f9ba711217b29c1d760badfa6`. A bounded check compares an executable component with an independent oracle. A measurement applies to the implementation, arithmetic and inputs recorded in its data. The paper's binary linear gates, counted operations, logical workspace and elapsed time are separate. [Pinned manuscript][paper]
 
+The [Phase 2 report](PHASE2_REPORT.md) summarizes the verified scope, measurements, conditional applications and open gates for the v0.2.0 Research Preview candidate.
+
 ## How the paper fits together
 
 Arrows run from a prerequisite to the result that uses it. The two arms for the main theorem use different arguments.

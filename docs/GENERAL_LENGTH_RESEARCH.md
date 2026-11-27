@@ -1,5 +1,7 @@
 # General-length research: source verification and applications
 
+Phase 2 is closed for new mathematical and performance exploration. This file preserves the chronological checkpoints below. Their earlier open items describe what remained at the time. See the [Phase 2 report](PHASE2_REPORT.md) for the final scope and resumption criteria.
+
 ## Purpose and scope
 
 The first research cycle is archived in FINAL_REPORT.md. The aim now is to make the November 24, 2026 preprint inspectable and useful beyond WHT: executable lemma checks, clear applicability boundaries, and reproducible application experiments. A new record or a faster production FFT is not a required outcome. Do not resume the closed WHT search without a new structural argument.

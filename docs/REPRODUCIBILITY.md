@@ -87,3 +87,26 @@ python -m nextfft_lab.bench_prime5_deformation --output prime5-local.json
 ```sh
 python -m pytest -q tests/test_shear_word.py
 ```
+
+## Phase 2 release candidate
+
+The [Phase 2 report](PHASE2_REPORT.md) indexes the frozen measurements. The [construction map](CONSTRUCTION_MAP.md) gives three standalone examples. The [Lean audit](LEAN_FOURIER_AUDIT.md) records the distinct proof-verification preflight and the open build gate.
+
+Run the full suite with the research extra to exercise all 284 tests, and build the 0.2.0 wheel from the candidate branch. The benchmark command is a classical package smoke check, not a new performance comparison.
+
+```sh
+python -m pip install -e '.[dev,research]'
+python -m pytest -q -rs
+python -m pip wheel --no-deps --wheel-dir ../phase2-wheel .
+```
+
+In a fresh virtual environment, install that wheel and run its smoke checks from a directory outside the repository.
+
+```sh
+python -m pip install /path/to/phase2-wheel/nextfft_lab-0.2.0-py3-none-any.whl
+python -m pip check
+python -c "from importlib.metadata import version; import nextfft_lab; assert version('nextfft-lab') == nextfft_lab.__version__ == '0.2.0'"
+python -m nextfft_lab.bench --max-power 7 --repeats 2
+```
+
+Package metadata and the import version both identify 0.2.0 on the candidate branch. The existing v0.1.0 tag and Research Preview remain the published artifacts. The merge, tag and publication of v0.2.0 require approval.

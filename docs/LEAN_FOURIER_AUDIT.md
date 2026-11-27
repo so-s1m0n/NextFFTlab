@@ -23,6 +23,24 @@ The challenge file contains `sorry` at lines 58, 246 and 311 as theorem placehol
 - The upstream `lake update` applied its compatibility patches and fetched Mathlib and other packages. The last Lake output warned that multiple dependency toolchains differed and that the root fixed toolchain was not updated. About 6 minutes 32 seconds after starting the scope, systemd reported a process killed by the OOM killer and the scope result `oom-kill`. This establishes the limit reached during this attempt. It does not identify the killed process or imply that a provisioned build would fail.
 - The run stopped before the post-update lock check, cache download, proof build and `#print axioms`. Comparator, landrun and lean4export were absent at preflight. No comparison or formal proof pass is claimed. The Python/Z3 regression is a separate check of the lab code.
 
+## Phase 2 closeout: artifacts and resource envelope
+
+The formal-verification preflight was carried out separately from the mathematical experiments. The 1 GiB process-group cap remained in force. This closeout used public artifact metadata and a local environment check. It did not repeat the same cold build.
+
+| Item | Evidence | Consequence for a rerun |
+|---|---|---|
+| Pinned Mathlib artifacts | The official run at the exact Mathlib revision reports staging and uploading its release cache. Download and complete local coverage were not tested in this closeout. The pinned cache covers a fixed set of roots that excludes OAI and ComparatorChallenges. | The Mathlib cache can remove Mathlib compilation if the exact file hashes resolve. It does not provide the OpenAI solution artifacts or avoid root-workspace setup. Module-filtering reduces extraction and transfer. It does not supply a process-memory bound. [Release cache run][mathlib-release] · [Pinned cache docs][mathlib-cache] · [Cache roots][mathlib-roots] · [Hash traversal][mathlib-hash] |
+| Pinned OpenAI artifacts | No matching compiled distribution was identified through the public OpenAI/math releases, packages or Actions artifact listing. The Reservoir v1 package metadata endpoint returned HTTP 404 with “Package not found in index”. | No trusted prebuilt OAI route was available to stage this checkout under the current cap. This survey does not establish that compatible artifacts could never be provided. [Releases][oai-releases] · [Packages][oai-packages] · [Actions][oai-actions] · [Reservoir response][reservoir] |
+| Memory | The cold setup was killed at the 1 GiB cgroup limit. Current WSL preflight confirmed cgroup v2 and the same scope cap. There is no observed successful peak for package resolution, proof build, axiom reporting or replay. | The cold setup exceeds the present envelope in this environment. Treat each later stage as unmeasured, even with compatible precompiled dependencies. Comparator captures and parses both exports, which can have a separate peak. [Comparator implementation example][comparator-export] |
+| Storage | The official compressed Lean archive is 580,432,872 bytes. The earlier scratch workspace during toolchain preparation was already about 3 GiB with the archive retained. The full checkout, dependencies, cache, build products and proof exports were never staged together to completion. | Budget several GiB before counting dependent modules and exports. The minimum complete footprint has not been measured. On a provisioned rerun, record actual directory sizes and free space before and after each stage. [Official asset][release] |
+| Execution environment | Ubuntu 24.04 x86-64 under WSL2 reported Landlock ABI 7. A capped systemd scope ran a benign command. No prepared pinned tools and compiled workspace were available for this run. | Use an isolated Linux workspace. Validate the effective sandbox with a small trusted smoke test before Comparator. ABI support alone does not prove confinement. Pin compatible Comparator, landrun and lean4export. The challenge sets `enable_nanoda: false`. Later bundled `lake comparator` does not apply to this pinned Lean version. [Comparator setup][comparator-core] · [Challenge settings][spec] |
+
+**Closeout decision.** The proof build, each theorem's transitive axioms and the independent Comparator check remain **unverified**. The expected source or archive paths and the allowed axioms are known. Resume only with a prepared workspace whose compiler, source hashes, dependency pins and upstream patches can be traced, or with a separately approved formal-verification resource envelope. No new memory, disk or paid-compute budget was assumed.
+
+For a prepared workspace, first check the root revision and lock, then try `lake --no-cache --no-build build +OAI.LinearAlgebra.FiniteFourier.Main` under the same cap to detect stale or missing products without compiling them. This command can still elaborate the Lake configuration. Stop if it cannot validate the prepared state within budget. For a newly approved cold build, record capped wall time, the cgroup memory peak and directory sizes separately for configuration, cache hydration, proof compilation, axioms, and Comparator. The currently available observations do not justify a numeric minimum RAM target for the full run. [Pinned Lake flags][lake-flags]
+
+Use a separate clean workspace for Comparator so that its sandbox validation does not reuse an independently built solution checkout unless the provenance meets the upstream verifier's requirements. Follow the upstream Landrun and systemd configuration. Keep the exact theorem configuration and kernel outcome in the result. [Comparator trust model][comparator-core]
+
 ## Reproduce in an isolated Linux checkout
 
 The source-only inventory requires Python and Git. The bounded attempt used an isolated sparse checkout. Install the official pinned Lean release or select it with Elan before running the build commands. Use dedicated storage for the toolchain, packages and compiled files. Keep the official source and its manifest unchanged.
@@ -72,3 +90,15 @@ Resume formal verification on a provisioned environment or with compatible compi
 [admit]: https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/OAI/Computability/BorderVNP/TeamSiteStop.lean#L88-L95
 [release]: https://github.com/leanprover/lean4/releases/tag/v4.34.1
 [comparator]: https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/lean/ComparatorChallenges/README.md
+
+[mathlib-release]: https://github.com/leanprover-community/mathlib4/actions/runs/36055820105
+[mathlib-cache]: https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Cache/README.md
+[mathlib-roots]: https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Cache/IO.lean#L25-L53
+[mathlib-hash]: https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Cache/Hashing.lean#L156-L165
+[oai-releases]: https://github.com/openai/math/releases
+[oai-packages]: https://github.com/orgs/openai/packages?repo_name=math
+[oai-actions]: https://github.com/openai/math/actions
+[reservoir]: https://reservoir.lean-lang.org/api/v1/packages/openai/math
+[comparator-export]: https://github.com/leanprover/comparator/blob/v4.34.0/Main.lean#L282-L316
+[comparator-core]: https://github.com/leanprover/comparator/blob/v4.34.0/README.md
+[lake-flags]: https://github.com/leanprover/lean4/blob/v4.34.1/src/lake/Lake/CLI/Help.lean#L46-L63

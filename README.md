@@ -1,19 +1,21 @@
 # NextFFT Lab
 
-**v0.1.0 Research Preview candidate** · [日本語](README.ja.md)
+**v0.2.0 Research Preview candidate** · [日本語](README.ja.md)
 
-An independent study of the November 24, 2026 preprint *The logarithmic exponent of finite Fourier transforms*. This cycle reproduced selected mathematical components, measured a fixed Walsh–Hadamard template and searched small circuit neighborhoods. The project is independent of OpenAI. [Pinned manuscript](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026/paper.pdf)
+An independent study of the November 24, 2026 preprint *The logarithmic exponent of finite Fourier transforms*. Phase 2 verifies executable components beyond Walsh–Hadamard and records their applicability, costs and remaining proof obligations. The project is independent of OpenAI. [Pinned manuscript](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026/paper.pdf)
 
-## Results
+Start with the [Phase 2 report](docs/PHASE2_REPORT.md), [construction map and executable examples](docs/CONSTRUCTION_MAP.md), or [reproduction guide](docs/REPRODUCIBILITY.md). The [published v0.1.0 Research Preview](https://github.com/so-s1m0n/NextFFTlab/releases/tag/v0.1.0) remains the first-phase release. The v0.2.0 package version identifies this branch's release candidate.
+
+## First-phase WHT results
 
 - **Exact fixed template.** The binary matrix pencil, bounded Hermite repair and shared routing were checked over F₉₉₈₂₄₄₃₅₃. A zero-exception template agreed exactly with classical Walsh–Hadamard on 512 independent length-256 inputs. Repair with nonzero exceptions was tested separately on a toy window.
 - **Measured optimization.** Sparse routing and a degree-sized pencil reduced the fixed Python template from 7.718 s to 0.679 s on the same batch. Classical Walsh took 0.0772 s in that comparison. The optimized template still required 24 axis calls per row for eight axes, above the threshold required for recursion.
 - **Circuit search.** The bounded H8 and H16 search retained the published comparison points: 19 binary linear gates and 20 scaled arithmetic operations at H8, and 56 scaled arithmetic operations at H16. Witnesses were checked on all basis vectors over the rationals and the finite field. Gate counts, arithmetic counts and scale restoration are reported separately.
 - **Open scope.** A saving recursive template, general-length reproduction and local validation of the upstream Lean formalization remain open.
 
-The [final research report](docs/FINAL_REPORT.md) separates published results, lab measurements and bounded negative results.
+The [first-phase report](docs/FINAL_REPORT.md) separates published results, lab measurements and bounded negative results.
 
-## Active research: general-length NTT and FFT
+## Phase 2: general-length NTT, FFT and applications
 
 [General-length research](docs/GENERAL_LENGTH_RESEARCH.md) records occupied-fiber borrowing, Bostan–Schost interpolation, bounded multi-axis and polynomial packing over small extension fields, and the numerical limits of the tested complex128 factorization. The general-length theorem and saving recursive construction remain open. [Research protocol](docs/AGENT_RESEARCH_PROTOCOL.md)
 
