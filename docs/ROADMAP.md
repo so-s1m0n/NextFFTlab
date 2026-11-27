@@ -2,6 +2,8 @@
 
 ## Source snapshot
 
+See the [construction and evidence map](CONSTRUCTION_MAP.md) for pinned source anchors, tests, data and remaining work, including the characteristic-zero prime-axis and deformation lemmas.
+
 Primary source pinned to openai/math commit 3344da59991ed94f9ba711217b29c1d760badfa6.
 [Manuscript directory](https://github.com/openai/math/tree/3344da59991ed94f9ba711217b29c1d760badfa6/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026).
 Actual LaTeX is in build/; no PDF extraction is needed. Upstream README, main.tex, intro.tex, repair.tex, kernel.tex and section labels of layers.tex/packing.tex/binary.tex were inspected. Full proof and Lean build are not yet audited.

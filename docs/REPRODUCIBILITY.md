@@ -68,3 +68,12 @@ The driver verifies the published and retained circuits on every basis vector ov
 - OpenAI's November 24 preprint and higher-level claims are tied to the source commit in the [source map](ROADMAP.md). The repository records the Lean correspondence and leaves local compilation open.
 - The chronological comparison uses the Alman–Rao arithmetic bound and Sussman's distinct gate and scaled-arithmetic counts. [Alman and Rao v2](https://arxiv.org/abs/2211.06459) · [Sussman at bbb7f830](https://github.com/jacobalansussman/wht-fewer-operations/tree/bbb7f830d8c5612465a9922ace566750ce6d09d2)
 - NextFFTlab's original code and documentation are [MIT licensed](../LICENSE). For Sussman's two H8-derived JSON artifacts, see the [attributions](../results/record-circuits/NOTICE.md) and [Apache-2.0 license](../results/record-circuits/LICENSE-APACHE-2.0.txt). The pinned proof and reference repository remain separately licensed external sources.
+
+## Characteristic-zero prime axes
+
+The exact width-four quotient comparison records raw batch samples, setup, operation counts, coefficient bits and traced Python allocation peaks. It uses standard-library Fraction arithmetic. [Protocol and results](PRIME5_DEFORMATION_A3.md) · [Raw JSON](../results/prime5-deformation.json) · [Runnable examples](CONSTRUCTION_MAP.md)
+
+```sh
+python -m pytest -q tests/test_rational_deformation.py tests/test_prime5_deformation.py
+python -m nextfft_lab.bench_prime5_deformation --output prime5-local.json
+```

@@ -15,3 +15,5 @@ Objective: verify the pinned paper and investigate transferable components with 
 ## Current handoff
 
 A2 now checks serial borrowing on occupied tensor fibers. A1 includes a fast Bostan–Schost comparator and a polynomial application. A4 covers multi-axis grids and odd batches in degree two. A3 covers small quartic extension packing with active coordinate digits. See GENERAL_LENGTH_RESEARCH.md for the benchmark results and bounded scope. Before scaling, justify an implementation that reduces auxiliary transform or slot-address costs. Resume complex arithmetic only with a concrete stability hypothesis. Keep archived data and use unique files for new experiments.
+
+The characteristic-zero track checks p=3 and p=5 and measures a width-four quotient application. The measured deformation loses to direct schoolbook. Reopen performance work only with a specific change to endpoint costs, coefficient growth or jet arithmetic. [Construction map](CONSTRUCTION_MAP.md) · [Prime-five evidence](PRIME5_DEFORMATION_A3.md)
