@@ -129,3 +129,9 @@ Keep this implementation as a correctness example. Resume characteristic-zero pe
 ### Shear-layer reduction checkpoint
 
 Added an explicit fixed-field word for U^(tensor j) from three classical Walsh transforms and four tensor diagonals, with independent subset zeta/Moebius oracles. 11 focused local tests passed. This gives a concrete conditional application of a future saving Walsh backend to subset transforms, but the present backend uses six times the direct butterfly's addition count plus diagonal updates. No speed claim; full uniform-field lemma and synchronized saving circuits remain open. [Derivation, tests and boundaries](SHEAR_WORD.md).
+
+### Core verification checkpoint from PR #3 at 14072b3
+
+The incoming 11 shear tests passed independently, and a separate direct oracle agreed on signed integer inputs at every supported power of two. The incoming suite passed 283 tests with Z3, and the updated suite passed 284 with a bounded integer-input regression. Faster exact Walsh gates transfer to dense zeta and Möbius transforms. Ranked subset convolution still has a quadratic-in-rank product stage with schoolbook products. No shear or subset-convolution runtime was measured here. [Review, existing algorithms and conditional bounds](SHEAR_WORD.md)
+
+The Lean toolchain ran on the fixed sources for import resolution. Dependency setup hit the 1 GiB process-group limit before proof compilation, transitive axiom extraction or Comparator. The existing binary prototype has 24 calls per row at eight axes, above the threshold even before padding. Keep the closed scaling and complex stability decisions. [Formal audit](LEAN_FOURIER_AUDIT.md) · [Saving recursion criteria](RECURSION_GATE.md) · [Dependency map and executable checks](CONSTRUCTION_MAP.md)

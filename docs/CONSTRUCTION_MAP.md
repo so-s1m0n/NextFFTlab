@@ -2,14 +2,43 @@
 
 This map follows `openai/math@3344da59991ed94f9ba711217b29c1d760badfa6`. A bounded check compares an executable component with an independent oracle. A measurement applies to the implementation, arithmetic and inputs recorded in its data. The paper's binary linear gates, counted operations, logical workspace and elapsed time are separate. [Pinned manuscript][paper]
 
+## How the paper fits together
+
+Arrows run from a prerequisite to the result that uses it. The two arms for the main theorem use different arguments.
+
+```mermaid
+flowchart TD
+    P["Count predictor and affine matrix root"] --> R["Hermite repair"]
+    R --> K["Shared routing and saving prime tensor template"]
+    K --> B["Binary layout and real stability"]
+    K --> S["Tensor shear"]
+    K --> C["Formal convolution upper bound"]
+    S --> C
+    T["Newton, Toeplitz and occupied fibers"] --> C
+    T --> G["Geometric grids and field descent"]
+    K --> G
+    C --> G
+    S --> G
+    G --> F["Exact Fourier upper bound"]
+    L["Spectral plane, quotient and time expansion"] --> E["Exact and robust Fourier lower bounds"]
+    F --> M["Main Fourier exponent theorem"]
+    E --> M
+    M --> Q["Formal convolution exponent"]
+    C --> Q
+```
+
+The convolution path uses the prime-axis and deformation lemmas in characteristic zero. The characteristic-positive path uses prime-axis Fourier evaluations. The grid argument also uses polynomial convolution with a fixed operand for field descent. The Lean source audit maps the lower-bound proof entry points. Python experiments address bounded upper-bound components. [Pinned proof structure][main] · [Formal proof audit](LEAN_FOURIER_AUDIT.md) · [Recursion gate](RECURSION_GATE.md)
+
+## Implementation and evidence
+
 | Source and construction | Implementation | Verification | Evidence and scope | Open scope |
 |---|---|---|---|---|
-| [`thm:main`][intro] and [Lean comparator statements][lean] | The project records theorem statements and arithmetic hypotheses. | Main, Fourier and batched Fourier theorem correspondence. | Source inspection. [Lean correspondence](ROADMAP.md#lean-source-correspondence) | Local Lean compilation, transitive axioms and full proof validation. |
+| [`thm:main`][intro] and [Lean Comparator statements][lean] | Actual proof entry point `OAI.LinearAlgebra.FiniteFourier.Main`. | [Pinned source inventory](../results/lean-fourier-source-audit.json) and [kernel axiom probe](../scripts/ExactFourierAudit.lean). | [Status and correspondence](LEAN_FOURIER_AUDIT.md). The older complex subsequence statement is a separate target in the same challenge. | See the current formal audit and outstanding verification steps. |
 | [`lem:count-predict`][count] | [Integer-count oracle](../nextfft_lab/predictor.py) and [query-power polynomial](../nextfft_lab/query_polynomial.py). | [Window](../tests/test_predictor.py) and [polynomial](../tests/test_query_polynomial.py) tests. | Exact on the tested queries and shifts, including all pairs in the three-bit toy case. [Data](../results/gate1-components.json) | Predictor execution in a saving recursive template. |
 | [`lem:matrix-root`][matrix] | [Explicit pencil](../nextfft_lab/matrix_pencil.py) and [implicit pencil](../nextfft_lab/implicit_pencil.py). The implicit layout is a local implementation experiment. | [Pencil/repair](../tests/test_binary_repair.py) and [implicit versus explicit](../tests/test_implicit_pencil.py) tests. | Small exact matrix-power checks and a separate one-shift comparison. [Data](../results/gate2-pencil.json) · [Implicit experiment](OPTIMIZATION.md) | Theorem-scale batched workspace and routing. |
 | [`lem:hermite-repair` and `thm:repair`][hermite] | [Frequency repair](../nextfft_lab/spectral_repair.py) and [binary assembly](../nextfft_lab/binary_repair.py). | [Exact basis and exception tests](../tests/test_binary_repair.py). | Verified with nonzero exceptions in a toy window. [Data](../results/gate2-pencil.json) | Nonzero-exception repair inside the complete shared-routing construction. |
-| [`thm:kernel`, `eq:kernel-routing-block` and `eq:kernel-template-saving`][kernel], [`prop:binary-template`][binary] | [Binary kernels](../nextfft_lab/binary_kernel.py), [shared routing](../nextfft_lab/binary_routing.py), [fixed template](../nextfft_lab/binary_template.py), [compact experiment](../nextfft_lab/compact_template.py). | [Kernel](../tests/test_binary_kernel.py), [routing](../tests/test_binary_routing.py), [template](../tests/test_binary_template.py) and [compact template](../tests/test_compact_template.py) tests. | The zero-exception template matched classical Walsh on the tested independent rows. Sparse routing and a smaller pencil improved the prototype. Classical Walsh remained faster in the matched run. [Data](../results/gate3-kernel.json) · [Ablations](OPTIMIZATION.md) | Strict axis-call saving, recursive construction and its stability claims. |
-| [`lem:shear`](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026/build/layers.tex#L18-L105) | [Explicit tensor shear word and classical subset transform](../nextfft_lab/shear_word.py). | [Subset-sum basis and inverse oracle](../tests/test_shear_word.py). | Fixed field reduction to three Walsh calls; conditional transfer to subset zeta/Moebius transform. [Derivation and counts](SHEAR_WORD.md) | Exceptional characteristics, uniform descent, saving backend and full layer synchronization. |
+| [`thm:kernel`, `eq:kernel-routing-block` and `eq:kernel-template-saving`][kernel], [`prop:binary-template`][binary] | [Binary kernels](../nextfft_lab/binary_kernel.py), [shared routing](../nextfft_lab/binary_routing.py), [fixed template](../nextfft_lab/binary_template.py), [compact experiment](../nextfft_lab/compact_template.py). | [Kernel](../tests/test_binary_kernel.py), [routing](../tests/test_binary_routing.py), [template](../tests/test_binary_template.py) and [compact template](../tests/test_compact_template.py) tests. | The zero-exception template matched classical Walsh on the tested independent rows. Sparse routing and a smaller pencil improved the prototype. Classical Walsh remained faster in the matched run. [Data](../results/gate3-kernel.json) · [Ablations](OPTIMIZATION.md) | [Strict axis-call saving and recursive construction](RECURSION_GATE.md). Real-arithmetic stability is separate. |
+| [`lem:shear`][shear] | [Explicit two-coordinate word and direct superset butterfly](../nextfft_lab/shear_word.py). | [Exact basis and dense oracles](../tests/test_shear_word.py). | [Arithmetic counts and conditional subset applications](SHEAR_WORD.md). Dense zeta and Möbius benefit from a saving backend in the gate model. Schoolbook rank products keep the same full subset-convolution bound. | Uniform-field word, saving backend and measured application benefit. |
 | [`up:newton-lemma` and `up:newton`][newton] | [Newton and Toeplitz plans](../nextfft_lab/geometric.py), using classical padded radix-2 NTT. | [Dense character basis, inverse and Toeplitz tests](../tests/test_geometric.py). | Exact evaluation and interpolation on the supported geometric nodes. [Data](../results/geometric-baseline.json) · [Derivation](GENERAL_LENGTH_RESEARCH.md#g1--executable-geometric-newton-factorization) | A saving transform backend and synchronized execution across many axes. |
 | [`up:toeplitz`][toeplitz] | [Occupied Toeplitz, triangular and Newton words](../nextfft_lab/occupied.py). | [Independent block basis and dirty-workspace checks](../tests/test_occupied.py). | The word restores occupied auxiliary registers. Setup and actual backend calls remain part of the cost. [Data](../results/geometric-extensions.json) | Low-depth execution with reduced auxiliary transform cost. |
 | [`up:fibers`][fibers] | [Serial borrowing on occupied tensors](../nextfft_lab/fiber_schedule.py). | [Dense tensor oracle and occupied-neighbor restoration](../tests/test_fiber_schedule.py). | Borrowing removes dedicated payload slots with the same backend transform count as dedicated scratch. It took longer in the matched Python measurements. [Slot counts and scope](OCCUPIED_FIBERS_A2.md) · [Data](../results/fiber-schedule-a2.json) | Full grouping and depth synchronization for many axes. |
@@ -29,7 +58,7 @@ From the repository root with Python 3.10 or newer, install the test and researc
 
 ```sh
 python -m pip install -e '.[dev,research]'
-python -m pytest -q tests/test_geometric.py tests/test_occupied.py tests/test_fiber_schedule.py
+python -m pytest -q tests/test_shear_word.py tests/test_geometric.py tests/test_occupied.py tests/test_fiber_schedule.py
 python -m pytest -q tests/test_geometric_interpolation.py tests/test_geometric_packing.py tests/test_extension_research.py
 python -m pytest -q tests/test_rational_deformation.py tests/test_prime5_deformation.py tests/test_complex_geometric.py
 ```
@@ -61,6 +90,24 @@ assert plan.multiply([[0, 0], [0, 0], [0, 0], [0, 1]],
 assert cyclic5_product([0, 0, 0, 0, 1], [0, 1, 0, 0, 0]) == [1, 0, 0, 0, 0]
 ```
 
+This superset zeta example checks its sign and index convention directly. Each output sums the coefficients at supersets of the corresponding bitmask.
+
+```python
+from nextfft_lab.shear_word import tensor_shear_word
+
+values = [2, 3, 5, 7]
+assert tensor_shear_word(values) == [17, 10, 12, 7]
+assert tensor_shear_word([17, 10, 12, 7], inverse=True) == values
+```
+
+## Bounded negative results
+
+- The fixed template misses the saving inequality even after the measured sparse-routing improvement. [Recursion gate](RECURSION_GATE.md) · [Matched template data](OPTIMIZATION.md)
+- The bounded circuit search did not improve the published H8/H16 comparison points. [Search envelope and retained circuits](RECORD_SEARCH.md)
+- Occupied-fiber borrowing restores payload scratch with fewer dedicated slots, at a time cost in the tested implementation. [Fiber experiments](OCCUPIED_FIBERS_A2.md)
+- The tested characteristic-zero deformation and non-root evaluate–multiply–interpolate path lose to their same-domain direct baselines. [Width-four quotient experiment](PRIME5_DEFORMATION_A3.md) · [Non-root product experiment](GEOMETRIC_INTERPOLATION_A1.md)
+- The tested complex128 Newton factors had large forward errors on some grids. [Numerical stability evidence](COMPLEX_GEOMETRIC_A5.md)
+
 Use a separate location for fresh benchmark output. [Geometric benchmark commands and saved raw samples](GENERAL_LENGTH_RESEARCH.md) · [Source and license notes](REPRODUCIBILITY.md#pinned-circuit-search-and-source-licenses)
 
 [paper]: https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026/paper.pdf
@@ -81,3 +128,5 @@ Use a separate location for fresh benchmark output. [Geometric benchmark command
 [bostan]: https://cs.uwaterloo.ca/~eschost/publications/BostanSchost.pdf#page=27
 [alman]: https://arxiv.org/abs/2211.06459
 [sussman]: https://github.com/jacobalansussman/wht-fewer-operations/tree/bbb7f830d8c5612465a9922ace566750ce6d09d2
+[main]: https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026/build/main.tex#L22-L38
+[shear]: https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026/build/layers.tex#L18-L78

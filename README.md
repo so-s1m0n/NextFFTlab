@@ -17,7 +17,11 @@ The [final research report](docs/FINAL_REPORT.md) separates published results, l
 
 [General-length research](docs/GENERAL_LENGTH_RESEARCH.md) records occupied-fiber borrowing, Bostan–Schost interpolation, bounded multi-axis and polynomial packing over small extension fields, and the numerical limits of the tested complex128 factorization. The general-length theorem and saving recursive construction remain open. [Research protocol](docs/AGENT_RESEARCH_PROTOCOL.md)
 
-The characteristic-zero follow-up verifies the prime-five split and width-four deformation over Q(i). The measured split multiplication was about seven times slower than direct schoolbook in the paper-derived quotient at the tested jet orders. [Prime-five results and reproduction](docs/PRIME5_DEFORMATION_A3.md) · [Construction map and runnable examples](docs/CONSTRUCTION_MAP.md)
+The characteristic-zero follow-up verifies the prime-five split and width-four deformation over Q(i). The measured split multiplication was about seven times slower than direct schoolbook in the paper-derived quotient at the tested jet orders. [Prime-five results and reproduction](docs/PRIME5_DEFORMATION_A3.md)
+
+- [Construction map](docs/CONSTRUCTION_MAP.md) connects the paper's dependencies to executable examples, raw data and remaining gaps.
+- [Lean audit](docs/LEAN_FOURIER_AUDIT.md) records the theorem correspondence and the local build blocker.
+- [Saving recursion](docs/RECURSION_GATE.md) gives the exact call and padding requirements. [Shear and subset applications](docs/SHEAR_WORD.md) explains which costs a saving Walsh backend could reduce.
 
 ## Run the tests
 

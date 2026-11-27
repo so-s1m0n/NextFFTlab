@@ -77,3 +77,13 @@ The exact width-four quotient comparison records raw batch samples, setup, opera
 python -m pytest -q tests/test_rational_deformation.py tests/test_prime5_deformation.py
 python -m nextfft_lab.bench_prime5_deformation --output prime5-local.json
 ```
+
+## Core proof and shear checks
+
+- [Lean toolchain, fixed dependency inventory, attempted build and commands](LEAN_FOURIER_AUDIT.md)
+- [Shear basis checks, exact operation counts and conditional subset applications](SHEAR_WORD.md)
+- [Strict saving and padding conditions](RECURSION_GATE.md)
+
+```sh
+python -m pytest -q tests/test_shear_word.py
+```

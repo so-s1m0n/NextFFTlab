@@ -1,0 +1,223 @@
+{
+  "upstream_commit": "3344da59991ed94f9ba711217b29c1d760badfa6",
+  "toolchain": "leanprover/lean4:v4.34.1",
+  "locked_packages": 59,
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "solution_module": "OAI.LinearAlgebra.FiniteFourier.Main",
+  "solution_local_module_count": 8115,
+  "solution_direct_imports": [
+    "OAI.LinearAlgebra.FiniteFourier.BatchedTheorem",
+    "OAI.LinearAlgebra.FiniteFourier.CompanionUpper",
+    "OAI.LinearAlgebra.FiniteFourier.FourierTheorem",
+    "OAI.LinearAlgebra.FiniteFourier.CompanionStretch",
+    "OAI.Computability.FourierCircuit.Main"
+  ],
+  "solution_local_modules_by_namespace": {
+    "OAI.Analysis": 1,
+    "OAI.Computability": 6021,
+    "OAI.Geometry": 396,
+    "OAI.LinearAlgebra": 1362,
+    "OAI.NumberTheory": 298,
+    "OAI.Probability": 37
+  },
+  "external_module_count": 641,
+  "external_modules_by_namespace": {
+    "FixedPointTheorems": 1,
+    "Lean": 6,
+    "Lemmata": 6,
+    "Mathlib": 621,
+    "PrimeNumberTheoremAnd": 5,
+    "Std": 1,
+    "StrongPNT": 1
+  },
+  "solution_local_source_token_hits": {
+    "OAI.Computability.BorderVNP.DiagonalCalendarOriginalSelectionWriter": [
+      {
+        "line": 105,
+        "token": "admit"
+      },
+      {
+        "line": 110,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.DiagonalSignedDemandCapacity": [
+      {
+        "line": 52,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.DiagonalSignedDemandPacket": [
+      {
+        "line": 51,
+        "token": "admit"
+      },
+      {
+        "line": 54,
+        "token": "admit"
+      },
+      {
+        "line": 87,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.DiagonalSignedPacketAdmission": [
+      {
+        "line": 47,
+        "token": "admit"
+      },
+      {
+        "line": 50,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.DiagonalSignedSewnCellLoads": [
+      {
+        "line": 44,
+        "token": "admit"
+      },
+      {
+        "line": 45,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.DiagonalSignedSewnWidth": [
+      {
+        "line": 42,
+        "token": "admit"
+      },
+      {
+        "line": 43,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.FiniteEvaluatorCells": [
+      {
+        "line": 141,
+        "token": "admit"
+      },
+      {
+        "line": 175,
+        "token": "admit"
+      },
+      {
+        "line": 186,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.FiniteEvaluatorCellsCube": [
+      {
+        "line": 62,
+        "token": "admit"
+      },
+      {
+        "line": 79,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.FiniteEvaluatorHistories": [
+      {
+        "line": 29,
+        "token": "admit"
+      },
+      {
+        "line": 43,
+        "token": "admit"
+      },
+      {
+        "line": 51,
+        "token": "admit"
+      },
+      {
+        "line": 58,
+        "token": "admit"
+      },
+      {
+        "line": 65,
+        "token": "admit"
+      },
+      {
+        "line": 74,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.TeamSiteStop": [
+      {
+        "line": 88,
+        "token": "admit"
+      },
+      {
+        "line": 94,
+        "token": "admit"
+      },
+      {
+        "line": 94,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.TeamSiteSupply": [
+      {
+        "line": 38,
+        "token": "admit"
+      },
+      {
+        "line": 43,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.TeamSiteSupplyDeterminism": [
+      {
+        "line": 39,
+        "token": "admit"
+      },
+      {
+        "line": 42,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.TeamSiteSupplyGuard": [
+      {
+        "line": 124,
+        "token": "admit"
+      },
+      {
+        "line": 129,
+        "token": "admit"
+      },
+      {
+        "line": 148,
+        "token": "admit"
+      }
+    ],
+    "OAI.Computability.BorderVNP.TeamSiteTimedStop": [
+      {
+        "line": 93,
+        "token": "admit"
+      },
+      {
+        "line": 101,
+        "token": "admit"
+      },
+      {
+        "line": 101,
+        "token": "admit"
+      }
+    ]
+  },
+  "challenge_module": "ComparatorChallenges.ExactFourier",
+  "challenge_source_markers": [
+    {
+      "line": 58,
+      "token": "sorry"
+    },
+    {
+      "line": 246,
+      "token": "sorry"
+    },
+    {
+      "line": 311,
+      "token": "sorry"
+    }
+  ],
+  "scope": "Lexical source inventory. Token hits can be identifiers. External modules and declaration-level axioms require a separate Lean audit."
+}

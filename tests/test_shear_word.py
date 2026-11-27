@@ -1,7 +1,8 @@
+from itertools import count
 from random import Random
 import pytest
 from nextfft_lab.exact import P
-from nextfft_lab.shear_word import tensor_shear_word, tensor_shear_classical, forward_counts
+from nextfft_lab.shear_word import MAX_N, forward_counts, tensor_shear_classical, tensor_shear_word
 
 
 def direct(values,inverse=False):
@@ -37,3 +38,14 @@ def test_counts_and_rejections():
             with pytest.raises(ValueError): fn(x)
     for n in (0,3,2048,True):
         with pytest.raises(ValueError): forward_counts(n)
+
+
+def test_exact_bounded_integer_inputs():
+    for apply in (tensor_shear_word, tensor_shear_classical):
+        with pytest.raises(TypeError):
+            apply([0.75])
+        values = count()
+        with pytest.raises(ValueError):
+            apply(values)
+        assert next(values) == MAX_N + 1
+        assert apply(iter([P + 1, -2])) == [P - 1, P - 2]
