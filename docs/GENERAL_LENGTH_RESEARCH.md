@@ -85,3 +85,17 @@ python -m nextfft_lab.bench_complex_geometric
 ```
 
 G2's next dependency is A2 fiber scheduling with arbitrary occupied neighboring data. Beyond the bounded A3/A4 identities, the next source gate is independent coefficient-coordinate verification over a small extension field before testing any claimed general-length savings.
+
+### A4 — extension-coordinate packing checkpoint [bounded verification]
+
+Source: grids.tex, up:packing (returning to the base field), combined with up:newton-lemma. See [pinned source](https://github.com/openai/math/blob/3344da59991ed94f9ba711217b29c1d760badfa6/preprints/The-logarithmic-exponent-of-finite-Fourier-transforms-November-24-2026/build/grids.tex#L88-L112).
+
+The independent reference uses E = F_p[t]/(t^2-3), p=998244353. Euler's criterion verifies 3 is a nonsquare. With i a primitive fourth root in the base field, z=(-1+i*t)/2 is a primitive third root. Multiplying z by the base-field primitive root of order b/3 gives an auxiliary root of order b in {6,12,24,48}; no such b-th root exists in F_p. Pack the two independent inputs as x+t*y. Base-defined Newton diagonal and triangular Toeplitz factors preserve the coordinatewise target transform, even though the auxiliary cyclic convolutions actually use E-valued roots and coefficients. The basis 1,t is related by an invertible base-field change of coordinates to 1,w for the chosen auxiliary root w. This checks the coordinate principle, not the paper's exact asymptotic parameter schedule.
+
+Implementation: nextfft_lab/extension_coordinates.py. Tests check exact auxiliary root orders, dense extension DFT inversion, all 106 basis vectors of the combined two-row input across seven lengths (2,3,4,7,8,13,16), independent seeded rows, restoration by interpolation, and unsupported inputs. Forward output uses an independent direct base-field geometric formula. Local focused suite: 12 passed; full current suite requires CI.
+
+Run: python -m pytest -q tests/test_extension_coordinates.py
+
+Limitations: dense quadratic extension DFT; six auxiliary transforms per application (including repeated kernel setup), ordinary base-field NewtonPlan setup, temporary arrays, no occupied-register word, no performance claim. Each extension register is two base-field coordinates, so packing two rows does not compress arbitrary input information. This is an actual extension-field execution, not a componentwise base-field transform masquerading as extension arithmetic. General extension degrees, grouped-axis capacity, incomplete final batches, efficient descent, and the saving backend remain open.
+
+Next: A2 fiber scheduling with arbitrary occupied adjacent fibers; then batch padding and multiple axes for A4. For A1 compare interpolation with an established fast geometric interpolation method before claiming an application advantage. Keep A5's bounded negative result; no further complex optimization without a stability hypothesis.
