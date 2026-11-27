@@ -115,3 +115,7 @@ The 12 extension-coordinate tests at the incoming commit were independently revi
 The current checks establish exactness for the supported sizes. Low-depth synchronized word construction, practical base-field descent for larger extension degrees, and the source's prime-grid and deformation machinery remain open. Priority goes to a structurally different cost model before expanding the exhaustive cases.
 
 Regression with Z3 after integration passed all 255 tests in 50.68 s. The classical benchmark smoke produced 35 rows. Reproduction commands and raw samples are in each track report.
+
+### A3 — characteristic-zero deformation checkpoint
+
+The separate characteristic-zero path in `packing.tex` is now checked for p=3 over Q and width-two binomial blocks with one to three axes and jet length one to three. Exact rational endpoint scaling, lifting, Walsh evaluation, pointwise jet products, inverse evaluation and polynomial recovery agree with independent dense binomial multiplication; 104 full bilinear basis pairs plus 9 cyclic basis pairs, seeded rational inputs and rejected invalid cases. Focused local test suite: 8 passed. No performance measurement or full-regression result is claimed for this checkpoint yet. [Source mapping, reproduction and limits](RATIONAL_DEFORMATION_A3.md). General prime resolvent constants, width-four deformation, prime-grid selection and the saving recursion remain open.
