@@ -14,4 +14,4 @@ Objective: verify the pinned paper and investigate transferable components with 
 
 ## Current handoff
 
-Complete G2 first (fully occupied circulant/Toeplitz shear and full combined basis tests). Then A1: compare geometric polynomial evaluation/interpolation against classical Horner/chirp-z at non-root q, including repeated queries and batches. In parallel where resources permit, A5 may investigate numerical conditioning and compare against SciPy CZT / FFT with high-precision reference. Then A3/A4 in source dependency order. Do not pursue the previous closed WHT record search. Preserve archived benchmarks; new output files need unique names.
+G2 is verified on bounded occupied buffers. A1 and A5 have matched measurements, and A3/A4 have bounded base-field identity checks. See the continuation checkpoint in GENERAL_LENGTH_RESEARCH.md for scope and no-go findings. Next verify A2 fiber borrowing with independent dirty neighbors and A3/A4 coefficient-coordinate packing over a small extension. Continue larger cases only with an explicit resource bound and independent exact checks. Preserve archived data and write new experiments to unique files.
